@@ -1,0 +1,13 @@
+# Ignorar entornos virtuales
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Ignorar dependencias
+node_modules/
+.env
+
+# Ignorar logs, bases de datos, etc.
+*.log
+*.sqlite3
