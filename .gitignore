@@ -1,13 +1,68 @@
-# Ignorar entornos virtuales
+# 📁 .gitignore para proyecto Contaclic Core
+
+### Python ###
+# Entornos virtuales
 .venv/
 venv/
+env/
+.python-version
+
+# Archivos compilados
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
 
-# Ignorar dependencias
-node_modules/
+# Dependencias
+__pypackages__/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+poetry.lock
+Pipfile*
+
+### Environment ###
 .env
+.env.*
+.venv
+local.env
 
-# Ignorar logs, bases de datos, etc.
+### Node.js ###
+node_modules/
+.npm/
+.yarn/
+yarn-error.log
+
+### Logs/DBs ###
 *.log
 *.sqlite3
+*.db
+*.dump
+*.backup
+
+### Testing ###
+coverage/
+htmlcov/
+*.cover
+*.py,cover
+.pytest_cache/
+
+### Editors ###
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*.tmp
+*.orig
+
+### Sistemas ###
+.DS_Store
+Thumbs.db
+
+### Next.js ###
+.next/
+out/
+
+### Build/Production ###
+dist/
+build/
