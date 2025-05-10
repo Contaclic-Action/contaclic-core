@@ -1,0 +1,1 @@
+# Guía para que otros contribuyan correctamente - Guía para colaboradores.

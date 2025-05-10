@@ -1,0 +1,1 @@
+# Establece un entorno de respeto si lo haces público. Reglas de comportamiento.

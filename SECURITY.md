@@ -1,0 +1,1 @@
+# Cómo reportar vulnerabilidades (opcional pero profesional).
