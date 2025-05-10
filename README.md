@@ -1,12 +1,12 @@
              
-#                     💻 **Contaclic Action – Plataforma Contable y Tributaria** 🚀.
+#                     💻 **Contaclic Action – Plataforma Contable y Tributaria** 🚀
  
 
 Automatización contable y tributaria inteligente para empresas. Incluye módulos de carga masiva, validación de datos, creación de terceros, lectura de RUT en PDF, conciliación de compras y más.
 
 ---
 
-## 🧠 * Tecnologías *
+## 🧠  Tecnologías
 
 | Tecnología              | Descripción                                |
 | --------------------    |-------------------------------------       |
@@ -321,7 +321,7 @@ DATABASE_URL=postgresql://usuario:contrasena@host:puerto/basededatos
 `from backend.database.base_class import Base`
 `from dotenv import load_dotenv`
 `import os`
-   `load_dotenv()` - Cargar variables del .env
+   `load_dotenv()` 
 
    `DATABASE_URL = os.getenv("DATABASE_URL")`
 
