@@ -247,54 +247,55 @@ Incluye rutas comunes para ignorar archivos innecesarios:
 
 ## 📁 Carpetas de modelos (models/)  
 
-✅ Importamos las clases de los modelos que queremos exponer
+### Importamos las clases de los modelos que queremos exponer
 `from .archivo_1 import Clase1`
 `from .archivo_2 import Clase2`
 
-✅ Controlamos qué se puede importar desde fuera
+###  Controlamos qué se puede importar desde fuera
 `__all__ = ["Clase1", "Clase2"]`
 
 
 ##  📁 Carpetas de routers (routers/)
 
-✅ Importamos los routers definidos en otros archivos
+###  Importamos los routers definidos en otros archivos
 `from .recurso_1 import router as recurso_1_router`
 `from .recurso_2 import router as recurso_2_router`
 
-✅ Listamos los routers para facilitar su uso desde main.py o routers principales
+###  Listamos los routers para facilitar su uso desde main.py o routers principales
 
 ` __all__ = ["recurso_1_router", "recurso_2_router"]`
 
 ##  📁 Carpetas de esquemas (schemas/)
 
-✅ Importamos los esquemas base, create, update, etc.
+###  Importamos los esquemas base, create, update, etc.
 `from .archivo_1 import Clase1Base, Clase1Create`
 `from .archivo_2 import Clase2Base, Clase2Create`
 
-✅ Indicamos explícitamente qué exportamos
+###  Indicamos explícitamente qué exportamos
 
 `__all__ = ["Clase1Base", "Clase1Create", "Clase2Base", "Clase2Create"]`
 
 
 ## 📁 Carpetas de servicios (services/)
 
-✅ Importamos funciones o clases que contienen la lógica del negocio
+###  Importamos funciones o clases que contienen la lógica del negocio
 `from .recurso_1 import funcion_1`
 `from .recurso_2 import clase_servicio`
 
-✅ Exportamos solo lo necesario
+###  Exportamos solo lo necesario
 
 `__all__ = ["funcion_1", "clase_servicio"]`
 
 
 ## 📁 Carpetas de utilidades (utils/)
 
-✅ Importamos funciones específicas de procesamiento PDF
-### from .lector_pdf import extraer_texto
-### from .validador_pdf import validar_formato
+###  Importamos funciones específicas de procesamiento PDF
+`from .lector_pdf import extraer_texto`
+`from .validador_pdf import validar_formato`
 
-✅ Dejamos claro qué funciones queremos que estén disponibles
-### __all__ = ["extraer_texto", "validar_formato"]
+###  Dejamos claro qué funciones queremos que estén disponibles
+
+`__all__ = ["extraer_texto", "validar_formato"]`
 
 
 ## ❌ Carpetas que no necesitan __init__.py
@@ -315,56 +316,56 @@ DATABASE_URL=postgresql://usuario:contrasena@host:puerto/basededatos
 
 🔄 Usa python-dotenv para cargar la variable del .env:
 
-   from sqlalchemy import create_engine
-   from sqlalchemy.orm import sessionmaker
-   from backend.database.base_class import Base
-   from dotenv import load_dotenv
-   import os
+`from sqlalchemy import create_engine`
+`from sqlalchemy.orm import sessionmaker`
+`from backend.database.base_class import Base`
+`from dotenv import load_dotenv`
+`import os`
 
-   load_dotenv()  # Cargar variables del .env
+   `load_dotenv()`  # Cargar variables del .env
 
-   DATABASE_URL = os.getenv("DATABASE_URL")
+   `DATABASE_URL = os.getenv("DATABASE_URL")`
 
-   engine = create_engine(DATABASE_URL)
-   SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+   `engine = create_engine(DATABASE_URL)`
+   `SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)`
 
- def get_db():
-     db = SessionLocal()
-    try:
-        yield db
-     finally:
-         db.close()
+ `def get_db():`
+     `db = SessionLocal()`
+    `try:`
+        `yield db`
+     `finally:`
+         `db.close()`
 
 ## ✅ DATABASE / base_class.py
 
-### from sqlalchemy.ext.declarative import declarative_base
-### Base = declarative_base()
+`from sqlalchemy.ext.declarative import declarative_base`
+`Base = declarative_base()`
 
 ## ✅ DATABASE / __init__.py
 
-### from .connection import engine, SessionLocal, get_db
-### from .base_class import Base
+`from .connection import engine, SessionLocal, get_db`
+`from .base_class import Base`
 
 ## DATABASE / create_tables.py
 
-### from backend.database.connection import engine 
-### from backend.database.base_class import Base   
-### from backend.models import *  
+`from backend.database.connection import engine`
+`from backend.database.base_class import Base`   
+`from backend.models import *`  
 
-### def create_all_tables():                  
-###     Base.metadata.create_all(bind=engine)   
+`def create_all_tables():`                 
+     `Base.metadata.create_all(bind=engine)`  
 
-### if __name__ == "__main__":                   
-###     print("✅ Tablas creadas exitosamente.")    
-###     create_all_tables()
+`if __name__ == "__main__":`                   
+`print("✅ Tablas creadas exitosamente.")`
+`create_all_tables()`
 
 ## ✅ MODELOS - models
 
-### from sqlalchemy import Column, Integer, String
-### from backend.database.base_class import Base
+`from sqlalchemy import Column, Integer, String`
+`from backend.database.base_class import Base`
 
-### class Tercero(Base):
-###     __tablename__ = "terceros"
+`class Tercero(Base):`
+`__tablename__ = "terceros"`
 
     id = Column(Integer, primary_key=True, index=True)
     nombre = Column(String, index=True)
@@ -373,45 +374,44 @@ DATABASE_URL=postgresql://usuario:contrasena@host:puerto/basededatos
 
 ## ✅ MODELS /__init__.py
 
-### from .terceros import Tercero
-
-### __all__ = [
-###    "Tercero",
-### ]
+`from .terceros import Tercero`
+`__all__ = [`
+`"Tercero",`
+` ]`
 
 ## ✅ ESQUEMAS - schemas
 
-### from pydantic import BaseModel
-### class TerceroBase(BaseModel):
-###     nombre: str
-###     identificacion: str
-###     direccion: str
-### class TerceroCreate(TerceroBase):
-###     pass
-### class Tercero(TerceroBase):
-###    id: int
-###     class Config:
-###         from_attributes = True
+`from pydantic import BaseModel`
+`class TerceroBase(BaseModel):`
+`nombre: str`
+`identificacion: str`
+`direccion: str`
+`class TerceroCreate(TerceroBase):`
+` pass`
+`class Tercero(TerceroBase):`
+`id: int`
+`class Config:`
+`from_attributes = True`
 
 ## ✅ ESQUEMAS / __init__.py
 
-### from .terceros import Tercero, TerceroCreate, TerceroBase
+`from .terceros import Tercero, TerceroCreate, TerceroBase`
 
 ## ✅ ROUTERS - routers 
 
-### from fastapi import APIRouter, HTTPException, Depends
-### from sqlalchemy.orm import Session
-### from backend.schemas.tercero import TerceroCreate, Tercero
-### from backend.models.tercero import Tercero as DBTercero
-### from backend.database import get_db
+`from fastapi import APIRouter, HTTPException, Depends`
+`from sqlalchemy.orm import Session`
+`from backend.schemas.tercero import TerceroCreate, Tercero`
+`from backend.models.tercero import Tercero as DBTercero`
+`from backend.database import get_db`
 
 ### router = APIRouter()
 
-### @router.post("/terceros", response_model=Tercero)
-### def crear_tercero(tercero: TerceroCreate, db: Session = Depends(get_db)):
-###    existente = db.query(DBTercero).filter(DBTercero.identificacion == tercero.identificacion).first()
-###     if existente:
-###         raise HTTPException(status_code=400, detail="⚠️ El tercero ya esta registrado.")
+`@router.post("/terceros", response_model=Tercero)`
+`def crear_tercero(tercero: TerceroCreate, db: Session = Depends(get_db)):`
+   `existente = db.query(DBTercero).filter(DBTercero.identificacion == tercero.identificacion).first()`
+     `if existente:`
+         `raise HTTPException(status_code=400, detail="⚠️ El tercero ya esta registrado.")`
 
     nuevo_tercero = DBTercero(**tercero.dict())
     db.add(nuevo_tercero)
@@ -419,36 +419,37 @@ DATABASE_URL=postgresql://usuario:contrasena@host:puerto/basededatos
     db.refresh(nuevo_tercero)
     return nuevo_tercero
 
-### @router.get("/terceros/{tercero_id}", response_model=Tercero)
-### def get_tercero(tercero_id: int, db: Session = Depends(get_db)):
-###     db_tercero = db.query(DBTercero).filter(DBTercero.id == tercero_id).first()
-###     if db_tercero is None:
-###         raise HTTPException(status_code=404, detail="Tercero not found")
-###     return db_tercero
+ `@router.get("/terceros/{tercero_id}", response_model=Tercero)`
+ `def get_tercero(tercero_id: int, db: Session = Depends(get_db)):`
+     `db_tercero = db.query(DBTercero).filter(DBTercero.id == tercero_id).first()`
+     `if db_tercero is None:`
+         `raise HTTPException(status_code=404, detail="Tercero not found")`
+     `return db_tercero`
 
 ## ✅ ROUTERS / __init__.py
 
-### from .terceros import router as terceros_router
+`from .terceros import router as terceros_router`
 
 ## ✅ MAIN.PY - Integracion de los Endpoints  
 
-### from fastapi import FastAPI
-### from fastapi.middleware.cors import CORSMiddleware
-### from backend.routers import terceros  # importa tu router
+`from fastapi import FastAPI`
+`from fastapi.middleware.cors import CORSMiddleware`
+`from backend.routers import terceros  # importa tu router`
 
-### app = FastAPI()
+`app = FastAPI()`
 
-# 🔐 CORS middleware
-### app.add_middleware(
-###     CORSMiddleware,
-###     allow_origins=["http://localhost:3000"],  # puedes poner "*" si estás en desarrollo
-###     allow_credentials=True,
-###     allow_methods=["*"],
-###     allow_headers=["*"],
-### )
+ `🔐 CORS middleware`
+ `app.add_middleware(`
+     `CORSMiddleware,`
+     `allow_origins=["http://localhost:3000"],  # puedes poner "*" si estás en desarrollo`
+     `allow_credentials=True,`
+     `allow_methods=["*"],`
+     `allow_headers=["*"],`
+ `)`
 
 ## ✅ Incluye tus routers con prefijo /api
-### app.include_router(terceros.router, prefix="/api")
+
+`app.include_router(terceros.router, prefix="/api")`
 
 ## ✅ "Crear tablas:" python -m backend.db.create_tables
 
