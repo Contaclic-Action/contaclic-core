@@ -235,65 +235,65 @@ Incluye rutas comunes para ignorar archivos innecesarios:
 └── 🐍 git push origin main
 
 
-## 💻 Confirmar en GitHub
+# 💻 Confirmar en GitHub
 
-└── ✅ README.md se muestra como descripción principal del repositorio.
-── ⚙️ .gitignore, requirements.txt y demás archivos son visibles.
-── ✅ La rama principal aparece como main.
+### └── ✅ README.md se muestra como descripción principal del repositorio.
+### ── ⚙️ .gitignore, requirements.txt y demás archivos son visibles.
+### ── ✅ La rama principal aparece como main.
 
 ---
 
-#                🧠 Estructura de archivos __init__.py
+#                🧠 **Estructura de archivos __init__.py**
 
 ## 📁 Carpetas de modelos (models/)  
 
-### Importamos las clases de los modelos que queremos exponer
+### 🎯 Importamos las clases de los modelos que queremos exponer
 `from .archivo_1 import Clase1`
 `from .archivo_2 import Clase2`
 
-###  Controlamos qué se puede importar desde fuera
+###  🔹Controlamos qué se puede importar desde fuera
 `__all__ = ["Clase1", "Clase2"]`
 
 
 ##  📁 Carpetas de routers (routers/)
 
-###  Importamos los routers definidos en otros archivos
+###  🎯 Importamos los routers definidos en otros archivos
 `from .recurso_1 import router as recurso_1_router`
 `from .recurso_2 import router as recurso_2_router`
 
-###  Listamos los routers para facilitar su uso desde main.py o routers principales
+###  🔹Listamos los routers para facilitar su uso desde main.py o routers principales
 
 ` __all__ = ["recurso_1_router", "recurso_2_router"]`
 
 ##  📁 Carpetas de esquemas (schemas/)
 
-###  Importamos los esquemas base, create, update, etc.
+###  🎯 Importamos los esquemas base, create, update, etc.
 `from .archivo_1 import Clase1Base, Clase1Create`
 `from .archivo_2 import Clase2Base, Clase2Create`
 
-###  Indicamos explícitamente qué exportamos
+###  🔹Indicamos explícitamente qué exportamos
 
 `__all__ = ["Clase1Base", "Clase1Create", "Clase2Base", "Clase2Create"]`
 
 
 ## 📁 Carpetas de servicios (services/)
 
-###  Importamos funciones o clases que contienen la lógica del negocio
+###  🎯 Importamos funciones o clases que contienen la lógica del negocio
 `from .recurso_1 import funcion_1`
 `from .recurso_2 import clase_servicio`
 
-###  Exportamos solo lo necesario
+###  🔹Exportamos solo lo necesario
 
 `__all__ = ["funcion_1", "clase_servicio"]`
 
 
 ## 📁 Carpetas de utilidades (utils/)
 
-###  Importamos funciones específicas de procesamiento PDF
+###  🎯 Importamos funciones específicas de procesamiento PDF
 `from .lector_pdf import extraer_texto`
 `from .validador_pdf import validar_formato`
 
-###  Dejamos claro qué funciones queremos que estén disponibles
+###  🔹Dejamos claro qué funciones queremos que estén disponibles
 
 `__all__ = ["extraer_texto", "validar_formato"]`
 
@@ -316,25 +316,25 @@ DATABASE_URL=postgresql://usuario:contrasena@host:puerto/basededatos
 
 🔄 Usa python-dotenv para cargar la variable del .env:
 
-`from sqlalchemy import create_engine`
-`from sqlalchemy.orm import sessionmaker`
-`from backend.database.base_class import Base`
-`from dotenv import load_dotenv`
-`import os`
+### `from sqlalchemy import create_engine`
+### `from sqlalchemy.orm import sessionmaker`
+### `from backend.database.base_class import Base`
+### `from dotenv import load_dotenv`
+### `import os`
 
-   `load_dotenv()`  # Cargar variables del .env
+###   `load_dotenv()` - Cargar variables del .env
 
-   `DATABASE_URL = os.getenv("DATABASE_URL")`
+###   `DATABASE_URL = os.getenv("DATABASE_URL")`
 
-   `engine = create_engine(DATABASE_URL)`
-   `SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)`
+###   `engine = create_engine(DATABASE_URL)`
+###   `SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)`
 
- `def get_db():`
-     `db = SessionLocal()`
-    `try:`
-        `yield db`
-     `finally:`
-         `db.close()`
+### `def get_db():`
+###     `db = SessionLocal()`
+###    `try:`
+###        `yield db`
+###     `finally:`
+###         `db.close()`
 
 ## ✅ DATABASE / base_class.py
 
