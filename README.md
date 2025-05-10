@@ -1,8 +1,8 @@
              
-#                          💻 Contaclic Action – Plataforma contable y tributaria 🚀.
+#                     💻 Contaclic Action – Plataforma Contable y Tributaria 🚀.
  
 
-Automatización contable y tributaria inteligente para empresas. Incluye módulos de carga masiva, validación de datos, creación de terceros, lectura de RUT en PDF, conciliación de compras y más.
+### Automatización contable y tributaria inteligente para empresas. Incluye módulos de carga masiva, validación de datos, creación de terceros, lectura de RUT en PDF, conciliación de compras y más.
 
 ---
 
@@ -25,7 +25,8 @@ Automatización contable y tributaria inteligente para empresas. Incluye módulo
 # 🗂️ Estructura general
 
 
-## 📁 `contaclic_core/`
+📁 `contaclic_core/`
+
 ### ├── 📦 backend/   Backend con FastAPI (API REST, lógica de negocio, base de datos, automatizaciones)
 ### └── 💻 frontend/  Frontend moderno en Next.js (interfaz de usuario para clientes y administrativos)
 
@@ -66,15 +67,15 @@ Este backend es el núcleo que conecta procesos clave de tu operación contable 
 ## 🧹 Gestión del Entorno Virtual y Dependencias
 
 1. ▶️ Eliminar el Entorno Virtual Antiguo (Limpieza):
-### 📥 Remove-Item -Path .venv -Recurse -Force       -  Si la carpeta se llama .venv
+└── 📥 Remove-Item -Path .venv -Recurse -Force   ➡️ Si la carpeta se llama .venv
 2. ▶️ Crear un Nuevo Entorno Virtual:
-### 📥 python -m venv .venv                          -  Esto crea una nueva carpeta '.venv'
+└── 📥 python -m venv .venv                      ➡️  Esto crea una nueva carpeta '.venv'
 3. ▶️ Activar el Nuevo Entorno Virtual:         
-### 📥 .\.venv\Scripts\activate                      -  Si la carpeta se llama .venv
+└── 📥 .\.venv\Scripts\activate                  ➡️  Si la carpeta se llama .venv
 4. ▶️ Verificar listado en la raiz del proyecto. Instalar las Dependencias:
-### 📥 pip install -r requirements.txt
+└── 📥 pip install -r requirements.txt
 5. ▶️ Para verificar todas las librerías instaladas específicamente en ese entorno.
-### 📥 pip freeze                                    -  Muestra el contenido de requirements.txt.
+└── 📥 pip freeze                                ➡️  Muestra el contenido de requirements.txt.
 
 ---
 
@@ -147,7 +148,7 @@ Este backend es el núcleo que conecta procesos clave de tu operación contable 
 
 ---
 
-##             🛠️ Framework y Servidor
+##                   🛠️ Framework y Servidor
 
 
 └── ✅ fastapi==0.115.8            - Framework web moderno para construir APIs
@@ -206,14 +207,14 @@ Incluye rutas comunes para ignorar archivos innecesarios:
 ──🛠️ .idea/
 
 ### ✅ 2. Inicializar el repositorio local - Si tu proyecto aún no está conectado a Git:
-└──🐍 git init
+└── 🐍 git init
 ### ✅ 3. Agrega el repositorio remoto - Esto vincula tu proyecto local al repositorio de GitHub:
-└──🐍 git remote add origin https://github.com/tu_usuario/tu_repositorio.git
+└── 🐍 git remote add origin https://github.com/tu_usuario/tu_repositorio.git
 ### ✅ 4. Crea y muévete a la rama principal main.
-── 🐍 git checkout -b main
+└── 🐍 git checkout -b main
 ### ✅ 5. Añade los archivos y haz tu primer commit - Preparar archivos para subir
 └── 🐍 git add .
-── 🐍 git commit -m "Primer commit "
+──  🐍 git commit -m "Primer commit "
 ### ✅ 6. Sube tu código a GitHub -  Si tu rama local se llama main, haz:
 └── 🐍 git push -u origin main
 
@@ -233,6 +234,7 @@ Incluye rutas comunes para ignorar archivos innecesarios:
 ### ✅ 4. Sube los cambios al repositorio en GitHub.
 └── 🐍 git push origin main
 
+
 ## 💻 Confirmar en GitHub
 
 └── ✅ README.md se muestra como descripción principal del repositorio.
@@ -241,9 +243,9 @@ Incluye rutas comunes para ignorar archivos innecesarios:
 
 ---
 
-##                🧠 Estructura de archivos __init__.py
+#                🧠 Estructura de archivos __init__.py
 
-### 📁 Carpetas de modelos (models/)  
+## 📁 Carpetas de modelos (models/)  
 
 ✅ Importamos las clases de los modelos que queremos exponer
 ### from .archivo_1 import Clase1
@@ -253,7 +255,7 @@ Incluye rutas comunes para ignorar archivos innecesarios:
 ### __all__ = ["Clase1", "Clase2"]
 
 
-###  📁 Carpetas de routers (routers/)
+##  📁 Carpetas de routers (routers/)
 
 ✅ Importamos los routers definidos en otros archivos
 ### from .recurso_1 import router as recurso_1_router
@@ -263,7 +265,7 @@ Incluye rutas comunes para ignorar archivos innecesarios:
 ### __all__ = ["recurso_1_router", "recurso_2_router"]
 
 
-###  📁 Carpetas de esquemas (schemas/)
+##  📁 Carpetas de esquemas (schemas/)
 
 ✅ Importamos los esquemas base, create, update, etc.
 ### from .archivo_1 import Clase1Base, Clase1Create
@@ -290,7 +292,7 @@ Incluye rutas comunes para ignorar archivos innecesarios:
 ### from .validador_pdf import validar_formato
 
 ✅ Dejamos claro qué funciones queremos que estén disponibles
-__all__ = ["extraer_texto", "validar_formato"]
+### __all__ = ["extraer_texto", "validar_formato"]
 
 
 ## ❌ Carpetas que no necesitan __init__.py
@@ -301,7 +303,7 @@ __all__ = ["extraer_texto", "validar_formato"]
            
 ---
 
-                        📋 PROCESO CREACION DE TABLAS
+#                       📋 PROCESO CREACION DE TABLAS
 
 ## ✅ .env
 
@@ -311,25 +313,25 @@ DATABASE_URL=postgresql://usuario:contrasena@host:puerto/basededatos
 
 🔄 Usa python-dotenv para cargar la variable del .env:
 
-### from sqlalchemy import create_engine
-### from sqlalchemy.orm import sessionmaker
-### from backend.database.base_class import Base
-### from dotenv import load_dotenv
-### import os
+   from sqlalchemy import create_engine
+   from sqlalchemy.orm import sessionmaker
+   from backend.database.base_class import Base
+   from dotenv import load_dotenv
+   import os
 
-### load_dotenv()  # Cargar variables del .env
+   load_dotenv()  # Cargar variables del .env
 
-### DATABASE_URL = os.getenv("DATABASE_URL")
+   DATABASE_URL = os.getenv("DATABASE_URL")
 
-### engine = create_engine(DATABASE_URL)
-### SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+   engine = create_engine(DATABASE_URL)
+   SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
-### def get_db():
-###     db = SessionLocal()
-###    try:
-###        yield db
-###     finally:
-###         db.close()
+ def get_db():
+     db = SessionLocal()
+    try:
+        yield db
+     finally:
+         db.close()
 
 ## ✅ DATABASE / base_class.py
 
