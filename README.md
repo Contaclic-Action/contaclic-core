@@ -1,12 +1,12 @@
              
-#                     💻 Contaclic Action – Plataforma Contable y Tributaria 🚀.
+#                     💻 **Contaclic Action – Plataforma Contable y Tributaria** 🚀.
  
 
-### Automatización contable y tributaria inteligente para empresas. Incluye módulos de carga masiva, validación de datos, creación de terceros, lectura de RUT en PDF, conciliación de compras y más.
+Automatización contable y tributaria inteligente para empresas. Incluye módulos de carga masiva, validación de datos, creación de terceros, lectura de RUT en PDF, conciliación de compras y más.
 
 ---
 
-## 🧠 Tecnologías
+## 🧠 * Tecnologías *
 
 | Tecnología              | Descripción                                |
 | --------------------    |-------------------------------------       |
@@ -67,15 +67,15 @@ Este backend es el núcleo que conecta procesos clave de tu operación contable 
 ## 🧹 Gestión del Entorno Virtual y Dependencias
 
 1. ▶️ Eliminar el Entorno Virtual Antiguo (Limpieza):
-└── 📥 Remove-Item -Path .venv -Recurse -Force   ➡️ Si la carpeta se llama .venv
+### 📥 Remove-Item -Path .venv -Recurse -Force   ➡️ Si la carpeta se llama .venv
 2. ▶️ Crear un Nuevo Entorno Virtual:
-└── 📥 python -m venv .venv                      ➡️  Esto crea una nueva carpeta '.venv'
+### 📥 python -m venv .venv                      ➡️  Esto crea una nueva carpeta '.venv'
 3. ▶️ Activar el Nuevo Entorno Virtual:         
-└── 📥 .\.venv\Scripts\activate                  ➡️  Si la carpeta se llama .venv
+### 📥 .\.venv\Scripts\activate                  ➡️  Si la carpeta se llama .venv
 4. ▶️ Verificar listado en la raiz del proyecto. Instalar las Dependencias:
-└── 📥 pip install -r requirements.txt
+### 📥 pip install -r requirements.txt
 5. ▶️ Para verificar todas las librerías instaladas específicamente en ese entorno.
-└── 📥 pip freeze                                ➡️  Muestra el contenido de requirements.txt.
+### 📥 pip freeze                                ➡️  Muestra el contenido de requirements.txt.
 
 ---
 
@@ -248,41 +248,43 @@ Incluye rutas comunes para ignorar archivos innecesarios:
 ## 📁 Carpetas de modelos (models/)  
 
 ✅ Importamos las clases de los modelos que queremos exponer
-### from .archivo_1 import Clase1
-### from .archivo_2 import Clase2
+`from .archivo_1 import Clase1`
+`from .archivo_2 import Clase2`
 
 ✅ Controlamos qué se puede importar desde fuera
-### __all__ = ["Clase1", "Clase2"]
+`__all__ = ["Clase1", "Clase2"]`
 
 
 ##  📁 Carpetas de routers (routers/)
 
 ✅ Importamos los routers definidos en otros archivos
-### from .recurso_1 import router as recurso_1_router
-### from .recurso_2 import router as recurso_2_router
+`from .recurso_1 import router as recurso_1_router`
+`from .recurso_2 import router as recurso_2_router`
 
 ✅ Listamos los routers para facilitar su uso desde main.py o routers principales
-### __all__ = ["recurso_1_router", "recurso_2_router"]
 
+` __all__ = ["recurso_1_router", "recurso_2_router"]`
 
 ##  📁 Carpetas de esquemas (schemas/)
 
 ✅ Importamos los esquemas base, create, update, etc.
-### from .archivo_1 import Clase1Base, Clase1Create
-### from .archivo_2 import Clase2Base, Clase2Create
+`from .archivo_1 import Clase1Base, Clase1Create`
+`from .archivo_2 import Clase2Base, Clase2Create`
 
 ✅ Indicamos explícitamente qué exportamos
-### __all__ = ["Clase1Base", "Clase1Create", "Clase2Base", "Clase2Create"]
+
+`__all__ = ["Clase1Base", "Clase1Create", "Clase2Base", "Clase2Create"]`
 
 
 ## 📁 Carpetas de servicios (services/)
 
 ✅ Importamos funciones o clases que contienen la lógica del negocio
-### from .recurso_1 import funcion_1
-### from .recurso_2 import clase_servicio
+`from .recurso_1 import funcion_1`
+`from .recurso_2 import clase_servicio`
 
 ✅ Exportamos solo lo necesario
-### __all__ = ["funcion_1", "clase_servicio"]
+
+`__all__ = ["funcion_1", "clase_servicio"]`
 
 
 ## 📁 Carpetas de utilidades (utils/)
