@@ -26,12 +26,12 @@ Automatización contable y tributaria inteligente para empresas. Incluye módulo
 
 
 ## 📁 contaclic_core/
-├── 📦 backend/   # Backend con FastAPI (API REST, lógica de negocio, base de datos, automatizaciones)
-└── 💻 frontend/  # Frontend moderno en Next.js (interfaz de usuario para clientes y administrativos)
+### ├── 📦 backend/   Backend con FastAPI (API REST, lógica de negocio, base de datos, automatizaciones)
+### └── 💻 frontend/  Frontend moderno en Next.js (interfaz de usuario para clientes y administrativos)
 
 ---
 
-## Carpeta: `backend/`
+### Carpeta: `backend/`
 
 # 👋 Bienvenido al backend de Contaclic Action
 
@@ -39,40 +39,40 @@ Este sistema ha sido desarrollado para automatizar y gestionar de forma eficient
 
 Aquí encontrarás:
 
-## 🧩 Todos los módulos funcionales del sistema (tributación, facturación, bancos, informes, etc.).
+### 🧩 Todos los módulos funcionales del sistema (tributación, facturación, bancos, informes, etc.).
 
-## ⚙️ Detalles técnicos de su estructura, lógica de negocio y herramientas integradas.
+### ⚙️ Detalles técnicos de su estructura, lógica de negocio y herramientas integradas.
 
-## 🚀 Mejoras continuas orientadas a rendimiento, usabilidad y escalabilidad.
+### 🚀 Mejoras continuas orientadas a rendimiento, usabilidad y escalabilidad.
 
 Este backend es el núcleo que conecta procesos clave de tu operación contable con automatizaciones inteligentes y una visión clara del estado financiero.
 
 ---
 
-### ⌨️ Cómo iniciar 🖱️
+###  `Cómo iniciar/`
 
 
- ## 📌 CONEXION PgAdmin 4 y Render
+ ## 📌 CONEXION PgAdmin 4 y Render.
 
-### ✅ Host: Es la URL o IP de la base de datos.(Ej: dpg-xxxxxxx.render.com) - PSQL Command.
-### ✅ Port: generalmente 5432 (el puerto estándar de PostgreSQL).
-### ✅ Maintenance Database: suele ser el nombre de la base de datos principal que creaste en Render.
-### ✅ Username (Role): Es el nombre que configuraste o te asignó Render ( "DATABASE USER").
-### ✅ Password: la contraseña del usuario de base de datos.
-### ✅ Service: este campo no es obligatorio en pgAdmin. 
+✅ Host: Es la URL o IP de la base de datos.(Ej: dpg-xxxxxxx.render.com) - PSQL Command.
+✅ Port: generalmente 5432 (el puerto estándar de PostgreSQL).
+✅ Maintenance Database: suele ser el nombre de la base de datos principal que creaste en Render.
+✅ Username (Role): Es el nombre que configuraste o te asignó Render ( "DATABASE USER").
+✅ Password: la contraseña del usuario de base de datos.
+✅ Service: este campo no es obligatorio en pgAdmin. 
 
 ## 🧹 Gestión del Entorno Virtual y Dependencias
 
-### ✅ Eliminar el Entorno Virtual Antiguo (Limpieza):
-📥 Remove-Item -Path .venv -Recurse -Force       -  Si la carpeta se llama .venv
-### ✅ Crear un Nuevo Entorno Virtual:
-📥 python -m venv .venv                          -  Esto crea una nueva carpeta '.venv'
-### ✅ Activar el Nuevo Entorno Virtual:         
-📥 .\.venv\Scripts\activate                      -  Si la carpeta se llama .venv
-### ✅ Verificar listado en la raiz del proyecto. Instalar las Dependencias:
-📥 pip install -r requirements.txt
-### ✅ Para verificar todas las librerías instaladas específicamente en ese entorno.
-📥 pip freeze                                    -  Muestra el contenido de requirements.txt.
+✅ Eliminar el Entorno Virtual Antiguo (Limpieza):
+### 📥 Remove-Item -Path .venv -Recurse -Force       -  Si la carpeta se llama .venv
+✅ Crear un Nuevo Entorno Virtual:
+### 📥 python -m venv .venv                          -  Esto crea una nueva carpeta '.venv'
+✅ Activar el Nuevo Entorno Virtual:         
+### 📥 .\.venv\Scripts\activate                      -  Si la carpeta se llama .venv
+✅ Verificar listado en la raiz del proyecto. Instalar las Dependencias:
+### 📥 pip install -r requirements.txt
+✅ Para verificar todas las librerías instaladas específicamente en ese entorno.
+### 📥 pip freeze                                    -  Muestra el contenido de requirements.txt.
 
 ---
 
@@ -80,204 +80,203 @@ Este backend es el núcleo que conecta procesos clave de tu operación contable 
 #                     🏗️ RESUMEN ESTRUCTURA - BACKEND
 
 
-## 💼 backend/	                       -   Contiene la app principal, routers registrados, CORS.
-### └──📝 backend/main.py	           -   Archivo principal que levanta la API
+### 💼 backend/	                       -   Contiene la app principal, routers registrados, CORS.
+──📝 backend/main.py	           -   Archivo principal que levanta la API
 
-## 💼backend/bot/	                   -   Bot de Telegram con Python. "usuario automático".
+### 💼backend/bot/	                   -   Bot de Telegram con Python. "usuario automático".
 ──🗂️ backend/bot/main.py	        -   Punto de entrada principal.
 ──🗂️ backend/bot/handlers/	        -   Manejadores de comandos.
 ──🗂️ backend/bot/middlewares/      -   Hacer logs por usuario, o limitar por roles, etc.
 ──🗂️ backend/bot/services/	        -   Conexión con backend.
 
-## 💼 backend/clientes/	               -   Libreto de operaciones.
-### ──🗂️ backend/cliente/bancos/       -   Operaciones bancarias.
-### ──🗂️ backend/cliente/recibidos/    -   Modulo recibido Dian. Todo sobre compras.
-### ──🗂️ backend/cliente/terceros/	    -   Manejo de usuarios y terceros.
+### 💼 backend/clientes/	               -   Libreto de operaciones.
+──🗂️ backend/cliente/bancos/       -   Operaciones bancarias.
+──🗂️ backend/cliente/recibidos/    -   Modulo recibido Dian. Todo sobre compras.
+──🗂️ backend/cliente/terceros/	    -   Manejo de usuarios y terceros.
 
-## 💼 backend/contabilidad/	           -   Lógica de negocio central
-### ──🗂️ backend/contabilidad/models/	-   Modelos de datos
-### ──🗂️ backend/contabilidad/routers/ -   Endpoints (listar, crear, actualizar, etc.)
-### ──🗂️ backend/contabilidad/schemas/ -   Esquemas expuestos en API
+### 💼 backend/contabilidad/	           -   Lógica de negocio central
+──🗂️ backend/contabilidad/models/	-   Modelos de datos
+──🗂️ backend/contabilidad/routers/ -   Endpoints (listar, crear, actualizar, etc.)
+──🗂️ backend/contabilidad/schemas/ -   Esquemas expuestos en API
 
-## 💼 backend/core/	                   -   Configuraciones de la app
-### ──📝 /core/config.py	           -   Gestiona la configuración externa.
+### 💼 backend/core/	                   -   Configuraciones de la app
+──📝 /core/config.py	           -   Gestiona la configuración externa.
 
-## 💼 backend/database/	               -   Configuracion de la base de datos.  
-### ──📝 /database/connection.py	   -   Logica de conexion a PostgreSQL usando SQLAlchemy.
+### 💼 backend/database/	               -   Configuracion de la base de datos.  
+──📝 /database/connection.py	   -   Logica de conexion a PostgreSQL usando SQLAlchemy.
 
-## 💼 backend/integrations/            -   Módulo unificado para integraciones
-### ──🗂️ backend/integrations/auth/    -   Autenticación y tokens
+### 💼 backend/integrations/            -   Módulo unificado para integraciones
+──🗂️ backend/integrations/auth/    -   Autenticación y tokens
 
-## 💼 backend/models/	               -   Modelos SQLAlchemy para representar las tablas. 
-### ──🗂️ backend/models/registro/	    -   Modelos geograficos para crear terceros.
-### ──🗂️ backend/models/dian/	        -   Conciliacion modulo Dian.
-### ──🗂️ backend/models/bancos/	    -   Conciciliacion de extractos bancarios.
+### 💼 backend/models/	               -   Modelos SQLAlchemy para representar las tablas. 
+──🗂️ backend/models/registro/	    -   Modelos geograficos para crear terceros.
+──🗂️ backend/models/dian/	        -   Conciliacion modulo Dian.
+──🗂️ backend/models/bancos/	    -   Conciciliacion de extractos bancarios.
 
-## 💼 backend/routers/	               -   Carpeta general de endpoints FastAPI organizados por dominio.
-### ──🗂️ backend/routers/registro/   
-### ──🗂️ backend/routers/dian/
-### ──🗂️ backend/routers/bancos/
+### 💼 backend/routers/	               -   Carpeta general de endpoints FastAPI organizados por dominio.
+──🗂️ backend/routers/registro/   
+──🗂️ backend/routers/dian/
+──🗂️ backend/routers/bancos/
 
-## 💼 backend/schemas/	               -  Aqui defines los esquemas de entrada/salida (Pydantic) 
-### ──🗂️ backend/schemas/bancos/	    -  Conciciliacion de extractos bancarios.
-### ──🗂️ backend/schemas/registro/	    -  Esquema geograficos para crear terceros.  
-### ──🗂️ backend/schemas/dian/	        -  Conciliacion modulo Dian.   
+### 💼 backend/schemas/	               -  Aqui defines los esquemas de entrada/salida (Pydantic) 
+──🗂️ backend/schemas/bancos/	    -  Conciciliacion de extractos bancarios.
+──🗂️ backend/schemas/registro/	    -  Esquema geograficos para crear terceros.  
+──🗂️ backend/schemas/dian/	        -  Conciliacion modulo Dian.   
 
-## 💼 backend/services/                -  Divide lógica de negocio de forma clara y coherente.
-### ──🗂️ backend/services/bancos/	    -  Operaciones bancarias
-### ──🗂️ backend/services/registro/    -  Encapsula toda la lógica, terceros, geográficos, etc.
-### ──🗂️ backend/services/dian/	    -  Interacción con los datos regulados por la DIAN.
+### 💼 backend/services/                -  Divide lógica de negocio de forma clara y coherente.
+──🗂️ backend/services/bancos/	    -  Operaciones bancarias
+──🗂️ backend/services/registro/    -  Encapsula toda la lógica, terceros, geográficos, etc.
+──🗂️ backend/services/dian/	    -  Interacción con los datos regulados por la DIAN.
 
-## 💼 backend/tests/	               -  Es la raíz de la pruebas automáticas
-### ──🗂️ backend/tests/clientes/       -  Dependencias comunes de la API
-### ──🗂️ backend/tests/models/         -  Modelos de datos
-### ──🗂️ backend/tests/database/       -  Esquemas para validación/serialización API
+### 💼 backend/tests/	               -  Es la raíz de la pruebas automáticas
+──🗂️ backend/tests/clientes/       -  Dependencias comunes de la API
+──🗂️ backend/tests/models/         -  Modelos de datos
+──🗂️ backend/tests/database/       -  Esquemas para validación/serialización API
 
-## 💼 backend/uploads/	               -  Para guardar temporalmente los archivos (CSV, PDF, XML).
-### ──🗂️ backend/uploads/	bancos/YYYY/
-### ──🗂️ backend/uploads/	terceros/YYYY/
-### ──🗂️ backend/uploads/	emitidos/YYYY/
+### 💼 backend/uploads/	               -  Para guardar temporalmente los archivos (CSV, PDF, XML).
+──🗂️ backend/uploads/	bancos/YYYY/
+──🗂️ backend/uploads/	terceros/YYYY/
+──🗂️ backend/uploads/	emitidos/YYYY/
 
-## 💼 backend/utils/	               -  Funciones pequenas y sin conexion a la base de datos.
-
-### ──🗂️ backend/utils/archivos/pdf/	-  Funciones para leer PDFs.
-### ──🗂️ backend/utils/archivos/csv/	-  Validaciones CSV regitros de empresas y personas naturales.
-### ──🗂️ backend/utils/archivos/xml/	-  XML
-
----
-
-#             🛠️ Framework y Servidor
-
-
-## ✅ fastapi==0.115.8            - Framework web moderno para construir APIs
-## ✅ uvicorn==0.34.0             - Servidor ASGI para ejecutar FastAPI
-
-# 🗂️ ORM y Base de Datos (elige uno de los dos drivers para PostgreSQL)
-## ✅ SQLAlchemy==2.0.38          - ORM para bases de datos relacionales
-## ✅ asyncpg==0.30.0             - Driver asíncrono para PostgreSQL (recomendado)
-## ✅ psycopg2-binary==2.9.10     - Alternativa sincrónica (no necesaria si usas asyncpg)
-
-# 🛡️ Validación y Configuración
-## ✅ pydantic==2.10.6            - Validación de datos con anotaciones de tipo
-## ✅ python-dotenv==1.1.0        - Carga de variables desde .env
-
-# 💼 Herramientas de desarrollo
-## ✅ black==25.1.0               - Formateador automático de código
-## ✅ colorama==0.4.6             - Colores en terminal (útil para logs en Windows)
-
-# 🧩 Tareas asíncronas (solo si usas Celery)
-## ✅ celery==5.5.2               - Cola de tareas para trabajos en segundo plano
-## ✅ redis==5.2.1                - Broker de mensajes para Celery
-
-# 🛠️ OCR e imágenes
-## ✅ easyocr==1.7.2              - Reconocimiento de texto en imágenes
-
-# 🛠️ PDFs y texto
-## ✅ pdfplumber==0.11.6          - Extrae texto y tablas de PDFs
-## ✅ PyMuPDF==1.25.4             - Lectura y edición de PDFs
-
-# 📊 Procesamiento de datos
-## ✅ pandas==2.2.3               - Análisis y manipulación de datos tabulares
-## ✅ numpy==2.2.5                - Cálculo numérico (requerido por pandas)
-## ✅ openpyxl==3.1.5             - Lectura y escritura de archivos Excel
-
-# 📄 XML
-## ✅ xmlschema==3.2.1            - Validación y lectura de archivos XML con XSD
+### 💼 backend/utils/	               -  Funciones pequenas y sin conexion a la base de datos.
+──🗂️ backend/utils/archivos/pdf/	-  Funciones para leer PDFs.
+──🗂️ backend/utils/archivos/csv/	-  Validaciones CSV regitros de empresas y personas naturales.
+──🗂️ backend/utils/archivos/xml/	-  XML
 
 ---
 
- #                🔗  Conexión de proyecto local a GitHub
+##             🛠️ Framework y Servidor
 
-## ✅ 1. Crea un archivo .gitignore en la raíz del proyecto.
+
+### ✅ fastapi==0.115.8            - Framework web moderno para construir APIs
+── ✅ uvicorn==0.34.0             - Servidor ASGI para ejecutar FastAPI
+
+### 🗂️ ORM y Base de Datos (elige uno de los dos drivers para PostgreSQL)
+── ✅ SQLAlchemy==2.0.38          - ORM para bases de datos relacionales
+── ✅ asyncpg==0.30.0             - Driver asíncrono para PostgreSQL (recomendado)
+── ✅ psycopg2-binary==2.9.10     - Alternativa sincrónica (no necesaria si usas asyncpg)
+
+### 🛡️ Validación y Configuración
+── ✅ pydantic==2.10.6            - Validación de datos con anotaciones de tipo
+── ✅ python-dotenv==1.1.0        - Carga de variables desde .env
+
+###  💼 Herramientas de desarrollo
+── ✅ black==25.1.0               - Formateador automático de código
+── ✅ colorama==0.4.6             - Colores en terminal (útil para logs en Windows)
+
+###  🧩 Tareas asíncronas (solo si usas Celery)
+── ✅ celery==5.5.2               - Cola de tareas para trabajos en segundo plano
+── ✅ redis==5.2.1                - Broker de mensajes para Celery
+
+###  🛠️ OCR e imágenes
+── ✅ easyocr==1.7.2              - Reconocimiento de texto en imágenes
+
+###  🛠️ PDFs y texto
+── ✅ pdfplumber==0.11.6          - Extrae texto y tablas de PDFs
+── ✅ PyMuPDF==1.25.4             - Lectura y edición de PDFs
+
+###  📊 Procesamiento de datos
+── ✅ pandas==2.2.3               - Análisis y manipulación de datos tabulares
+── ✅ numpy==2.2.5                - Cálculo numérico (requerido por pandas)
+── ✅ openpyxl==3.1.5             - Lectura y escritura de archivos Excel
+
+### 📄 XML
+── ✅ xmlschema==3.2.1            - Validación y lectura de archivos XML con XSD
+
+---
+
+ ##                🔗  Conexión de proyecto local a GitHub
+
+### ✅ 1. Crea un archivo .gitignore en la raíz del proyecto.
 
 Incluye rutas comunes para ignorar archivos innecesarios:
 
-## ⚙️.gitignore
-### ──📁 .venv/
-### ──📁 node_modules/
-### ──🛠️ __pycache__/
-### ──📁.env
-### ──🛠️* .log
-### ──🛠️* .sqlite3
-### ──📁.next/
-### ──🛠️ dist/
-### ──🛠️ .vscode/
-### ──🛠️ .idea/
+### ⚙️.gitignore
+──📁 .venv/
+──📁 node_modules/
+──🛠️ __pycache__/
+──📁.env
+──🛠️* .log
+──🛠️* .sqlite3
+──📁.next/
+──🛠️ dist/
+──🛠️ .vscode/
+──🛠️ .idea/
 
 ---
 
-## ✅ 2. Inicializar el repositorio local - Si tu proyecto aún no está conectado a Git:
-### 🐍 git init
-## ✅ 3. Agrega el repositorio remoto - Esto vincula tu proyecto local al repositorio de GitHub:
-### 🐍 git remote add origin https://github.com/tu_usuario/tu_repositorio.git
-## ✅ 4. Crea y muévete a la rama principal main.
-### 🐍 git checkout -b main
-## ✅ 5. Añade los archivos y haz tu primer commit - Preparar archivos para subir
-### 🐍 git add .
-### 🐍 git commit -m "Primer commit "
-## ✅ 6. Sube tu código a GitHub -  Si tu rama local se llama main, haz:
-### 🐍 git push -u origin main
+### ✅ 2. Inicializar el repositorio local - Si tu proyecto aún no está conectado a Git:
+── 🐍 git init
+### ✅ 3. Agrega el repositorio remoto - Esto vincula tu proyecto local al repositorio de GitHub:
+── 🐍 git remote add origin https://github.com/tu_usuario/tu_repositorio.git
+### ✅ 4. Crea y muévete a la rama principal main.
+── 🐍 git checkout -b main
+### ✅ 5. Añade los archivos y haz tu primer commit - Preparar archivos para subir
+── 🐍 git add .
+── 🐍 git commit -m "Primer commit "
+### ✅ 6. Sube tu código a GitHub -  Si tu rama local se llama main, haz:
+── 🐍 git push -u origin main
 
-## ⚠️ Si da error porque el repositorio remoto ya contiene archivos:
-### 🐍git push -u origin main --force
+### ⚠️ Si da error porque el repositorio remoto ya contiene archivos:
+── 🐍git push -u origin main --force
 
 ---
 
 # 📄 Subir o actualizar el archivo README.md
 
-## ✅ 1. Verifica que el archivo está presente.
-### 🐍 git status
-## ✅ 2. Agrega el archivo README.md al staging.
-### 🐍 git add README.md
-## ✅ 3. Realiza un commit con un mensaje descriptivo.
-### 🐍 git commit -m "Agregar o actualizar README.md"
-## ✅ 4. Sube los cambios al repositorio en GitHub.
-### 🐍 git push origin main
+### ✅ 1. Verifica que el archivo está presente.
+── 🐍 git status
+### ✅ 2. Agrega el archivo README.md al staging.
+── 🐍 git add README.md
+### ✅ 3. Realiza un commit con un mensaje descriptivo.
+── 🐍 git commit -m "Agregar o actualizar README.md"
+### ✅ 4. Sube los cambios al repositorio en GitHub.
+── 🐍 git push origin main
 
-# 🟢 Confirmar en GitHub
+## 🟢 Confirmar en GitHub
 
-## ✅ README.md se muestra como descripción principal del repositorio.
-## ⚙️ .gitignore, requirements.txt y demás archivos son visibles.
-## ✅ La rama principal aparece como main.
+### ✅ README.md se muestra como descripción principal del repositorio.
+### ⚙️ .gitignore, requirements.txt y demás archivos son visibles.
+### ✅ La rama principal aparece como main.
 
 ---
 
-#                 🧠 Estructura de archivos __init__.py
+##                🧠 Estructura de archivos __init__.py
 
-## 📁 Carpetas de modelos (models/)
+### 📁 Carpetas de modelos (models/)
 
-###  backend/models/__init__.py
+backend/models/__init__.py
 
 Importamos las clases de los modelos que queremos exponer
-from .archivo_1 import Clase1
-from .archivo_2 import Clase2
+### from .archivo_1 import Clase1
+### from .archivo_2 import Clase2
 
 Controlamos qué se puede importar desde fuera
-__all__ = ["Clase1", "Clase2"]
+### __all__ = ["Clase1", "Clase2"]
 
 
-## 📁 Carpetas de routers (routers/)
+###  📁 Carpetas de routers (routers/)
 
 ###  backend/routers/__init__.py
 
 Importamos los routers definidos en otros archivos
-from .ecurso_1 import router as recurso_1_router
-from .recurso_2 import router as recurso_2_router
+### from .ecurso_1 import router as recurso_1_router
+### from .recurso_2 import router as recurso_2_router
 
 Listamos los routers para facilitar su uso desde main.py o routers principales
-__all__ = ["recurso_1_router", "recurso_2_router"]
+### __all__ = ["recurso_1_router", "recurso_2_router"]
 
 
-## 📁 Carpetas de esquemas (schemas/)
+###  📁 Carpetas de esquemas (schemas/)
 
-### backend/schemas/__init__.py
+backend/schemas/__init__.py
 
 Importamos los esquemas base, create, update, etc.
-from .archivo_1 import Clase1Base, Clase1Create
-from .archivo_2 import Clase2Base, Clase2Create
+### from .archivo_1 import Clase1Base, Clase1Create
+### from .archivo_2 import Clase2Base, Clase2Create
 
 Indicamos explícitamente qué exportamos
-__all__ = ["Clase1Base", "Clase1Create", "Clase2Base", "Clase2Create"]
+### __all__ = ["Clase1Base", "Clase1Create", "Clase2Base", "Clase2Create"]
 
 
 ## 📁 Carpetas de servicios (services/)
