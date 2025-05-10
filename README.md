@@ -26,12 +26,12 @@ Automatización contable y tributaria inteligente para empresas. Incluye módulo
 
 
 ## 📁 contaclic_core/
-###├── 📦 backend/   # Backend con FastAPI (API REST, lógica de negocio, base de datos, automatizaciones)
-###└── 💻 frontend/  # Frontend moderno en Next.js (interfaz de usuario para clientes y administrativos)
+├── 📦 backend/   # Backend con FastAPI (API REST, lógica de negocio, base de datos, automatizaciones)
+└── 💻 frontend/  # Frontend moderno en Next.js (interfaz de usuario para clientes y administrativos)
 
 ---
 
-## > Carpeta: `backend/`
+## Carpeta: `backend/`
 
 # 👋 Bienvenido al backend de Contaclic Action
 
@@ -49,32 +49,33 @@ Este backend es el núcleo que conecta procesos clave de tu operación contable 
 
 ---
 
-### Cómo iniciar
+### ⌨️ Cómo iniciar 🖱️
 
 
- # 📌 CONEXION PgAdmin 4 y Render
+ ## 📌 CONEXION PgAdmin 4 y Render
 
-## ✅ Host: Es la URL o IP de la base de datos.(Ej: dpg-xxxxxxx.render.com) - PSQL Command.
-## ✅ Port: generalmente 5432 (el puerto estándar de PostgreSQL).
-## ✅ Maintenance Database: suele ser el nombre de la base de datos principal que creaste en Render.
-## ✅ Username (Role): Es el nombre que configuraste o te asignó Render ( "DATABASE USER").
-## ✅ Password: la contraseña del usuario de base de datos.
-## ✅ Service: este campo no es obligatorio en pgAdmin. 
+### ✅ Host: Es la URL o IP de la base de datos.(Ej: dpg-xxxxxxx.render.com) - PSQL Command.
+### ✅ Port: generalmente 5432 (el puerto estándar de PostgreSQL).
+### ✅ Maintenance Database: suele ser el nombre de la base de datos principal que creaste en Render.
+### ✅ Username (Role): Es el nombre que configuraste o te asignó Render ( "DATABASE USER").
+### ✅ Password: la contraseña del usuario de base de datos.
+### ✅ Service: este campo no es obligatorio en pgAdmin. 
 
-# 🧹 Gestión del Entorno Virtual y Dependencias
+## 🧹 Gestión del Entorno Virtual y Dependencias
 
-## ✅ Eliminar el Entorno Virtual Antiguo (Limpieza):
-### 📥 Remove-Item -Path .venv -Recurse -Force       -  Si la carpeta se llama .venv
-## ✅ Crear un Nuevo Entorno Virtual:
-### 📥 python -m venv .venv                          -  Esto crea una nueva carpeta '.venv'
-## ✅ Activar el Nuevo Entorno Virtual:         
-### 📥 .\.venv\Scripts\activate                      -  Si la carpeta se llama .venv
-## ✅ Verificar listado en la raiz del proyecto. Instalar las Dependencias:
-### 📥 pip install -r requirements.txt
-## ✅ Para verificar todas las librerías instaladas específicamente en ese entorno.
-### 📥 pip freeze                                    -  Muestra el contenido de requirements.txt.
+### ✅ Eliminar el Entorno Virtual Antiguo (Limpieza):
+📥 Remove-Item -Path .venv -Recurse -Force       -  Si la carpeta se llama .venv
+### ✅ Crear un Nuevo Entorno Virtual:
+📥 python -m venv .venv                          -  Esto crea una nueva carpeta '.venv'
+### ✅ Activar el Nuevo Entorno Virtual:         
+📥 .\.venv\Scripts\activate                      -  Si la carpeta se llama .venv
+### ✅ Verificar listado en la raiz del proyecto. Instalar las Dependencias:
+📥 pip install -r requirements.txt
+### ✅ Para verificar todas las librerías instaladas específicamente en ese entorno.
+📥 pip freeze                                    -  Muestra el contenido de requirements.txt.
 
 ---
+
                     
 #                     🏗️ RESUMEN ESTRUCTURA - BACKEND
 
@@ -83,10 +84,10 @@ Este backend es el núcleo que conecta procesos clave de tu operación contable 
 ### └──📝 backend/main.py	           -   Archivo principal que levanta la API
 
 ## 💼backend/bot/	                   -   Bot de Telegram con Python. "usuario automático".
-### ──🗂️ backend/bot/main.py	        -   Punto de entrada principal.
-### ──🗂️ backend/bot/handlers/	        -   Manejadores de comandos.
-### ──🗂️ backend/bot/middlewares/      -   Hacer logs por usuario, o limitar por roles, etc.
-### ──🗂️ backend/bot/services/	        -   Conexión con backend.
+──🗂️ backend/bot/main.py	        -   Punto de entrada principal.
+──🗂️ backend/bot/handlers/	        -   Manejadores de comandos.
+──🗂️ backend/bot/middlewares/      -   Hacer logs por usuario, o limitar por roles, etc.
+──🗂️ backend/bot/services/	        -   Conexión con backend.
 
 ## 💼 backend/clientes/	               -   Libreto de operaciones.
 ### ──🗂️ backend/cliente/bancos/       -   Operaciones bancarias.
