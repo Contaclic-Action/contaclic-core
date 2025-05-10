@@ -83,24 +83,24 @@ Este backend es el núcleo que conecta procesos clave de tu operación contable 
 #                     🏗️ RESUMEN ESTRUCTURA - BACKEND
 
 
-### 💼 backend/	                       -   Contiene la app principal, routers registrados, CORS.
-└──📝 backend/main.py	               -   Archivo principal que levanta la API
+### 💼 backend/	                        -   Contiene la app principal, routers registrados, CORS.
+└──📝 backend/main.py	                -   Archivo principal que levanta la API
 
-### 💼backend/bot/	                   -   Bot de Telegram con Python. "usuario automático".
-└── 🗂️ backend/bot/main.py	            -   Punto de entrada principal.
-── 🗂️ backend/bot/handlers/	        -   Manejadores de comandos.
-── 🗂️ backend/bot/middlewares/         -   Hacer logs por usuario, o limitar por roles, etc.
-── 🗂️ backend/bot/services/	        -   Conexión con backend.
+### 💼backend/bot/	                    -   Bot de Telegram con Python. "usuario automático".
+└── 🗂️ backend/bot/main.py	             -   Punto de entrada principal.
+─── 🗂️ backend/bot/handlers/	         -   Manejadores de comandos.
+─── 🗂️ backend/bot/middlewares/         -   Hacer logs por usuario, o limitar por roles, etc.
+─── 🗂️ backend/bot/services/	         -   Conexión con backend.
 
-### 💼 backend/clientes/	           -   Libreto de operaciones.
-└── 🗂️ backend/cliente/bancos/         -   Operaciones bancarias.
-── 🗂️ backend/cliente/recibidos/       -   Modulo recibido Dian. Todo sobre compras.
-── 🗂️ backend/cliente/terceros/	    -   Manejo de usuarios y terceros.
+### 💼 backend/clientes/	            -   Libreto de operaciones.
+└── 🗂️ backend/cliente/bancos/          -   Operaciones bancarias.
+─── 🗂️ backend/cliente/recibidos/       -   Modulo recibido Dian. Todo sobre compras.
+─── 🗂️ backend/cliente/terceros/	     -   Manejo de usuarios y terceros.
 
 ### 💼 backend/contabilidad/	        -   Lógica de negocio central
 └── 🗂️ backend/contabilidad/models/	 -   Modelos de datos
-── 🗂️ backend/contabilidad/routers/     -   Endpoints (listar, crear, actualizar, etc.)
-── 🗂️ backend/contabilidad/schemas/     -   Esquemas expuestos en API
+─── 🗂️ backend/contabilidad/routers/    -   Endpoints (listar, crear, actualizar, etc.)
+─── 🗂️ backend/contabilidad/schemas/    -   Esquemas expuestos en API
 
 ### 💼 backend/core/	                -   Configuraciones de la app
 └── 📝 /core/config.py	                -   Gestiona la configuración externa.
@@ -113,38 +113,38 @@ Este backend es el núcleo que conecta procesos clave de tu operación contable 
 
 ### 💼 backend/models/	                -   Modelos SQLAlchemy para representar las tablas. 
 └── 🗂️ backend/models/registro/	     -   Modelos geograficos para crear terceros.
-── 🗂️ backend/models/dian/	             -   Conciliacion modulo Dian.
-── 🗂️ backend/models/bancos/	         -   Conciciliacion de extractos bancarios.
+─── 🗂️ backend/models/dian/	             -   Conciliacion modulo Dian.
+─── 🗂️ backend/models/bancos/	         -   Conciciliacion de extractos bancarios.
 
 ### 💼 backend/routers/	                -   Carpeta general de endpoints FastAPI organizados por dominio.
 └── 🗂️ backend/routers/registro/   
-── 🗂️ backend/routers/dian/
-── 🗂️ backend/routers/bancos/
+─── 🗂️ backend/routers/dian/
+─── 🗂️ backend/routers/bancos/
 
 ### 💼 backend/schemas/	                -  Aqui defines los esquemas de entrada/salida (Pydantic) 
 └── 🗂️ backend/schemas/bancos/	         -  Conciciliacion de extractos bancarios.
-── 🗂️ backend/schemas/registro/	     -  Esquema geograficos para crear terceros.  
-── 🗂️ backend/schemas/dian/	         -  Conciliacion modulo Dian.   
+─── 🗂️ backend/schemas/registro/	     -  Esquema geograficos para crear terceros.  
+─── 🗂️ backend/schemas/dian/	         -  Conciliacion modulo Dian.   
 
 ### 💼 backend/services/                -  Divide lógica de negocio de forma clara y coherente.
 └── 🗂️ backend/services/bancos/	     -  Operaciones bancarias
-── 🗂️ backend/services/registro/        -  Encapsula toda la lógica, terceros, geográficos, etc.
-── 🗂️ backend/services/dian/	         -  Interacción con los datos regulados por la DIAN.
+─── 🗂️ backend/services/registro/       -  Encapsula toda la lógica, terceros, geográficos, etc.
+─── 🗂️ backend/services/dian/	         -  Interacción con los datos regulados por la DIAN.
 
 ### 💼 backend/tests/	                -  Es la raíz de la pruebas automáticas
 └── 🗂️ backend/tests/clientes/          -  Dependencias comunes de la API
-── 🗂️ backend/tests/models/             -  Modelos de datos
-── 🗂️ backend/tests/database/           -  Esquemas para validación/serialización API
+─── 🗂️ backend/tests/models/            -  Modelos de datos
+─── 🗂️ backend/tests/database/          -  Esquemas para validación/serialización API
 
 ### 💼 backend/uploads/	                -  Para guardar temporalmente los archivos (CSV, PDF, XML).
 └── 🗂️ backend/uploads/	bancos/YYYY/
-── 🗂️ backend/uploads/	terceros/YYYY/
-── 🗂️ backend/uploads/	emitidos/YYYY/
+─── 🗂️ backend/uploads/	terceros/YYYY/
+─── 🗂️ backend/uploads/	emitidos/YYYY/
 
 ### 💼 backend/utils/	                -  Funciones pequenas y sin conexion a la base de datos.
 └── 🗂️ backend/utils/archivos/pdf/	     -  Funciones para leer PDFs.
-── 🗂️ backend/utils/archivos/csv/	     -  Validaciones CSV regitros de empresas y personas naturales.
-── 🗂️ backend/utils/archivos/xml/	     -  XML
+─── 🗂️ backend/utils/archivos/csv/	     -  Validaciones CSV regitros de empresas y personas naturales.
+─── 🗂️ backend/utils/archivos/xml/	     -  XML
 
 ---
 
@@ -152,36 +152,36 @@ Este backend es el núcleo que conecta procesos clave de tu operación contable 
 
 
 └── ✅ fastapi==0.115.8            - Framework web moderno para construir APIs
-── ✅ uvicorn==0.34.0             - Servidor ASGI para ejecutar FastAPI
+─── ✅ uvicorn==0.34.0             - Servidor ASGI para ejecutar FastAPI
 
 ### 🗂️ ORM y Base de Datos (elige uno de los dos drivers para PostgreSQL)
 └── ✅ SQLAlchemy==2.0.38          - ORM para bases de datos relacionales
-── ✅ asyncpg==0.30.0             - Driver asíncrono para PostgreSQL (recomendado)
-── ✅ psycopg2-binary==2.9.10     - Alternativa sincrónica (no necesaria si usas asyncpg)
+─── ✅ asyncpg==0.30.0             - Driver asíncrono para PostgreSQL (recomendado)
+─── ✅ psycopg2-binary==2.9.10     - Alternativa sincrónica (no necesaria si usas asyncpg)
 
 ### 🛡️ Validación y Configuración
 └── ✅ pydantic==2.10.6            - Validación de datos con anotaciones de tipo
-── ✅ python-dotenv==1.1.0        - Carga de variables desde .env
+─── ✅ python-dotenv==1.1.0        - Carga de variables desde .env
 
 ###  💼 Herramientas de desarrollo
 └── ✅ black==25.1.0               - Formateador automático de código
-── ✅ colorama==0.4.6             - Colores en terminal (útil para logs en Windows)
+─── ✅ colorama==0.4.6             - Colores en terminal (útil para logs en Windows)
 
 ###  🧩 Tareas asíncronas (solo si usas Celery)
 └── ✅ celery==5.5.2               - Cola de tareas para trabajos en segundo plano
-── ✅ redis==5.2.1                - Broker de mensajes para Celery
+─── ✅ redis==5.2.1                - Broker de mensajes para Celery
 
 ###  🛠️ OCR e imágenes
 └──✅ easyocr==1.7.2              - Reconocimiento de texto en imágenes
 
 ###  🛠️ PDFs y texto
 └── ✅ pdfplumber==0.11.6          - Extrae texto y tablas de PDFs
-── ✅ PyMuPDF==1.25.4             - Lectura y edición de PDFs
+─── ✅ PyMuPDF==1.25.4             - Lectura y edición de PDFs
 
 ###  📊 Procesamiento de datos
 └── ✅ pandas==2.2.3               - Análisis y manipulación de datos tabulares
-── ✅ numpy==2.2.5                - Cálculo numérico (requerido por pandas)
-── ✅ openpyxl==3.1.5             - Lectura y escritura de archivos Excel
+─── ✅ numpy==2.2.5                - Cálculo numérico (requerido por pandas)
+─── ✅ openpyxl==3.1.5             - Lectura y escritura de archivos Excel
 
 ### 📄 XML
 └── ✅ xmlschema==3.2.1            - Validación y lectura de archivos XML con XSD
@@ -195,16 +195,16 @@ Este backend es el núcleo que conecta procesos clave de tu operación contable 
 Incluye rutas comunes para ignorar archivos innecesarios:
 
 ### ⚙️.gitignore
-└──📁 .venv/
-──📁 node_modules/
-──🛠️ __pycache__/
-──📁.env
-──🛠️* .log
-──🛠️* .sqlite3
-──📁.next/
-──🛠️ dist/
-──🛠️ .vscode/
-──🛠️ .idea/
+└── 📁 .venv/
+─── 📁 node_modules/
+─── 🛠️ __pycache__/
+─── 📁.env
+─── 🛠️* .log
+─── 🛠️* .sqlite3
+─── 📁.next/
+─── 🛠️ dist/
+─── 🛠️ .vscode/
+─── 🛠️ .idea/
 
 ### ✅ 2. Inicializar el repositorio local - Si tu proyecto aún no está conectado a Git:
 └── 🐍 git init
@@ -214,7 +214,7 @@ Incluye rutas comunes para ignorar archivos innecesarios:
 └── 🐍 git checkout -b main
 ### ✅ 5. Añade los archivos y haz tu primer commit - Preparar archivos para subir
 └── 🐍 git add .
-──  🐍 git commit -m "Primer commit "
+─── 🐍 git commit -m "Primer commit "
 ### ✅ 6. Sube tu código a GitHub -  Si tu rama local se llama main, haz:
 └── 🐍 git push -u origin main
 
@@ -238,8 +238,8 @@ Incluye rutas comunes para ignorar archivos innecesarios:
 # 💻 Confirmar en GitHub
 
 ### └── ✅ README.md se muestra como descripción principal del repositorio.
-### ── ⚙️ .gitignore, requirements.txt y demás archivos son visibles.
-### ── ✅ La rama principal aparece como main.
+### ─── ⚙️ .gitignore, requirements.txt y demás archivos son visibles.
+### ─── ✅ La rama principal aparece como main.
 
 ---
 
@@ -301,8 +301,8 @@ Incluye rutas comunes para ignorar archivos innecesarios:
 ## ❌ Carpetas que no necesitan __init__.py
 
 └── 📁 Carpetas de uploads - solo para guardar archivos temporales.
-── 📁 Carpetas de tests - si no planeas importar sus módulos desde fuera.
-── 📁 Carpetas docs/, temp/ o cualquier carpeta de recursos.
+─── 📁 Carpetas de tests - si no planeas importar sus módulos desde fuera.
+─── 📁 Carpetas docs/, temp/ o cualquier carpeta de recursos.
            
 ---
 
@@ -314,27 +314,26 @@ DATABASE_URL=postgresql://usuario:contrasena@host:puerto/basededatos
 
 ## ✅ database/connection.py
 
-🔄 Usa python-dotenv para cargar la variable del .env:
+### 🔄 Usa python-dotenv para cargar la variable del .env:
 
-### `from sqlalchemy import create_engine`
-### `from sqlalchemy.orm import sessionmaker`
-### `from backend.database.base_class import Base`
-### `from dotenv import load_dotenv`
-### `import os`
+`from sqlalchemy import create_engine`
+`from sqlalchemy.orm import sessionmaker`
+`from backend.database.base_class import Base`
+`from dotenv import load_dotenv`
+`import os`
+   `load_dotenv()` - Cargar variables del .env
 
-###   `load_dotenv()` - Cargar variables del .env
+   `DATABASE_URL = os.getenv("DATABASE_URL")`
 
-###   `DATABASE_URL = os.getenv("DATABASE_URL")`
+   `engine = create_engine(DATABASE_URL)`
+   `SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)`
 
-###   `engine = create_engine(DATABASE_URL)`
-###   `SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)`
-
-### `def get_db():`
-###     `db = SessionLocal()`
-###    `try:`
-###        `yield db`
-###     `finally:`
-###         `db.close()`
+ `def get_db():`
+     `db = SessionLocal()`
+    `try:`
+        `yield db`
+    `finally:`
+         `db.close()`
 
 ## ✅ DATABASE / base_class.py
 
@@ -441,7 +440,7 @@ DATABASE_URL=postgresql://usuario:contrasena@host:puerto/basededatos
  `🔐 CORS middleware`
  `app.add_middleware(`
      `CORSMiddleware,`
-     `allow_origins=["http://localhost:3000"],  # puedes poner "*" si estás en desarrollo`
+     `allow_origins=["http://localhost:3000"]`
      `allow_credentials=True,`
      `allow_methods=["*"],`
      `allow_headers=["*"],`
@@ -451,35 +450,35 @@ DATABASE_URL=postgresql://usuario:contrasena@host:puerto/basededatos
 
 `app.include_router(terceros.router, prefix="/api")`
 
-## ✅ "Crear tablas:" python -m backend.db.create_tables
+# ✅ "Crear tablas:" python -m backend.db.create_tables
 
 
-### 📁 Explicación de la organización:
+## 📁 Explicación de la organización:
 
 ### 📁 database/ - Conexion a la base de datos. Aqui generalmente se encuentra:
 └──🔹El motor de conexion (engine).
-──🔹La sesion (SessionLocal).
-──🔹El archivo create_tables.py para inicializar las tablas a partir de los modelos.
+───🔹La sesion (SessionLocal).
+───🔹El archivo create_tables.py para inicializar las tablas a partir de los modelos.
 
 ### 📁 models/ - Define las clases de SQLAlchemy que representan tus tablas en la base de datos. Cada clase equivale a una tabla y define sus campos, relaciones y restricciones.
 
 ### 📁 schemas/ - Contiene las clases de Pydantic, utilizadas para:
 └──🔹Validar los datos de entrada y salida de la API.
-──🔹Separar los modelos internos de la base de datos de las estructuras que se exponen al cliente.
-──🔹Esto mejora la seguridad y mantiene el codigo desacoplado.
+───🔹Separar los modelos internos de la base de datos de las estructuras que se exponen al cliente.
+───🔹Esto mejora la seguridad y mantiene el codigo desacoplado.
 
 ### 📁 routers/ - Endpoints de la API agrupados por funcionalidad. Cada archivo corresponde a un recurso o entidad y contiene:
 └──🔹Las rutas (@router.get, @router.post, etc.).
-──🔹La logica de interaccion entre los schemas y los modelos.
+───🔹La logica de interaccion entre los schemas y los modelos.
 
 ### ⚙️ __init__.py en cada carpeta - Este archivo hace que la carpeta sea reconocida como un paquete de Python y permite importaciones limpias entre modulos. Ayuda a mantener una estructura modular y organizada.
 
 ### 📝 main.py - Es el punto de entrada de la aplicacion FastAPI. Aqui se:
 └──🔹Crea la instancia principal de la app (app = FastAPI()).
-──🔹Se agregan middlewares (como CORS).
-──🔹Se incluyen los routers definidos en routers/.
-──🔹Se levanta el servidor si se ejecuta directamente.
-──🔹Beneficios de esta Estructura.
+───🔹Se agregan middlewares (como CORS).
+───🔹Se incluyen los routers definidos en routers/.
+───🔹Se levanta el servidor si se ejecuta directamente.
+───🔹Beneficios de esta Estructura.
 
 ---
 
