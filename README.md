@@ -33,17 +33,19 @@ Automatización contable y tributaria inteligente para empresas. Incluye módulo
 
 ### Carpeta: `backend/`
 
+
 # 👋 Bienvenido al backend de Contaclic Action
 
 Este sistema ha sido desarrollado para automatizar y gestionar de forma eficiente, modular y escalable toda la información tributaria, contable y documental de tu empresa, tanto a nivel nacional como municipal.
 
 Aquí encontrarás:
 
-### 🧩 Todos los módulos funcionales del sistema (tributación, facturación, bancos, informes, etc.).
+### 🧩 Todos los módulos funcionales del sistema (tributación, facturación, bancos, etc.).
 
 ### ⚙️ Detalles técnicos de su estructura, lógica de negocio y herramientas integradas.
 
 ### 🚀 Mejoras continuas orientadas a rendimiento, usabilidad y escalabilidad.
+
 
 Este backend es el núcleo que conecta procesos clave de tu operación contable con automatizaciones inteligentes y una visión clara del estado financiero.
 
@@ -54,24 +56,24 @@ Este backend es el núcleo que conecta procesos clave de tu operación contable 
 
  ## 📌 CONEXION PgAdmin 4 y Render.
 
-✅ Host: Es la URL o IP de la base de datos.(Ej: dpg-xxxxxxx.render.com) - PSQL Command.
-✅ Port: generalmente 5432 (el puerto estándar de PostgreSQL).
-✅ Maintenance Database: suele ser el nombre de la base de datos principal que creaste en Render.
-✅ Username (Role): Es el nombre que configuraste o te asignó Render ( "DATABASE USER").
-✅ Password: la contraseña del usuario de base de datos.
-✅ Service: este campo no es obligatorio en pgAdmin. 
+1. Host: Es la URL o IP de la base de datos.(Ej: dpg-xxxxxxx.render.com) - PSQL Command.
+2. Port: generalmente 5432 (el puerto estándar de PostgreSQL).
+3. Maintenance Database: suele ser el nombre de la base de datos principal que creaste en Render.
+4. Username (Role): Es el nombre que configuraste o te asignó Render ( "DATABASE USER").
+5. Password: la contraseña del usuario de base de datos.
+6. Service: este campo no es obligatorio en pgAdmin. 
 
 ## 🧹 Gestión del Entorno Virtual y Dependencias
 
-✅ Eliminar el Entorno Virtual Antiguo (Limpieza):
+1. Eliminar el Entorno Virtual Antiguo (Limpieza):
 ### 📥 Remove-Item -Path .venv -Recurse -Force       -  Si la carpeta se llama .venv
-✅ Crear un Nuevo Entorno Virtual:
+2. Crear un Nuevo Entorno Virtual:
 ### 📥 python -m venv .venv                          -  Esto crea una nueva carpeta '.venv'
-✅ Activar el Nuevo Entorno Virtual:         
+3. Activar el Nuevo Entorno Virtual:         
 ### 📥 .\.venv\Scripts\activate                      -  Si la carpeta se llama .venv
-✅ Verificar listado en la raiz del proyecto. Instalar las Dependencias:
+4. Verificar listado en la raiz del proyecto. Instalar las Dependencias:
 ### 📥 pip install -r requirements.txt
-✅ Para verificar todas las librerías instaladas específicamente en ese entorno.
+5. Para verificar todas las librerías instaladas específicamente en ese entorno.
 ### 📥 pip freeze                                    -  Muestra el contenido de requirements.txt.
 
 ---
