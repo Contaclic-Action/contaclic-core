@@ -1,5 +1,5 @@
              
-# 💻 **Contaclic Action – Plataforma Contable y Tributaria** 🚀
+# 💻 **Contaclic Action – Plataforma Contable y Tributaria.** 
  
 
 Automatización contable y tributaria inteligente para empresas. Incluye módulos de carga masiva, validación de datos, creación de terceros, lectura de RUT en PDF, conciliación de compras y más.
