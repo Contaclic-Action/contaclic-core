@@ -10,17 +10,44 @@ Automatización contable y tributaria inteligente para empresas. Incluye módulo
 
 | Tecnología              | Descripción                                |
 | --------------------    |-------------------------------------       |
-| Python 3.10+            | Backend con FastAPI + SQLAlchemy           |
+| Python 3.11+            | Backend con FastAPI + SQLAlchemy           |
 | PostgreSQL              | Base de datos                              |
 | React / Next.js 14+     | Frontend visual                            |
 | Tailwind CSS            | Estilos rápidos y modernos                 |
 | React Query             | Manejo de peticiones y estado              |
 | Redis                   | Mensajería y almacenamiento en caché       |
 | Power BI                | Visualización datos y paneles interactivos |
+| Pytest                  |                                            |
+| Docker & Docker Compose |                                            |
 | Pydantic V2             | Validación robusta (backend)               |
 
 
 ---
+
+## 🚀 Entorno virtual
+
+    python -m venv .venv
+    source .venv/bin/activate  - Linux/macOS
+    .venv\Scripts\activate     - Windows
+
+
+## 📝 Instalar dependencias
+
+ pip install -r requirements.txt
+
+
+## ⚙️ Levantar con Docker
+
+ docker-compose up --build
+
+## 🧪 Correr pruebas
+
+ pytest src/tests
+
+📌 Las pruebas están organizadas en src/tests/. Se utiliza pytest para cobertura y ejecución.
+
+---
+
 
 # 🗂️ Estructura general
 
@@ -41,7 +68,7 @@ Este sistema ha sido desarrollado para automatizar y gestionar de forma eficient
 
 Aquí encontrarás:
 
-### 🧩 Todos los módulos funcionales del sistema (tributación, facturación, bancos, etc.).
+### 🧩 Todos los módulos funcionales del sistema (tributación, Compras, bancos, etc.).
 
 ### ⚙️ Detalles técnicos de su estructura, lógica de negocio y herramientas integradas.
 
@@ -79,34 +106,54 @@ Este backend es el núcleo que conecta procesos clave de tu operación contable 
 
 ---
 
+# 🏛️ Contaclic Core
+
+**Contaclic Core** es el backend central de la plataforma de automatización contable. Está construido con FastAPI, Docker, pruebas automatizadas, y una estructura escalable y profesional.
                     
 #                     🏗️ RESUMEN ESTRUCTURA - BACKEND
 
+### ├── 📂 .github/         - Workflows de GitHub Actions (CI/CD)
+### ├── 📂 docs/            - Documentación general o técnica
+### ├── 📂 infrastructure/  - Archivos para despliegue (Dockerfile, docker-compose)
+### ├── 📂 src/             - Código fuente principal
+### │   ├─ app/             - Backend FastAPI (rutas, modelos, servicios, etc.)
+### │   └─ tests/           - Pruebas automatizadas
+### ├── 📂 .venv/           - Entorno virtual local (no se sube a Git)
+### ├── ⚙️ .gitignore
+### ├── 📝 CHANGELOG.md
+### ├── 📝 ci.yml           - CI principal (test/lint)
+### ├── ⚙️ CODE_OF_CONDUCT.md
+### ├── 📄 CONTRIBUTING.md
+### ├── 📄 LICENSE
+### ├── 📄 README.md
+### ├── 📄 requirements.txt
+### └── ⚙️ SECURITY.md
+
 
 ### 💼 backend/	                        -   Contiene la app principal, routers registrados, CORS.
-└──📝 backend/main.py	                -   Archivo principal que levanta la API
+└── 📄 backend/main.py	                -   Archivo principal que levanta la API
 
 ### 💼backend/bot/	                    -   Bot de Telegram con Python. "usuario automático".
 └── 🗂️ backend/bot/main.py	             -   Punto de entrada principal.
 ─── 🗂️ backend/bot/handlers/	         -   Manejadores de comandos.
 ─── 🗂️ backend/bot/middlewares/         -   Hacer logs por usuario, o limitar por roles, etc.
-─── 🗂️ backend/bot/services/	         -   Conexión con backend.
+──│ 🗂️ backend/bot/services/	         -   Conexión con backend.
 
 ### 💼 backend/clientes/	            -   Libreto de operaciones.
 └── 🗂️ backend/cliente/bancos/          -   Operaciones bancarias.
 ─── 🗂️ backend/cliente/recibidos/       -   Modulo recibido Dian. Todo sobre compras.
-─── 🗂️ backend/cliente/terceros/	     -   Manejo de usuarios y terceros.
+──│ 🗂️ backend/cliente/terceros/	     -   Manejo de usuarios y terceros.
 
 ### 💼 backend/contabilidad/	        -   Lógica de negocio central
 └── 🗂️ backend/contabilidad/models/	 -   Modelos de datos
 ─── 🗂️ backend/contabilidad/routers/    -   Endpoints (listar, crear, actualizar, etc.)
-─── 🗂️ backend/contabilidad/schemas/    -   Esquemas expuestos en API
+───│ 🗂️ backend/contabilidad/schemas/    -   Esquemas expuestos en API
 
 ### 💼 backend/core/	                -   Configuraciones de la app
-└── 📝 /core/config.py	                -   Gestiona la configuración externa.
+└── 📄 /core/config.py	                -   Gestiona la configuración externa.
 
 ### 💼 backend/database/	            -   Configuracion de la base de datos.  
-└── 📝 /database/connection.py	        -   Logica de conexion a PostgreSQL usando SQLAlchemy.
+└── 📄 /database/connection.py	        -   Logica de conexion a PostgreSQL usando SQLAlchemy.
 
 ### 💼 backend/integrations/            -   Módulo unificado para integraciones
 └── 🗂️ backend/integrations/auth/       -   Autenticación y tokens
@@ -114,37 +161,37 @@ Este backend es el núcleo que conecta procesos clave de tu operación contable 
 ### 💼 backend/models/	                -   Modelos SQLAlchemy para representar las tablas. 
 └── 🗂️ backend/models/registro/	     -   Modelos geograficos para crear terceros.
 ─── 🗂️ backend/models/dian/	             -   Conciliacion modulo Dian.
-─── 🗂️ backend/models/bancos/	         -   Conciciliacion de extractos bancarios.
+──│ 🗂️ backend/models/bancos/	         -   Conciciliacion de extractos bancarios.
 
 ### 💼 backend/routers/	                -   Carpeta general de endpoints FastAPI organizados por dominio.
 └── 🗂️ backend/routers/registro/   
 ─── 🗂️ backend/routers/dian/
-─── 🗂️ backend/routers/bancos/
+──│ 🗂️ backend/routers/bancos/
 
 ### 💼 backend/schemas/	                -  Aqui defines los esquemas de entrada/salida (Pydantic) 
 └── 🗂️ backend/schemas/bancos/	         -  Conciciliacion de extractos bancarios.
 ─── 🗂️ backend/schemas/registro/	     -  Esquema geograficos para crear terceros.  
-─── 🗂️ backend/schemas/dian/	         -  Conciliacion modulo Dian.   
+──│ 🗂️ backend/schemas/dian/	         -  Conciliacion modulo Dian.   
 
 ### 💼 backend/services/                -  Divide lógica de negocio de forma clara y coherente.
 └── 🗂️ backend/services/bancos/	     -  Operaciones bancarias
 ─── 🗂️ backend/services/registro/       -  Encapsula toda la lógica, terceros, geográficos, etc.
-─── 🗂️ backend/services/dian/	         -  Interacción con los datos regulados por la DIAN.
+──│ 🗂️ backend/services/dian/	         -  Interacción con los datos regulados por la DIAN.
 
 ### 💼 backend/tests/	                -  Es la raíz de la pruebas automáticas
 └── 🗂️ backend/tests/clientes/          -  Dependencias comunes de la API
 ─── 🗂️ backend/tests/models/            -  Modelos de datos
-─── 🗂️ backend/tests/database/          -  Esquemas para validación/serialización API
+──│ 🗂️ backend/tests/database/          -  Esquemas para validación/serialización API
 
 ### 💼 backend/uploads/	                -  Para guardar temporalmente los archivos (CSV, PDF, XML).
 └── 🗂️ backend/uploads/	bancos/YYYY/
 ─── 🗂️ backend/uploads/	terceros/YYYY/
-─── 🗂️ backend/uploads/	emitidos/YYYY/
+──│ 🗂️ backend/uploads/	emitidos/YYYY/
 
 ### 💼 backend/utils/	                -  Funciones pequenas y sin conexion a la base de datos.
 └── 🗂️ backend/utils/archivos/pdf/	     -  Funciones para leer PDFs.
 ─── 🗂️ backend/utils/archivos/csv/	     -  Validaciones CSV regitros de empresas y personas naturales.
-─── 🗂️ backend/utils/archivos/xml/	     -  XML
+──│ 🗂️ backend/utils/archivos/xml/	     -  XML
 
 ---
 
@@ -152,36 +199,36 @@ Este backend es el núcleo que conecta procesos clave de tu operación contable 
 
 
 └── ✅ fastapi==0.115.8            - Framework web moderno para construir APIs
-─── ✅ uvicorn==0.34.0             - Servidor ASGI para ejecutar FastAPI
+──│ ✅ uvicorn==0.34.0             - Servidor ASGI para ejecutar FastAPI
 
 ### 🗂️ ORM y Base de Datos (elige uno de los dos drivers para PostgreSQL)
 └── ✅ SQLAlchemy==2.0.38          - ORM para bases de datos relacionales
 ─── ✅ asyncpg==0.30.0             - Driver asíncrono para PostgreSQL (recomendado)
-─── ✅ psycopg2-binary==2.9.10     - Alternativa sincrónica (no necesaria si usas asyncpg)
+──│ ✅ psycopg2-binary==2.9.10     - Alternativa sincrónica (no necesaria si usas asyncpg)
 
 ### 🛡️ Validación y Configuración
 └── ✅ pydantic==2.10.6            - Validación de datos con anotaciones de tipo
-─── ✅ python-dotenv==1.1.0        - Carga de variables desde .env
+──│ ✅ python-dotenv==1.1.0        - Carga de variables desde .env
 
 ###  💼 Herramientas de desarrollo
 └── ✅ black==25.1.0               - Formateador automático de código
-─── ✅ colorama==0.4.6             - Colores en terminal (útil para logs en Windows)
+──│ ✅ colorama==0.4.6             - Colores en terminal (útil para logs en Windows)
 
 ###  🧩 Tareas asíncronas (solo si usas Celery)
 └── ✅ celery==5.5.2               - Cola de tareas para trabajos en segundo plano
-─── ✅ redis==5.2.1                - Broker de mensajes para Celery
+──│ ✅ redis==5.2.1                - Broker de mensajes para Celery
 
 ###  🛠️ OCR e imágenes
-└──✅ easyocr==1.7.2              - Reconocimiento de texto en imágenes
+└── ✅ easyocr==1.7.2              - Reconocimiento de texto en imágenes
 
 ###  🛠️ PDFs y texto
 └── ✅ pdfplumber==0.11.6          - Extrae texto y tablas de PDFs
-─── ✅ PyMuPDF==1.25.4             - Lectura y edición de PDFs
+──│ ✅ PyMuPDF==1.25.4             - Lectura y edición de PDFs
 
 ###  📊 Procesamiento de datos
 └── ✅ pandas==2.2.3               - Análisis y manipulación de datos tabulares
 ─── ✅ numpy==2.2.5                - Cálculo numérico (requerido por pandas)
-─── ✅ openpyxl==3.1.5             - Lectura y escritura de archivos Excel
+──│ ✅ openpyxl==3.1.5             - Lectura y escritura de archivos Excel
 
 ### 📄 XML
 └── ✅ xmlschema==3.2.1            - Validación y lectura de archivos XML con XSD
@@ -204,7 +251,7 @@ Incluye rutas comunes para ignorar archivos innecesarios:
 ─── 📁.next/
 ─── 🛠️ dist/
 ─── 🛠️ .vscode/
-─── 🛠️ .idea/
+──│ 🛠️ .idea/
 
 ### ✅ 2. Inicializar el repositorio local - Si tu proyecto aún no está conectado a Git:
 └── 🐍 git init
@@ -214,7 +261,7 @@ Incluye rutas comunes para ignorar archivos innecesarios:
 └── 🐍 git checkout -b main
 ### ✅ 5. Añade los archivos y haz tu primer commit - Preparar archivos para subir
 └── 🐍 git add .
-─── 🐍 git commit -m "Primer commit "
+──│ 🐍 git commit -m "Primer commit "
 ### ✅ 6. Sube tu código a GitHub -  Si tu rama local se llama main, haz:
 └── 🐍 git push -u origin main
 
@@ -239,7 +286,7 @@ Incluye rutas comunes para ignorar archivos innecesarios:
 
 ### └── ✅ README.md se muestra como descripción principal del repositorio.
 ### ─── ⚙️ .gitignore, requirements.txt y demás archivos son visibles.
-### ─── ✅ La rama principal aparece como main.
+### ──│ ✅ La rama principal aparece como main.
 
 ---
 
@@ -302,7 +349,7 @@ Incluye rutas comunes para ignorar archivos innecesarios:
 
 └── 📁 Carpetas de uploads - solo para guardar archivos temporales.
 ─── 📁 Carpetas de tests - si no planeas importar sus módulos desde fuera.
-─── 📁 Carpetas docs/, temp/ o cualquier carpeta de recursos.
+──│ 📁 Carpetas docs/, temp/ o cualquier carpeta de recursos.
            
 ---
 
@@ -465,11 +512,11 @@ DATABASE_URL=postgresql://usuario:contrasena@host:puerto/basededatos
 ### 📁 schemas/ - Contiene las clases de Pydantic, utilizadas para:
 └──🔹Validar los datos de entrada y salida de la API.
 ───🔹Separar los modelos internos de la base de datos de las estructuras que se exponen al cliente.
-───🔹Esto mejora la seguridad y mantiene el codigo desacoplado.
+──│🔹Esto mejora la seguridad y mantiene el codigo desacoplado.
 
 ### 📁 routers/ - Endpoints de la API agrupados por funcionalidad. Cada archivo corresponde a un recurso o entidad y contiene:
 └──🔹Las rutas (@router.get, @router.post, etc.).
-───🔹La logica de interaccion entre los schemas y los modelos.
+──│🔹La logica de interaccion entre los schemas y los modelos.
 
 ### ⚙️ __init__.py en cada carpeta - Este archivo hace que la carpeta sea reconocida como un paquete de Python y permite importaciones limpias entre modulos. Ayuda a mantener una estructura modular y organizada.
 
@@ -478,7 +525,7 @@ DATABASE_URL=postgresql://usuario:contrasena@host:puerto/basededatos
 ───🔹Se agregan middlewares (como CORS).
 ───🔹Se incluyen los routers definidos en routers/.
 ───🔹Se levanta el servidor si se ejecuta directamente.
-───🔹Beneficios de esta Estructura.
+──│🔹Beneficios de esta Estructura.
 
 ---
 
@@ -509,7 +556,7 @@ El uso de un patron uniforme en toda la aplicacion reduce errores, facilita la c
  ### ⬜ Integraciones.
 
  ## 👨‍💼 Autor
- Yecid – GitHub | Contaclic.com (contaclic.co)
+ Yecid – GitHub | Contaclic.com (contaclic.pro)
 
  ## ⚖️ Licencia
 
