@@ -23,73 +23,73 @@ Gracias por tu interés en contribuir. Este documento establece un flujo de trab
 
 Incluye rutas comunes para ignorar archivos innecesarios:
 
-### ⚙️.gitignore
-└── 📁 .venv/
-─── 📁 node_modules/
-─── 🛠️ __pycache__/
-─── 📁.env
-─── 🛠️* .log
-─── 🛠️* .sqlite3
-─── 📁.next/
-─── 🛠️ dist/
-─── 🛠️ .vscode/
-──│ 🛠️ .idea/
+### ├── ⚙️.gitignore
+### ├── 📁 .venv/
+### ├── 📁 node_modules/
+### ├── 🛠️ __pycache__/
+### ├── 📁.env
+### ├── 🛠️* .log
+### ├── 🛠️* .sqlite3
+### ├── 📁.next/
+### ├── 🛠️ dist/
+### ├── 🛠️ .vscode/
+### └── 🛠️ .idea/
 
-### ✅ 2. Inicializar el repositorio local - Si tu proyecto aún no está conectado a Git:
-└── 🐍 git init
-### ✅ 3. Agrega el repositorio remoto - Esto vincula tu proyecto local al repositorio de GitHub:
-└── 🐍 git remote add origin https://github.com/tu_usuario/tu_repositorio.git
-### ✅ 4. Crea y muévete a la rama principal main.
-└── 🐍 git checkout -b main
-### ✅ 5. Añade los archivos y haz tu primer commit - Preparar archivos para subir
-└── 🐍 git add .
-──│ 🐍 git commit -m "Primer commit "
-### ✅ 6. Sube tu código a GitHub -  Si tu rama local se llama main, haz:
-└── 🐍 git push -u origin main
+2. Inicializar el repositorio local - Si tu proyecto aún no está conectado a Git:
+🐍 git init
+3. Agrega el repositorio remoto - Esto vincula tu proyecto local al repositorio de GitHub:
+🐍 git remote add origin https://github.com/tu_usuario/tu_repositorio.git
+4. Crea y muévete a la rama principal main.
+🐍 git checkout -b main
+5. Añade los archivos y haz tu primer commit - Preparar archivos para subir
+🐍 git add .
+🐍 git commit -m "Primer commit "
+6. Sube tu código a GitHub -  Si tu rama local se llama main, haz:
+ 🐍 git push -u origin main
 
 ### ⚠️ Si da error porque el repositorio remoto ya contiene archivos:
-└── 🐍git push -u origin main --force
+🐍 git push -u origin main --force
 
 ---
 
 # 📄 Subir o actualizar el archivo README.md
 
-### ✅ 1. Verifica que el archivo está presente.
-└── 🐍 git status
-### ✅ 2. Agrega el archivo README.md al staging.
-└── 🐍 git add README.md
-### ✅ 3. Realiza un commit con un mensaje descriptivo.
-└── 🐍 git commit -m "Agregar o actualizar README.md"
-### ✅ 4. Sube los cambios al repositorio en GitHub.
-└── 🐍 git push origin main
+1. Verifica que el archivo está presente.
+🐍 git status
+2. Agrega el archivo README.md al staging.
+ 🐍 git add README.md
+3. Realiza un commit con un mensaje descriptivo.
+git commit -m "Agregar o actualizar README.md"
+4. Sube los cambios al repositorio en GitHub.
+🐍 git push origin main
 
 
-# 💻 Confirmar en GitHub
+## 💻 Confirmar en GitHub.
 
-### └── ✅ README.md se muestra como descripción principal del repositorio.
-### ─── ⚙️ .gitignore, requirements.txt y demás archivos son visibles.
-### ──│ ✅ La rama principal aparece como main.
+
+###  ✅ README.md se muestra como descripción principal del repositorio.
+###  ⚙️ .gitignore, requirements.txt y demás archivos son visibles.
+###  ✅ La rama principal aparece como main.
 
 ---
 
 ## 🛠️ Configuración local
 
-1. Clona el repositorio: https://github.com/Contaclic-Action/contaclic-core.git
+1.  Clona el repositorio: https://github.com/Contaclic-Action/contaclic-core.git 
 
 
-2. 🚀 Entorno virtual
+2.  Entorno virtual 
 
     python -m venv .venv
     source .venv/bin/activate  - Linux/macOS
     .venv\Scripts\activate     - Windows
 
-
-3. 📝 Instalar dependencias
+3. Instalar dependencias
 
  pip install -r requirements.txt
 
 
-4. 🐳 Levantar entorno con Docker
+4. Levantar entorno con Docker
 
  docker-compose up --build
 
@@ -98,7 +98,7 @@ Incluye rutas comunes para ignorar archivos innecesarios:
 
  pytest src/tests
 
-🔹Usa pytest-cov para cobertura:
+✅ Usa pytest-cov para cobertura:
 
  pytest --cov=src/app src/tests - Para cobertura
 
@@ -114,15 +114,10 @@ Incluye rutas comunes para ignorar archivos innecesarios:
 - Trabaja en ramas separadas:
 
 🔹feat/ → nueva funcionalidad
-
 🔹fix/ → corrección de bug
-
 🔹refactor/ → cambios internos sin alterar funcionalidad
-
 🔹test/ → pruebas
-
 🔹docs/ → documentación
-
 🔹chore/ → tareas de mantenimiento
 
 ### 💬 Estilo de Commit
@@ -156,7 +151,7 @@ Si vas a enviar un `Pull Request`:
 - Describe claramente qué hace el cambio
 
 
-## ✅ Revisión de código
+## 🔎 Revisión de código
 
 Antes de subir tu código:
 
@@ -176,111 +171,98 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 
  ## 📌 CONEXION PgAdmin 4 y Render.
 
-1. 💾 Host: Es la URL o IP de la base de datos.(Ej: dpg-xxxxxxx.render.com) - PSQL Command.
-2. 💾 Port: generalmente 5432 (el puerto estándar de PostgreSQL).
-3. 💾 Maintenance Database: suele ser el nombre de la base de datos principal que creaste en Render.
-4. 💾 Username (Role): Es el nombre que configuraste o te asignó Render ( "DATABASE USER").
-5. 💾 Password: la contraseña del usuario de base de datos.
-6. 💾 Service: este campo no es obligatorio en pgAdmin. 
+1. Host: Es la URL o IP de la base de datos.(Ej: dpg-xxxxxxx.render.com) - PSQL Command.
+2. Port: generalmente 5432 (el puerto estándar de PostgreSQL).
+3. Maintenance Database: suele ser el nombre de la base de datos principal que creaste en Render.
+4. Username (Role): Es el nombre que configuraste o te asignó Render ( "DATABASE USER").
+5. Password: la contraseña del usuario de base de datos.
+6. Service: este campo no es obligatorio en pgAdmin. 
 
 ## 🧹 Gestión del Entorno Virtual y Dependencias
 
-1. ▶️ Eliminar el Entorno Virtual Antiguo (Limpieza):
+▶️ Eliminar el Entorno Virtual Antiguo (Limpieza):
 ### 📥 Remove-Item -Path .venv -Recurse -Force   ➡️ Si la carpeta se llama .venv
-2. ▶️ Crear un Nuevo Entorno Virtual:
+▶️ Crear un Nuevo Entorno Virtual:
 ### 📥 python -m venv .venv                      ➡️  Esto crea una nueva carpeta '.venv'
-3. ▶️ Activar el Nuevo Entorno Virtual:         
+▶️ Activar el Nuevo Entorno Virtual:         
 ### 📥 .\.venv\Scripts\activate                  ➡️  Si la carpeta se llama .venv
-4. ▶️ Verificar listado en la raiz del proyecto. Instalar las Dependencias:
+▶️ Verificar listado en la raiz del proyecto. Instalar las Dependencias:
 ### 📥 pip install -r requirements.txt
-5. ▶️ Para verificar todas las librerías instaladas específicamente en ese entorno.
+▶️ Para verificar todas las librerías instaladas específicamente en ese entorno.
 ### 📥 pip freeze                                ➡️  Muestra el contenido de requirements.txt.
 
 ---
 
 #                     🏗️ RESUMEN ESTRUCTURA 
 
-### ├── 📂 .github/                 - Workflows de GitHub Actions (CI/CD).
-### │   ├── 📝 ci.yml               - CI principal (test/lint).
-### │   └── 📝 workflows            - Pruebas o despliegue automático.
-### ├── 📂 .venv/                   - Entorno virtual local (no se sube a Git).
-### ├── 📂 docs/                    - Documentación general o técnica.
-### │   ├── 🐳 Dockerfile           - Build para producción.
-### │   └── 🐳 docker-compose.yml   - Servicios acoplados.
-### ├── 📂 infrastructure/          - Archivos para despliegue (Dockerfile, docker-compose).
-### ├── 📂 src/                     - Código fuente principal.
-### │   ├─ 📂 app/                  - Módulo principal.          
-### │   │  └── 📂 backend/          - Backend FastAPI (rutas, modelos, servicios, etc.).
-### │   └─ 📂 tests/                - Pruebas automatizadas.
-### ├── ⚙️ .gitignore               - Para excluir archivos temporales.
-### ├── 📝 CHANGELOG.md             - Historial de cambios.
-### ├── ⚙️ CODE_OF_CONDUCT.md       - Reglas de comportamiento.
-### ├── 📄 CONTRIBUTING.md          - Guía para colaboradores.
-### ├── 📄 LICENSE                  - Tipo de licencia.
-### ├── 📄 README.md                - Descripción del proyecto.
-### ├── 📄 requirements.txt         - Dependencias de producción.
-### └── 🔒 SECURITY.md              - Cómo reportar vulnerabilidades.
+- ├── 📂 .github/                 - Workflows de GitHub Actions (CI/CD).
+-     ├── 📝 ci.yml               - CI principal (test/lint).
+-     └── 📝 workflows            - Pruebas o despliegue automático.
+- ├── 📂 .venv/                   - Entorno virtual local (no se sube a Git).
+- ├── 📂 docs/                    - Documentación general o técnica.
+-     ├── 🐳 Dockerfile           - Build para producción.
+-     └── 🐳 docker-compose.yml   - Servicios acoplados.
+- ├── 📂 infrastructure/          - Archivos para despliegue (Dockerfile, docker-compose).
+- ├── 📂 src/                     - Código fuente principal.
+-     ├── 📂 tests/               - Pruebas automatizadas.
+-     └──  📂 app/                - Módulo principal.          
+-          └── 📂 backend/        - Backend FastAPI (rutas, modelos, servicios, etc.).
+- ├── ⚙️ .gitignore               - Para excluir archivos temporales.
+- ├── 📝 CHANGELOG.md             - Historial de cambios.
+- ├── ⚙️ CODE_OF_CONDUCT.md       - Reglas de comportamiento.
+- ├── 📄 CONTRIBUTING.md          - Guía para colaboradores.
+- ├── 📄 LICENSE                  - Tipo de licencia.
+- ├── 📄 README.md                - Descripción del proyecto.
+- ├── 📄 requirements.txt         - Dependencias de producción.
+- └── 🔒 SECURITY.md              - Cómo reportar vulnerabilidades.
 
 # 🏛️ BACKEND
 
 ### 💼 backend/	                        -   Contiene la app principal, routers registrados, CORS.
 └── 📄 backend/main.py	                -   Archivo principal que levanta la API
-
 ### 💼backend/bot/	                    -   Bot de Telegram con Python. "usuario automático".
 └── 🗂️ backend/bot/main.py	             -   Punto de entrada principal.
 ─── 🗂️ backend/bot/handlers/	         -   Manejadores de comandos.
 ─── 🗂️ backend/bot/middlewares/         -   Hacer logs por usuario, o limitar por roles, etc.
 ──│ 🗂️ backend/bot/services/	         -   Conexión con backend.
-
 ### 💼 backend/clientes/	            -   Libreto de operaciones.
 └── 🗂️ backend/cliente/bancos/          -   Operaciones bancarias.
 ─── 🗂️ backend/cliente/recibidos/       -   Modulo recibido Dian. Todo sobre compras.
 ──│ 🗂️ backend/cliente/terceros/	     -   Manejo de usuarios y terceros.
-
 ### 💼 backend/contabilidad/	        -   Lógica de negocio central
 └── 🗂️ backend/contabilidad/models/	 -   Modelos de datos
 ─── 🗂️ backend/contabilidad/routers/    -   Endpoints (listar, crear, actualizar, etc.)
 ───│ 🗂️ backend/contabilidad/schemas/    -   Esquemas expuestos en API
-
 ### 💼 backend/core/	                -   Configuraciones de la app
 └── 📄 /core/config.py	                -   Gestiona la configuración externa.
-
 ### 💼 backend/database/	            -   Configuracion de la base de datos.  
 └── 📄 /database/connection.py	        -   Logica de conexion a PostgreSQL usando SQLAlchemy.
-
 ### 💼 backend/integrations/            -   Módulo unificado para integraciones
 └── 🗂️ backend/integrations/auth/       -   Autenticación y tokens
-
 ### 💼 backend/models/	                -   Modelos SQLAlchemy para representar las tablas. 
 └── 🗂️ backend/models/registro/	     -   Modelos geograficos para crear terceros.
 ─── 🗂️ backend/models/dian/	             -   Conciliacion modulo Dian.
 ──│ 🗂️ backend/models/bancos/	         -   Conciciliacion de extractos bancarios.
-
 ### 💼 backend/routers/	                -   Carpeta general de endpoints FastAPI organizados por dominio.
 └── 🗂️ backend/routers/registro/   
 ─── 🗂️ backend/routers/dian/
 ──│ 🗂️ backend/routers/bancos/
-
 ### 💼 backend/schemas/	                -  Aqui defines los esquemas de entrada/salida (Pydantic) 
 └── 🗂️ backend/schemas/bancos/	         -  Conciciliacion de extractos bancarios.
 ─── 🗂️ backend/schemas/registro/	     -  Esquema geograficos para crear terceros.  
 ──│ 🗂️ backend/schemas/dian/	         -  Conciliacion modulo Dian.   
-
 ### 💼 backend/services/                -  Divide lógica de negocio de forma clara y coherente.
 └── 🗂️ backend/services/bancos/	     -  Operaciones bancarias
 ─── 🗂️ backend/services/registro/       -  Encapsula toda la lógica, terceros, geográficos, etc.
 ──│ 🗂️ backend/services/dian/	         -  Interacción con los datos regulados por la DIAN.
-
 ### 💼 backend/tests/	                -  Es la raíz de la pruebas automáticas
 └── 🗂️ backend/tests/clientes/          -  Dependencias comunes de la API
 ─── 🗂️ backend/tests/models/            -  Modelos de datos
 ──│ 🗂️ backend/tests/database/          -  Esquemas para validación/serialización API
-
 ### 💼 backend/uploads/	                -  Para guardar temporalmente los archivos (CSV, PDF, XML).
 └── 🗂️ backend/uploads/	bancos/YYYY/
 ─── 🗂️ backend/uploads/	terceros/YYYY/
 ──│ 🗂️ backend/uploads/	emitidos/YYYY/
-
 ### 💼 backend/utils/	                -  Funciones pequenas y sin conexion a la base de datos.
 └── 🗂️ backend/utils/archivos/pdf/	     -  Funciones para leer PDFs.
 ─── 🗂️ backend/utils/archivos/csv/	     -  Validaciones CSV regitros de empresas y personas naturales.
@@ -288,13 +270,13 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 
 ---
 
-#                       📋 PROCESO CREACION DE TABLAS
+##                       📋 PROCESO CREACION DE TABLAS
 
-## ✅ .env
+- ✅ .env
 
 DATABASE_URL=postgresql://usuario:contrasena@host:puerto/basededatos
 
-## ✅ database/connection.py
+- ✅ database/connection.py
 
 ### 🔄 Usa python-dotenv para cargar la variable del .env:
 
