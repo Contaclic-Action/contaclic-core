@@ -36,19 +36,19 @@ Incluye rutas comunes para ignorar archivos innecesarios:
 - ┣ 🛠️ .idea/
 
 2. Inicializar el repositorio local - Si tu proyecto aún no está conectado a Git:
-🐍 git init
+-  git init
 3. Agrega el repositorio remoto - Esto vincula tu proyecto local al repositorio de GitHub:
-🐍 git remote add origin https://github.com/tu_usuario/tu_repositorio.git
+-  git remote add origin https://github.com/tu_usuario/tu_repositorio.git
 4. Crea y muévete a la rama principal main.
-🐍 git checkout -b main
+-  git checkout -b main
 5. Añade los archivos y haz tu primer commit - Preparar archivos para subir
-🐍 git add .
-🐍 git commit -m "Primer commit "
+-  git add .
+-  git commit -m "Primer commit "
 6. Sube tu código a GitHub -  Si tu rama local se llama main, haz:
- 🐍 git push -u origin main
+-  git push -u origin main
 
 ### ⚠️ Si da error porque el repositorio remoto ya contiene archivos:
-🐍 git push -u origin main --force
+-  git push -u origin main --force
 
 ---
 
