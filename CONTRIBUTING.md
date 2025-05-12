@@ -18,7 +18,7 @@ Gracias por tu interés en contribuir. Este documento establece un flujo de trab
 
 ---
 
-##                🔗  Conexión de proyecto local a GitHub
+## 🔗 Conexión de proyecto local a GitHub
 
 ### ✅ Crea un archivo .gitignore en la raíz del proyecto.
 
@@ -39,38 +39,47 @@ Incluye rutas comunes para ignorar archivos innecesarios:
 
 ---
 
-### ✅ Inicializar el repositorio local - Si tu proyecto aún no está conectado a Git:
+- Inicializar el repositorio local - Si tu proyecto aún no está conectado a Git:
   `git init`
-### ✅ Agrega el repositorio remoto - Esto vincula tu proyecto local al repositorio de GitHub:
+- Agrega el repositorio remoto - Esto vincula tu proyecto local al repositorio de GitHub:
   `git remote add origin https://github.com/tu_usuario/tu_repositorio.git`
-### ✅ Crea y muévete a la rama principal main.
+- Crea y muévete a la rama principal main.
   `git checkout -b main`
-### ✅ Añade los archivos y haz tu primer commit - Preparar archivos para subir
+- Añade los archivos y haz tu primer commit - Preparar archivos para subir
   `git add .`
   `git commit -m "Primer commit "`
-### ✅ Sube tu código a GitHub -  Si tu rama local se llama main, haz:
+- Sube tu código a GitHub -  Si tu rama local se llama main, haz:
   `git push -u origin main`
 
-### ⚠️ Si da error porque el repositorio remoto ya contiene archivos:
+- ⚠️ Si da error porque el repositorio remoto ya contiene archivos:
 -  `git push -u origin main --force`
 
 ---
 
-# 📄 Subir o actualizar el archivo README.md
+ ## ✅ Actualizar el README.md en GitHub.
 
-### ✅ Verifica que el archivo está presente.
-  `git status`
-### ✅ Agrega el archivo README.md al staging.
-  `git add README.md`
-### ✅ Realiza un commit con un mensaje descriptivo.
-  `git commit -m "Agregar o actualizar README.md"`
-### ✅ Sube los cambios al repositorio en GitHub.
-  `git push origin main`
+1. Añadir los cambios del archivo README.md.
+`git add README.md`
+2. Hacer el commit con un mensaje claro.
+`git commit -m "Actualizar contenido del README.md"`
+3. Subir los cambios al repositorio remoto. 
+ `git push origin main`
+
+
+## ✅ Subir o actualizar los cambios del proyecto en GitHub.
+
+1. Verifica qué archivos han cambiado.
+ `git status`
+2. Añade todos los archivos modificados 
+ `git add .`
+3. Haz un commit con un mensaje descriptivo 
+ `git commit -m "Actualizar estructura y archivos del proyecto"`
+4. Sube los cambios al repositorio remoto 
+ `git push origin main`
 
 ---
 
-## 💻 Confirmar en GitHub.
-
+## 🖥️ Confirmar en GitHub.
 
 - ✅ README.md se muestra como descripción principal del repositorio.
 - ⚙️ .gitignore, requirements.txt y demás archivos son visibles.
@@ -108,7 +117,9 @@ Incluye rutas comunes para ignorar archivos innecesarios:
  `pytest --cov=src/app src/tests` - Para cobertura
 
 
-📌 Las pruebas están organizadas en src/tests/. Se utiliza pytest para cobertura y ejecución.
+📌 Las pruebas están organizadas en 🗂️ src/tests/. 
+
+Se utiliza pytest para cobertura y ejecución.
 
 ---
 
@@ -212,88 +223,88 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 
 ---
 
-#                     🏗️ RESUMEN ESTRUCTURA 
+# 🏗️ RESUMEN ESTRUCTURA 
 
-### ┣ 📂 .github/                 - Workflows de GitHub Actions (CI/CD).
--       ┣ 📝 ci.yml               - CI principal (test/lint).
--       ┣ 📝 workflows            - Pruebas o despliegue automático.
-### ┣ 📂 .venv/                   - Entorno virtual local (no se sube a Git).
-### ┣ 📂 docs/                    - Documentación general o técnica.
--       ┣ 🐳 Dockerfile           - Build para producción.
--       ┣ 🐳 docker-compose.yml   - Servicios acoplados.
-### ┣ 📂 infrastructure/          - Archivos para despliegue (Dockerfile, docker-compose).
-### ┣ 📂 src/                     - Código fuente principal.
--       ┣ 📂 tests/               - Pruebas automatizadas.
--       ┣ 📂 app/                 - Módulo principal.          
--           ┣ 📂 backend/         - Backend FastAPI (rutas, modelos, servicios, etc.).
-### ┣ ⚙️ .gitignore               - Para excluir archivos temporales.
-### ┣ 📝 CHANGELOG.md             - Historial de cambios.
-### ┣ 📝 CODE_OF_CONDUCT.md       - Reglas de comportamiento.
-### ┣ 📄 CONTRIBUTING.md          - Guía para colaboradores.
-### ┣ 📄 LICENSE                  - Tipo de licencia.
-### ┣ 📄 README.md                - Descripción del proyecto.
-### ┣ 📄 requirements.txt         - Dependencias de producción.
-### ┗ 🔒 SECURITY.md              - Cómo reportar vulnerabilidades.
+- ┣ 📂 .github/                 ▶️  Workflows de GitHub Actions (CI/CD).
+       ┣ 📝 ci.yml              ▶️  CI principal (test/lint).
+       ┣ 📝 workflows           ▶️  Pruebas o despliegue automático.
+- ┣ 📂 .venv/                   ▶️  Entorno virtual local (no se sube a Git).
+- ┣ 📂 docs/                    ▶️  Documentación general o técnica.
+       ┣ 🐳 Dockerfile          ▶️  Build para producción.
+       ┣ 🐳 docker-compose.yml  ▶️  Servicios acoplados.
+- ┣ 📂 infrastructure/          ▶️  Archivos para despliegue (Dockerfile, docker-compose).
+- ┣ 📂 src/                     ▶️  Código fuente principal.
+       ┣ 📂 tests/              ▶️  Pruebas automatizadas.
+       ┣ 📂 app/                ▶️  Módulo principal.          
+           ┣ 📂 backend/        ▶️  Backend FastAPI (rutas, modelos, servicios, etc.).
+- ┣ ⚙️ .gitignore               ▶️  Para excluir archivos temporales.
+- ┣ 📝 CHANGELOG.md             ▶️  Historial de cambios.
+- ┣ 📝 CODE_OF_CONDUCT.md       ▶️  Reglas de comportamiento.
+- ┣ 📄 CONTRIBUTING.md          ▶️  Guía para colaboradores.
+- ┣ 📄 LICENSE                  ▶️  Tipo de licencia.
+- ┣ 📄 README.md                ▶️  Descripción del proyecto.
+- ┣ 📄 requirements.txt         ▶️  Dependencias de producción.
+- ┗ 🔒 SECURITY.md              ▶️  Cómo reportar vulnerabilidades.
 
 ---
 
-# 🏛️ BACKEND
+## 🏛️ BACKEND
 
 - ┣ 💼 **backend/**	                ▶️   Contiene la app principal, routers registrados, CORS.
-─── 📄 main.py	                    ▶️   Archivo principal que levanta la API.
+┃ ┣ 📄 main.py	                    ▶️   Archivo principal que levanta la API.
 - ┣ 💼 **backend/bot/**	            ▶️   Bot de Telegram con Python. "usuario automático".
-─── 🗂️ main.py	                     ▶️   Punto de entrada principal.
-─── 🗂️ handlers/	                 ▶️   Manejadores de comandos.
-─── 🗂️ middlewares/                 ▶️   Hacer logs por usuario, o limitar por roles, etc.
-──┃ 🗂️ services/	                 ▶️   Conexión con backend.
+┃ ┣ 🗂️ main.py	                     ▶️   Punto de entrada principal.
+┃ ┣🗂️ handlers/	                 ▶️   Manejadores de comandos.
+┃ ┣ 🗂️ middlewares/                 ▶️   Hacer logs por usuario, o limitar por roles, etc.
+┃ ┣ 🗂️ services/	                 ▶️   Conexión con backend.
 - ┣ 💼 **backend/clientes/**	    ▶️   Libreto de operaciones.
-─── 🗂️ bancos/                      ▶️   Operaciones bancarias.
-─── 🗂️ recibidos/                   ▶️   Modulo recibido Dian. Todo sobre compras.
-─── 🗂️ terceros/	                 ▶️   Manejo de usuarios y terceros.
+┃ ┣ 🗂️ bancos/                      ▶️   Operaciones bancarias.
+┃ ┣ 🗂️ recibidos/                   ▶️   Modulo recibido Dian. Todo sobre compras.
+┃ ┣ 🗂️ terceros/	                 ▶️   Manejo de usuarios y terceros.
 - ┣ 💼 **backend/contabilidad/**	▶️   Lógica de negocio central.
-─── 🗂️ models/	                     ▶️   Modelos de datos.
-─── 🗂️ routers/                     ▶️   Endpoints (listar, crear, actualizar, etc.).
-─── 🗂️ schemas/                     ▶️   Esquemas expuestos en API.
+┃ ┣ 🗂️ models/	                     ▶️   Modelos de datos.
+┃ ┣ 🗂️ routers/                     ▶️   Endpoints (listar, crear, actualizar, etc.).
+┃ ┣ 🗂️ schemas/                     ▶️   Esquemas expuestos en API.
 - ┣ 💼 **backend/core/**	        ▶️   Configuraciones de la app.
-─── 📄 config.py	                ▶️   Gestiona la configuración externa.
+┃ ┣ 📄 config.py	                ▶️   Gestiona la configuración externa.
 - ┣ 💼 **backend/database/**	    ▶️   Configuracion de la base de datos.  
-─── 📄 connection.py	            ▶️   Logica de conexion a PostgreSQL usando SQLAlchemy.
+┃ ┣ 📄 connection.py	            ▶️   Logica de conexion a PostgreSQL usando SQLAlchemy.
 - ┣ 💼 **backend/integrations/**    ▶️   Módulo unificado para integraciones.
-─── 🗂️ auth/                        ▶️   Autenticación y tokens.
+┃ ┣ 🗂️ auth/                        ▶️   Autenticación y tokens.
 - ┣ 💼 **backend/models/**	        ▶️   Modelos SQLAlchemy para representar las tablas. 
-─── 🗂️ registro/	                 ▶️   Modelos geograficos para crear terceros.
-─── 🗂️ dian/	                     ▶️   Conciliacion modulo Dian.
-─── 🗂️ bancos/	                     ▶️   Conciciliacion de extractos bancarios.
+┃ ┣ 🗂️ registro/	                 ▶️   Modelos geograficos para crear terceros.
+┃ ┣ 🗂️ dian/	                     ▶️   Conciliacion modulo Dian.
+┃ ┣ 🗂️ bancos/	                     ▶️   Conciciliacion de extractos bancarios.
 - ┣ 💼 **backend/routers/**	        ▶️   Carpeta general de endpoints FastAPI organizados por dominio.
-─── 🗂️ registro/   
-─── 🗂️ dian/
-─── 🗂️ bancos/
+┃ ┣ 🗂️ registro/   
+┃ ┣ 🗂️ dian/
+┃ ┣ 🗂️ bancos/
 - ┣ 💼 **backend/schemas/**	        ▶️  Aqui defines los esquemas de entrada/salida (Pydantic).
-─── 🗂️ bancos/	                     ▶️  Conciciliacion de extractos bancarios.
-─── 🗂️ registro/	                 ▶️  Esquema geograficos para crear terceros.  
-─── 🗂️ dian/	                     ▶️  Conciliacion modulo Dian.   
+┃ ┣ 🗂️ bancos/	                     ▶️  Conciciliacion de extractos bancarios.
+┃ ┣ 🗂️ registro/	                 ▶️  Esquema geograficos para crear terceros.  
+┃ ┣ 🗂️ dian/	                     ▶️  Conciliacion modulo Dian.   
 - ┣ 💼 **backend/services/**        ▶️  Divide lógica de negocio de forma clara y coherente.
-─── 🗂️ bancos/	                     ▶️  Operaciones bancarias.
-─── 🗂️ registro/                    ▶️  Encapsula toda la lógica, terceros, geográficos, etc.
-─── 🗂️ dian/	                     ▶️  Interacción con los datos regulados por la DIAN.
+┃ ┣ 🗂️ bancos/	                     ▶️  Operaciones bancarias.
+┃ ┣ 🗂️ registro/                    ▶️  Encapsula toda la lógica, terceros, geográficos, etc.
+┃ ┣ 🗂️ dian/	                     ▶️  Interacción con los datos regulados por la DIAN.
 - ┣ 💼 **backend/tests/**	        ▶️  Es la raíz de la pruebas automáticas.
-─── 🗂️ clientes/                    ▶️  Dependencias comunes de la API.
-─── 🗂️ models/                      ▶️  Modelos de datos.
-─── 🗂️ database/                    ▶️  Esquemas para validación/serialización API.
+┃ ┣ 🗂️ clientes/                    ▶️  Dependencias comunes de la API.
+┃ ┣ 🗂️ models/                      ▶️  Modelos de datos.
+┃ ┣ 🗂️ database/                    ▶️  Esquemas para validación/serialización API.
 - ┣ 💼 **backend/uploads/**	        ▶️  Para guardar temporalmente los archivos (CSV, PDF, XML).
-─── 🗂️ uploads/bancos/YYYY/
-─── 🗂️ uploads/terceros/YYYY/
-─── 🗂️ uploads/emitidos/YYYY/
+┃ ┣ 🗂️ uploads/bancos/YYYY/
+┃ ┣ 🗂️ uploads/terceros/YYYY/
+┃ ┣ 🗂️ uploads/emitidos/YYYY/
 - ┗ 💼 **backend/utils/**	         ▶️  Funciones pequenas y sin conexion a la base de datos.
-─── 🗂️ archivos/pdf/	              ▶️  Funciones para leer PDFs.
-─── 🗂️ archivos/csv/	              ▶️  Validaciones CSV regitros de empresas y personas naturales.
-─── 🗂️ archivos/xml/	              ▶️  XML.
+┃ ┣ 🗂️ archivos/pdf/	              ▶️  Funciones para leer PDFs.
+┃ ┣ 🗂️ archivos/csv/	              ▶️  Validaciones CSV regitros de empresas y personas naturales.
+┃ ┣ 🗂️ archivos/xml/	              ▶️  XML.
 
 ---
 
-##                🧠 **Estructura de archivos __init__.py**
+##                🧠 **Estructura de archivos `__init__.py`**
 
-### 🗂️ DATABASE / __init__.py
+### 🗂️ DATABASE / `__init__.py`
 
 `from .connection import engine, SessionLocal, get_db`
 `from .base_class import Base`
@@ -365,7 +376,7 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 
 ---
 
-### ❌ Carpetas que no necesitan __init__.py
+### ❌ Carpetas que no necesitan `__init__.py`
 
 - 📁 Carpetas de uploads - solo para guardar archivos temporales.
 - 📁 Carpetas de tests - si no planeas importar sus módulos desde fuera.
@@ -373,7 +384,7 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
            
 ---
 
-##                       📋 PROCESO CREACION DE TABLAS
+## 📋 PROCESO CREACION DE TABLAS
 
 ### 🗂️ .env
 
