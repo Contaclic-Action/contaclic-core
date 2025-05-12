@@ -39,25 +39,16 @@ Incluye rutas comunes para ignorar archivos innecesarios:
 
 ---
 
-## ✅ Inicializar el repositorio local - Si tu proyecto aún no está conectado a Git: 
-
+1. ✅ Inicializar el repositorio local - Si tu proyecto aún no está conectado a Git: 
  ▶ `git init`
-
-## ✅ Agrega el repositorio remoto - Esto vincula tu proyecto local al repositorio de GitHub:
-
+2. ✅ Agrega el repositorio remoto - Esto vincula tu proyecto local al repositorio de GitHub:
  ▶ `git remote add origin https://github.com/tu_usuario/tu_repositorio.git`
-
-## ✅ Crea y muévete a la rama principal main.
-
+3. ✅ Crea y muévete a la rama principal main.
  ▶ `git checkout -b main`
-
-## ✅ Añade los archivos y haz tu primer commit - Preparar archivos para subir
-
+4. ✅ Añade los archivos y haz tu primer commit - Preparar archivos para subir
  ▶ `git add .`
  ▶ `git commit -m "Primer commit "`
-
-## ✅ Sube tu código a GitHub -  Si tu rama local se llama main, haz:
-
+5. ✅ Sube tu código a GitHub -  Si tu rama local se llama main, haz:
  ▶ `git push -u origin main`
 
 - ⚠️ Si da error porque el repositorio remoto ya contiene archivos:
@@ -210,24 +201,19 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 
 ## 🧹 Gestión del Entorno Virtual y Dependencias
 
- - ✅ Eliminar el Entorno Virtual Antiguo (Limpieza):
-
+ 1. ✅ Eliminar el Entorno Virtual Antiguo (Limpieza).
   ▶ `Remove-Item -Path .venv -Recurse -Force`   -  Si la carpeta se llama .venv
 
- - ✅ Crear un Nuevo Entorno Virtual:
-
+ 2. ✅ Crear un Nuevo Entorno Virtual.
   ▶ `python -m venv .venv`                       -  Esto crea una nueva carpeta '.venv'
 
- - ✅ Activar el Nuevo Entorno Virtual: 
-
+ 3. ✅ Activar el Nuevo Entorno Virtual. 
   ▶ `.\.venv\Scripts\activate`                   -  Si la carpeta se llama .venv
 
- - ✅ Verificar listado en la raiz del proyecto. Instalar las Dependencias:
+ 4. ✅ Verificar listado en la raiz del proyecto. 
+  ▶ `pip install -r requirements.txt`            -  Instalar las Dependencias.
 
-  ▶ `pip install -r requirements.txt`
-
- - ✅ Para verificar todas las librerías instaladas específicamente en ese entorno.
-
+ 5. ✅ Para verificar todas las librerías instaladas específicamente en ese entorno.
   ▶ `pip freeze`                                 -  Muestra el contenido de requirements.txt.
 
 ---
