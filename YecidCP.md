@@ -8,27 +8,27 @@ Técnico Auxiliar Contable y Tecnólogo en Contabilidad y Finanzas, con más de 
 
 - Compras: Ingreso de facturas de compras electrónicas, documentos soporte, notas crédito, gastos nacionales y del exterior. Manejo de inventario.
 
-- Ventas: Registro de facturas de ventas electrónicas y notas crédito electrónicas.
+- **Ventas:** Registro de facturas de ventas electrónicas y notas crédito electrónicas.
 
-- Legalizaciones: Anticipos a colaboradores y caja menor.
+- **Legalizaciones:** Anticipos a colaboradores y caja menor.
 
-- Bancos: Comprobantes de egreso, recibos de ingreso, gastos con tarjeta de crédito, manejo de sucursal virtual empresarial.
+- **Bancos:** Comprobantes de egreso, recibos de ingreso, gastos con tarjeta de crédito, manejo de sucursal virtual empresarial.
 
-- Nómina: Elaboración de nómina electrónica, afiliaciones y retiros en seguridad social.
+- **Nómina:** Elaboración de nómina electrónica, afiliaciones y retiros en seguridad social.
 
-- Varios: Apoyo a gerencia, atención a clientes y proveedores, solicitud de certificados, archivo documental.
+- **Varios:** Apoyo a gerencia, atención a clientes y proveedores, solicitud de certificados, archivo documental.
 
 ### 📅 Cierre Contable:
 
-- Conciliación DIAN: Comparación de facturación electrónica emitida y recibida.
+- **Conciliación DIAN:** Comparación de facturación electrónica emitida y recibida.
 
-- Conciliación Bancaria: Revisión de movimientos bancarios y tarjetas de crédito.
+- **Conciliación Bancaria:** Revisión de movimientos bancarios y tarjetas de crédito.
 
-- Nómina Electrónica: Conciliación de pagos, seguridad social y provisiones laborales.
+- **Nómina Electrónica:** Conciliación de pagos, seguridad social y provisiones laborales.
 
-- Impuestos: Declaraciones de retención en la fuente, IVA y otros tributos.
+- **Impuestos:** Declaraciones de retención en la fuente, IVA y otros tributos.
 
-- Revisión de balances y estados financieros.
+- **Revisión de balances y estados financieros.**
 
 ### 🔧 Habilidades y Enfoque :
 

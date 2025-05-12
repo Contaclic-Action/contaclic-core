@@ -336,12 +336,12 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 
 -  🎯 Importamos los esquemas base, create, update, etc.
 
-`from .archivo_1 import Clase1Base, Clase1Create`
-`from .archivo_2 import Clase2Base, Clase2Create`
+`from .archivo_1 import Clase1Base, Clase1Create, Clase1Update`
+`from .archivo_2 import Clase2Base, Clase2Create, Clase1Update`
 
 -  Indicamos explícitamente qué exportamos.
 
-`__all__ = ["Clase1Base", "Clase1Create", "Clase2Base", "Clase2Create"]`
+`__all__ = ["Clase1Base", "Clase1Create", "Clase1Update" "Clase2Base", "Clase2Create" "Clase2Update"]`
 
 ---
 
