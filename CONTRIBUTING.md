@@ -221,17 +221,17 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 # 🏗️ RESUMEN ESTRUCTURA 
 
 - ┣ 📂 .github/                 ▶️  Workflows de GitHub Actions (CI/CD).
-       ┣ 📝 ci.yml              ▶️  CI principal (test/lint).
-       ┣ 📝 workflows           ▶️  Pruebas o despliegue automático.
+       ┃┣ 📝 ci.yml             ▶️  CI principal (test/lint).
+       ┃┣ 📝 workflows          ▶️  Pruebas o despliegue automático.
 - ┣ 📂 .venv/                   ▶️  Entorno virtual local (no se sube a Git).
 - ┣ 📂 docs/                    ▶️  Documentación general o técnica.
-       ┣ 🐳 Dockerfile          ▶️  Build para producción.
-       ┣ 🐳 docker-compose.yml  ▶️  Servicios acoplados.
+       ┃┣🐳 Dockerfile          ▶️  Build para producción.
+       ┃┣ 🐳 docker-compose.yml ▶️  Servicios acoplados.
 - ┣ 📂 infrastructure/          ▶️  Archivos para despliegue (Dockerfile, docker-compose).
 - ┣ 📂 src/                     ▶️  Código fuente principal.
-       ┣ 📂 tests/              ▶️  Pruebas automatizadas.
-       ┣ 📂 app/                ▶️  Módulo principal.          
-           ┣ 📂 backend/        ▶️  Backend FastAPI (rutas, modelos, servicios, etc.).
+       ┃┣ 📂 tests/             ▶️  Pruebas automatizadas.
+       ┃┣ 📂 app/               ▶️  Módulo principal.          
+           ┃┣ 📂 backend/       ▶️  Backend FastAPI (rutas, modelos, servicios, etc.).
 - ┣ ⚙️ .gitignore               ▶️  Para excluir archivos temporales.
 - ┣ 📝 CHANGELOG.md             ▶️  Historial de cambios.
 - ┣ 📝 CODE_OF_CONDUCT.md       ▶️  Reglas de comportamiento.
