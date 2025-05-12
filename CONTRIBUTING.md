@@ -1,3 +1,4 @@
+---
 # Guía para Contribuir
 
 Gracias por tu interés en contribuir. Este documento establece un flujo de trabajo claro y estandarizado para mantener la calidad del código en **Contaclic Action**.
@@ -116,12 +117,12 @@ Incluye rutas comunes para ignorar archivos innecesarios:
 
 - Trabaja en ramas separadas:
 
-- feat/ → nueva funcionalidad
-- fix/ → corrección de bug
-- refactor/ → cambios internos sin alterar funcionalidad
-- test/ → pruebas
-- docs/ → documentación
-- chore/ → tareas de mantenimiento
+- `feat/ → nueva funcionalidad`
+- `fix/ → corrección de bug`
+- `refactor/ → cambios internos sin alterar funcionalidad`
+- `test/ → pruebas`
+- `docs/ → documentación`
+- `chore/ → tareas de mantenimiento`
 
 ---
 
@@ -155,6 +156,7 @@ Si vas a enviar un `Pull Request`:
 - Asegúrate de que todos los tests pasen
 - Describe claramente qué hace el cambio
 
+---
 
 ## 🔎 Revisión de código
 
@@ -183,18 +185,20 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 - Password: la contraseña del usuario de base de datos.
 - Service: este campo no es obligatorio en pgAdmin. 
 
+---
+
 ## 🧹 Gestión del Entorno Virtual y Dependencias
 
-▶️ Eliminar el Entorno Virtual Antiguo (Limpieza):
-- `Remove-Item -Path .venv -Recurse -Force`   ➡️ Si la carpeta se llama .venv
-▶️ Crear un Nuevo Entorno Virtual:
-- `python -m venv .venv`                      ➡️  Esto crea una nueva carpeta '.venv'
-▶️ Activar el Nuevo Entorno Virtual:         
-- `.\.venv\Scripts\activate`                  ➡️  Si la carpeta se llama .venv
-▶️ Verificar listado en la raiz del proyecto. Instalar las Dependencias:
-- `pip install -r requirements.txt`
-▶️ Para verificar todas las librerías instaladas específicamente en ese entorno.
-- `pip freeze`                                ➡️  Muestra el contenido de requirements.txt.
+- ▶️ Eliminar el Entorno Virtual Antiguo (Limpieza):
+ `Remove-Item -Path .venv -Recurse -Force`   ➡️ Si la carpeta se llama .venv
+- ▶️ Crear un Nuevo Entorno Virtual:
+ `python -m venv .venv`                      ➡️  Esto crea una nueva carpeta '.venv'
+- ▶️ Activar el Nuevo Entorno Virtual:         
+ `.\.venv\Scripts\activate`                  ➡️  Si la carpeta se llama .venv
+- ▶️ Verificar listado en la raiz del proyecto. Instalar las Dependencias:
+ `pip install -r requirements.txt`
+- ▶️ Para verificar todas las librerías instaladas específicamente en ese entorno.
+ `pip freeze`                                ➡️  Muestra el contenido de requirements.txt.
 
 ---
 
@@ -221,54 +225,56 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 ### ├── 📄 requirements.txt         - Dependencias de producción.
 ### └── 🔒 SECURITY.md              - Cómo reportar vulnerabilidades.
 
+---
+
 # 🏛️ BACKEND
 
--   💼 backend/	                        -   Contiene la app principal, routers registrados, CORS.
+-   💼 **backend/**	                    -   Contiene la app principal, routers registrados, CORS.
 ─── 📄 backend/main.py	                -   Archivo principal que levanta la API
--   💼backend/bot/	                    -   Bot de Telegram con Python. "usuario automático".
+-   💼 **backend/bot/**	                -   Bot de Telegram con Python. "usuario automático".
 ─── 🗂️ backend/bot/main.py	             -   Punto de entrada principal.
 ─── 🗂️ backend/bot/handlers/	         -   Manejadores de comandos.
 ─── 🗂️ backend/bot/middlewares/         -   Hacer logs por usuario, o limitar por roles, etc.
 ─── 🗂️ backend/bot/services/	         -   Conexión con backend.
--   💼 backend/clientes/	            -   Libreto de operaciones.
+-   💼 **backend/clientes/**	        -   Libreto de operaciones.
 ─── 🗂️ backend/cliente/bancos/          -   Operaciones bancarias.
 ─── 🗂️ backend/cliente/recibidos/       -   Modulo recibido Dian. Todo sobre compras.
 ─── 🗂️ backend/cliente/terceros/	     -   Manejo de usuarios y terceros.
--   💼 backend/contabilidad/	        -   Lógica de negocio central
+-   💼 **backend/contabilidad/**	    -   Lógica de negocio central
 ─── 🗂️ backend/contabilidad/models/	 -   Modelos de datos
 ─── 🗂️ backend/contabilidad/routers/    -   Endpoints (listar, crear, actualizar, etc.)
 ─── 🗂️ backend/contabilidad/schemas/    -   Esquemas expuestos en API
--   💼 backend/core/	                -   Configuraciones de la app
+-   💼 **backend/core/**	            -   Configuraciones de la app
 ─── 📄 /core/config.py	                -   Gestiona la configuración externa.
--   💼 backend/database/	            -   Configuracion de la base de datos.  
+-   💼 **backend/database/**	        -   Configuracion de la base de datos.  
 ─── 📄 /database/connection.py	        -   Logica de conexion a PostgreSQL usando SQLAlchemy.
--   💼 backend/integrations/            -   Módulo unificado para integraciones
+-   💼 **backend/integrations/**        -   Módulo unificado para integraciones
 ─── 🗂️ backend/integrations/auth/       -   Autenticación y tokens
--   💼 backend/models/	                -   Modelos SQLAlchemy para representar las tablas. 
+-   💼 **backend/models/**	            -   Modelos SQLAlchemy para representar las tablas. 
 ─── 🗂️ backend/models/registro/	     -   Modelos geograficos para crear terceros.
-─── 🗂️ backend/models/dian/	             -   Conciliacion modulo Dian.
+─── 🗂️ backend/models/dian/	         -   Conciliacion modulo Dian.
 ─── 🗂️ backend/models/bancos/	         -   Conciciliacion de extractos bancarios.
--   💼 backend/routers/	                -   Carpeta general de endpoints FastAPI organizados por dominio.
+-   💼 **backend/routers/**	            -   Carpeta general de endpoints FastAPI organizados por dominio.
 ─── 🗂️ backend/routers/registro/   
 ─── 🗂️ backend/routers/dian/
 ─── 🗂️ backend/routers/bancos/
--   💼 backend/schemas/	                -  Aqui defines los esquemas de entrada/salida (Pydantic) 
+-   💼 **backend/schemas/**	            -  Aqui defines los esquemas de entrada/salida (Pydantic) 
 ─── 🗂️ backend/schemas/bancos/	         -  Conciciliacion de extractos bancarios.
 ─── 🗂️ backend/schemas/registro/	     -  Esquema geograficos para crear terceros.  
 ─── 🗂️ backend/schemas/dian/	         -  Conciliacion modulo Dian.   
--   💼 backend/services/                -  Divide lógica de negocio de forma clara y coherente.
+-   💼 **backend/services/**            -  Divide lógica de negocio de forma clara y coherente.
 ─── 🗂️ backend/services/bancos/	     -  Operaciones bancarias
 ─── 🗂️ backend/services/registro/       -  Encapsula toda la lógica, terceros, geográficos, etc.
 ─── 🗂️ backend/services/dian/	         -  Interacción con los datos regulados por la DIAN.
--   💼 backend/tests/	                -  Es la raíz de la pruebas automáticas
+-   💼 **backend/tests/**	            -  Es la raíz de la pruebas automáticas
 ─── 🗂️ backend/tests/clientes/          -  Dependencias comunes de la API
 ─── 🗂️ backend/tests/models/            -  Modelos de datos
 ─── 🗂️ backend/tests/database/          -  Esquemas para validación/serialización API
--   💼 backend/uploads/	                -  Para guardar temporalmente los archivos (CSV, PDF, XML).
+-   💼 **backend/uploads/**	            -  Para guardar temporalmente los archivos (CSV, PDF, XML).
 ─── 🗂️ backend/uploads/	bancos/YYYY/
 ─── 🗂️ backend/uploads/	terceros/YYYY/
 ─── 🗂️ backend/uploads/	emitidos/YYYY/
--   💼 backend/utils/	                -  Funciones pequenas y sin conexion a la base de datos.
+-   💼 **backend/utils/**	            -  Funciones pequenas y sin conexion a la base de datos.
 ─── 🗂️ backend/utils/archivos/pdf/	     -  Funciones para leer PDFs.
 ─── 🗂️ backend/utils/archivos/csv/	     -  Validaciones CSV regitros de empresas y personas naturales.
 ─── 🗂️ backend/utils/archivos/xml/	     -  XML
@@ -280,6 +286,8 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 ### 🗂️ .env
 
 - DATABASE_URL=postgresql://usuario:contrasena@host:puerto/basededatos
+
+---
 
 ### 🗂️ database/connection.py
 
@@ -304,6 +312,8 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
     `finally:`
          `db.close()`
 
+---
+
 ### 🗂️ DATABASE / base_class.py
 
 `from sqlalchemy.ext.declarative import declarative_base`
@@ -327,6 +337,8 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 `print("✅ Tablas creadas exitosamente.")`
 `create_all_tables()`
 
+---
+
 ### 🗂️ MODELOS - models
 
 `from sqlalchemy import Column, Integer, String`
@@ -340,12 +352,7 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
     identificacion = Column(String, unique=True, index=True)
     direccion = Column(String)
 
-### 🗂️ MODELS /__init__.py
-
-`from .terceros import Tercero`
-`__all__ = [`
-`"Tercero",`
-` ]`
+---
 
 ### 🗂️ ESQUEMAS - schemas
 
@@ -361,9 +368,7 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 `class Config:`
 `from_attributes = True`
 
-### 🗂️ ESQUEMAS / __init__.py
-
-`from .terceros import Tercero, TerceroCreate, TerceroBase`
+---
 
 ### 🗂️ ROUTERS - routers 
 
@@ -394,9 +399,7 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
          `raise HTTPException(status_code=404, detail="Tercero not found")`
      `return db_tercero`
 
-### 🗂️ ROUTERS / __init__.py
-
-`from .terceros import router as terceros_router`
+---
 
 ### 🗂️ MAIN.PY - Integracion de los Endpoints  
 
@@ -415,45 +418,17 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
      `allow_headers=["*"],`
  `)`
 
+---
+
 ### 🗂️ Incluye tus routers con prefijo /api
 
 `app.include_router(terceros.router, prefix="/api")`
 
+---
+
 ### 🗂️ "Crear tablas:" 
 
 `python -m backend.db.create_tables`
-
-
-## 📌 Explicación de la organización:
-
-### 📁 database/ - Conexion a la base de datos. Aqui generalmente se encuentra:
-
-- El motor de conexion (engine).
-- La sesion (SessionLocal).
-- El archivo create_tables.py para inicializar las tablas a partir de los modelos.
-
-### 📁 models/ - Define las clases de SQLAlchemy que representan tus tablas en la base de datos. Cada clase equivale a una tabla y define sus campos, relaciones y restricciones.
-
-### 📁 schemas/ - Contiene las clases de Pydantic, utilizadas para:
-
-- Validar los datos de entrada y salida de la API.
-- Separar los modelos internos de la base de datos de las estructuras que se exponen al cliente.
-- Esto mejora la seguridad y mantiene el codigo desacoplado.
-
-### 📁 routers/ - Endpoints de la API agrupados por funcionalidad. Cada archivo corresponde a un recurso o entidad y contiene:
-
-- Las rutas (@router.get, @router.post, etc.).
-- La logica de interaccion entre los schemas y los modelos.
-
-### ⚙️ __init__.py en cada carpeta - Este archivo hace que la carpeta sea reconocida como un paquete de Python y permite importaciones limpias entre modulos. Ayuda a mantener una estructura modular y organizada.
-
-### 📝 main.py - Es el punto de entrada de la aplicacion FastAPI. Aqui se:
-
-- Crea la instancia principal de la app (app = FastAPI()).
-- Se agregan middlewares (como CORS).
-- Se incluyen los routers definidos en routers/.
-- Se levanta el servidor si se ejecuta directamente.
-- Beneficios de esta Estructura.
 
 ---
 
@@ -461,56 +436,68 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 
 ### 📁 Carpetas de modelos (models/)  
 
-- 🎯 Importamos las clases de los modelos que queremos exponer
+- 🎯 Importamos las clases de los modelos que queremos exponer.
+
 `from .archivo_1 import Clase1`
 `from .archivo_2 import Clase2`
 
--  🔹Controlamos qué se puede importar desde fuera
+-  Controlamos qué se puede importar desde fuera.
+
 `__all__ = ["Clase1", "Clase2"]`
 
+---
 
 ###  📁 Carpetas de routers (routers/)
 
--  🎯 Importamos los routers definidos en otros archivos
+-  🎯 Importamos los routers definidos en otros archivos.
+
 `from .recurso_1 import router as recurso_1_router`
 `from .recurso_2 import router as recurso_2_router`
 
--  🔹Listamos los routers para facilitar su uso desde main.py o routers principales
+-  Listamos los routers para facilitar su uso desde main.py o routers principales.
 
 ` __all__ = ["recurso_1_router", "recurso_2_router"]`
+
+---
 
 ###  📁 Carpetas de esquemas (schemas/)
 
 -  🎯 Importamos los esquemas base, create, update, etc.
+
 `from .archivo_1 import Clase1Base, Clase1Create`
 `from .archivo_2 import Clase2Base, Clase2Create`
 
--  🔹Indicamos explícitamente qué exportamos
+-  Indicamos explícitamente qué exportamos.
 
 `__all__ = ["Clase1Base", "Clase1Create", "Clase2Base", "Clase2Create"]`
 
+---
 
 ### 📁 Carpetas de servicios (services/)
 
--  🎯 Importamos funciones o clases que contienen la lógica del negocio
+-  🎯 Importamos funciones o clases que contienen la lógica del negocio.
+
 `from .recurso_1 import funcion_1`
 `from .recurso_2 import clase_servicio`
 
--  🔹Exportamos solo lo necesario
+-  Exportamos solo lo necesario.
 
 `__all__ = ["funcion_1", "clase_servicio"]`
 
+---
 
 ### 📁 Carpetas de utilidades (utils/)
 
--  🎯 Importamos funciones específicas de procesamiento PDF
+-  🎯 Importamos funciones específicas de procesamiento PDF.
+
 `from .lector_pdf import extraer_texto`
 `from .validador_pdf import validar_formato`
 
--  🔹Dejamos claro qué funciones queremos que estén disponibles
+-  Dejamos claro qué funciones queremos que estén disponibles.
 
 `__all__ = ["extraer_texto", "validar_formato"]`
 
+---
 
 ### ❌ Carpetas que no necesitan __init__.py
 

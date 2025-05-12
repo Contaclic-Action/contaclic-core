@@ -57,6 +57,53 @@ Este backend es el núcleo que conecta procesos clave de tu operación contable 
                     
 ---
 
+## 📌 Explicación de la organización:
+
+### 📁 database/ 
+
+Conexion a la base de datos. Aqui generalmente se encuentra:
+
+- El motor de conexion (engine).
+- La sesion (SessionLocal).
+- El archivo create_tables.py para inicializar las tablas a partir de los modelos.
+
+---
+
+### 📁 models/ 
+
+Define las clases de SQLAlchemy que representan tus tablas en la base de datos. Cada clase equivale a una tabla y define sus campos, relaciones y restricciones.
+
+### 📁 schemas/ 
+
+Contiene las clases de Pydantic, utilizadas para:
+
+- Validar los datos de entrada y salida de la API.
+- Separar los modelos internos de la base de datos de las estructuras que se exponen al cliente.
+- Esto mejora la seguridad y mantiene el codigo desacoplado.
+
+### 📁 routers/  
+
+Endpoints de la API agrupados por funcionalidad. Cada archivo corresponde a un recurso o entidad y contiene:
+
+- Las rutas (@router.get, @router.post, etc.).
+- La logica de interaccion entre los schemas y los modelos.
+
+### ⚙️ __init__.py en cada carpeta/ 
+
+Este archivo hace que la carpeta sea reconocida como un paquete de Python y permite importaciones limpias entre modulos. Ayuda a mantener una estructura modular y organizada.
+
+### 📝 main.py/
+
+Es el punto de entrada de la aplicacion FastAPI. Aqui se:
+
+- Crea la instancia principal de la app (app = FastAPI()).
+- Se agregan middlewares (como CORS).
+- Se incluyen los routers definidos en routers/.
+- Se levanta el servidor si se ejecuta directamente.
+- Beneficios de esta Estructura.
+
+---
+
 ## 🧱 Ventajas de esta Arquitectura.
 
 ### 🧠 Separación clara de responsabilidades.
