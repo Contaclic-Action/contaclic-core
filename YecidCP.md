@@ -1,10 +1,10 @@
-👋 Hola, soy Yecid Cordoba
+### 👋 Hola, soy Yecid Cordoba
 
 Técnico Auxiliar Contable y Tecnólogo en Contabilidad y Finanzas, con más de cinco años de experiencia en el área contable y administrativa. Actualmente estoy enfocado en automatizar procesos contables mediante herramientas tecnológicas para aumentar la eficiencia, precisión y agilidad en las operaciones.
 
-💼 Experiencia Contable y Administrativa
+## 💼 Experiencia Contable y Administrativa
 
-🧾 Diario:
+### 🧾 Diario:
 
 - Compras: Ingreso de facturas de compras electrónicas, documentos soporte, notas crédito, gastos nacionales y del exterior. Manejo de inventario.
 
@@ -18,7 +18,7 @@ Técnico Auxiliar Contable y Tecnólogo en Contabilidad y Finanzas, con más de 
 
 - Varios: Apoyo a gerencia, atención a clientes y proveedores, solicitud de certificados, archivo documental.
 
-📅 Cierre Contable:
+### 📅 Cierre Contable:
 
 - Conciliación DIAN: Comparación de facturación electrónica emitida y recibida.
 
@@ -30,7 +30,7 @@ Técnico Auxiliar Contable y Tecnólogo en Contabilidad y Finanzas, con más de 
 
 - Revisión de balances y estados financieros.
 
-🔧 Habilidades y Enfoque :
+### 🔧 Habilidades y Enfoque :
 
 - Automatización de procesos contables
 
@@ -42,7 +42,7 @@ Técnico Auxiliar Contable y Tecnólogo en Contabilidad y Finanzas, con más de 
 
 - Manejo de herramientas tecnológicas modernas
 
-🚀 Proyecto en Desarrollo :
+## 🚀 Proyecto en Desarrollo :
 
 - Actualmente estoy trabajando en un proyecto de página web contable que automatiza todas estas tareas:
 
@@ -50,7 +50,7 @@ Técnico Auxiliar Contable y Tecnólogo en Contabilidad y Finanzas, con más de 
 
 El sistema incluirá módulos de compras, ventas, bancos, nómina, conciliaciones, impuestos y más. Todo bajo una arquitectura moderna con tecnologías como FastAPI, PostgreSQL, OCR y herramientas de integración con Microsoft 365.
 
-📫 Contacto:
+### 📫 Contacto:
 
 📧 <yecidcordoba@gmail.com>
 
