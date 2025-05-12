@@ -23,17 +23,17 @@ Gracias por tu interés en contribuir. Este documento establece un flujo de trab
 
 Incluye rutas comunes para ignorar archivos innecesarios:
 
-### ├── ⚙️.gitignore
-### ├── 📁 .venv/
-### ├── 📁 node_modules/
-### ├── 🛠️ __pycache__/
-### ├── 📁.env
-### ├── 🛠️* .log
-### ├── 🛠️* .sqlite3
-### ├── 📁.next/
-### ├── 🛠️ dist/
-### ├── 🛠️ .vscode/
-### └── 🛠️ .idea/
+- ┣  ⚙️.gitignore
+- ┣ 📁 .venv/
+- ┣ 📁 node_modules/
+- ┣ 🛠️ __pycache__/
+- ┣ 📁.env
+- ┣ 🛠️* .log
+- ┣ 🛠️* .sqlite3
+- ┣ 📁.next/
+- ┣ 🛠️ dist/
+- ┣ 🛠️ .vscode/
+- ┣ 🛠️ .idea/
 
 2. Inicializar el repositorio local - Si tu proyecto aún no está conectado a Git:
 🐍 git init
@@ -196,20 +196,20 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 #                     🏗️ RESUMEN ESTRUCTURA 
 
 - ├── 📂 .github/                 - Workflows de GitHub Actions (CI/CD).
--     ├── 📝 ci.yml               - CI principal (test/lint).
--     └── 📝 workflows            - Pruebas o despliegue automático.
+      ├── 📝 ci.yml               - CI principal (test/lint).
+      └── 📝 workflows            - Pruebas o despliegue automático.
 - ├── 📂 .venv/                   - Entorno virtual local (no se sube a Git).
 - ├── 📂 docs/                    - Documentación general o técnica.
--     ├── 🐳 Dockerfile           - Build para producción.
--     └── 🐳 docker-compose.yml   - Servicios acoplados.
+      ├── 🐳 Dockerfile           - Build para producción.
+      └── 🐳 docker-compose.yml   - Servicios acoplados.
 - ├── 📂 infrastructure/          - Archivos para despliegue (Dockerfile, docker-compose).
 - ├── 📂 src/                     - Código fuente principal.
--     ├── 📂 tests/               - Pruebas automatizadas.
--     └──  📂 app/                - Módulo principal.          
--          └── 📂 backend/        - Backend FastAPI (rutas, modelos, servicios, etc.).
+      ├── 📂 tests/               - Pruebas automatizadas.
+      └──  📂 app/                - Módulo principal.          
+           └── 📂 backend/        - Backend FastAPI (rutas, modelos, servicios, etc.).
 - ├── ⚙️ .gitignore               - Para excluir archivos temporales.
 - ├── 📝 CHANGELOG.md             - Historial de cambios.
-- ├── ⚙️ CODE_OF_CONDUCT.md       - Reglas de comportamiento.
+- ├── 📝 CODE_OF_CONDUCT.md       - Reglas de comportamiento.
 - ├── 📄 CONTRIBUTING.md          - Guía para colaboradores.
 - ├── 📄 LICENSE                  - Tipo de licencia.
 - ├── 📄 README.md                - Descripción del proyecto.
@@ -218,52 +218,52 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 
 # 🏛️ BACKEND
 
-### 💼 backend/	                        -   Contiene la app principal, routers registrados, CORS.
+-   💼 backend/	                        -   Contiene la app principal, routers registrados, CORS.
 └── 📄 backend/main.py	                -   Archivo principal que levanta la API
-### 💼backend/bot/	                    -   Bot de Telegram con Python. "usuario automático".
+-   💼backend/bot/	                    -   Bot de Telegram con Python. "usuario automático".
 └── 🗂️ backend/bot/main.py	             -   Punto de entrada principal.
 ─── 🗂️ backend/bot/handlers/	         -   Manejadores de comandos.
 ─── 🗂️ backend/bot/middlewares/         -   Hacer logs por usuario, o limitar por roles, etc.
 ──│ 🗂️ backend/bot/services/	         -   Conexión con backend.
-### 💼 backend/clientes/	            -   Libreto de operaciones.
+-   💼 backend/clientes/	            -   Libreto de operaciones.
 └── 🗂️ backend/cliente/bancos/          -   Operaciones bancarias.
 ─── 🗂️ backend/cliente/recibidos/       -   Modulo recibido Dian. Todo sobre compras.
 ──│ 🗂️ backend/cliente/terceros/	     -   Manejo de usuarios y terceros.
-### 💼 backend/contabilidad/	        -   Lógica de negocio central
+-   💼 backend/contabilidad/	        -   Lógica de negocio central
 └── 🗂️ backend/contabilidad/models/	 -   Modelos de datos
 ─── 🗂️ backend/contabilidad/routers/    -   Endpoints (listar, crear, actualizar, etc.)
-───│ 🗂️ backend/contabilidad/schemas/    -   Esquemas expuestos en API
-### 💼 backend/core/	                -   Configuraciones de la app
+──│ 🗂️ backend/contabilidad/schemas/    -   Esquemas expuestos en API
+-   💼 backend/core/	                -   Configuraciones de la app
 └── 📄 /core/config.py	                -   Gestiona la configuración externa.
-### 💼 backend/database/	            -   Configuracion de la base de datos.  
+-   💼 backend/database/	            -   Configuracion de la base de datos.  
 └── 📄 /database/connection.py	        -   Logica de conexion a PostgreSQL usando SQLAlchemy.
-### 💼 backend/integrations/            -   Módulo unificado para integraciones
+-   💼 backend/integrations/            -   Módulo unificado para integraciones
 └── 🗂️ backend/integrations/auth/       -   Autenticación y tokens
-### 💼 backend/models/	                -   Modelos SQLAlchemy para representar las tablas. 
+-   💼 backend/models/	                -   Modelos SQLAlchemy para representar las tablas. 
 └── 🗂️ backend/models/registro/	     -   Modelos geograficos para crear terceros.
 ─── 🗂️ backend/models/dian/	             -   Conciliacion modulo Dian.
 ──│ 🗂️ backend/models/bancos/	         -   Conciciliacion de extractos bancarios.
-### 💼 backend/routers/	                -   Carpeta general de endpoints FastAPI organizados por dominio.
+-   💼 backend/routers/	                -   Carpeta general de endpoints FastAPI organizados por dominio.
 └── 🗂️ backend/routers/registro/   
 ─── 🗂️ backend/routers/dian/
 ──│ 🗂️ backend/routers/bancos/
-### 💼 backend/schemas/	                -  Aqui defines los esquemas de entrada/salida (Pydantic) 
+-   💼 backend/schemas/	                -  Aqui defines los esquemas de entrada/salida (Pydantic) 
 └── 🗂️ backend/schemas/bancos/	         -  Conciciliacion de extractos bancarios.
 ─── 🗂️ backend/schemas/registro/	     -  Esquema geograficos para crear terceros.  
 ──│ 🗂️ backend/schemas/dian/	         -  Conciliacion modulo Dian.   
-### 💼 backend/services/                -  Divide lógica de negocio de forma clara y coherente.
+-   💼 backend/services/                -  Divide lógica de negocio de forma clara y coherente.
 └── 🗂️ backend/services/bancos/	     -  Operaciones bancarias
 ─── 🗂️ backend/services/registro/       -  Encapsula toda la lógica, terceros, geográficos, etc.
 ──│ 🗂️ backend/services/dian/	         -  Interacción con los datos regulados por la DIAN.
-### 💼 backend/tests/	                -  Es la raíz de la pruebas automáticas
+-   💼 backend/tests/	                -  Es la raíz de la pruebas automáticas
 └── 🗂️ backend/tests/clientes/          -  Dependencias comunes de la API
 ─── 🗂️ backend/tests/models/            -  Modelos de datos
 ──│ 🗂️ backend/tests/database/          -  Esquemas para validación/serialización API
-### 💼 backend/uploads/	                -  Para guardar temporalmente los archivos (CSV, PDF, XML).
+-   💼 backend/uploads/	                -  Para guardar temporalmente los archivos (CSV, PDF, XML).
 └── 🗂️ backend/uploads/	bancos/YYYY/
 ─── 🗂️ backend/uploads/	terceros/YYYY/
 ──│ 🗂️ backend/uploads/	emitidos/YYYY/
-### 💼 backend/utils/	                -  Funciones pequenas y sin conexion a la base de datos.
+-   💼 backend/utils/	                -  Funciones pequenas y sin conexion a la base de datos.
 └── 🗂️ backend/utils/archivos/pdf/	     -  Funciones para leer PDFs.
 ─── 🗂️ backend/utils/archivos/csv/	     -  Validaciones CSV regitros de empresas y personas naturales.
 ──│ 🗂️ backend/utils/archivos/xml/	     -  XML
@@ -272,13 +272,13 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 
 ##                       📋 PROCESO CREACION DE TABLAS
 
-- ✅ .env
+### ✅ .env
 
 DATABASE_URL=postgresql://usuario:contrasena@host:puerto/basededatos
 
-- ✅ database/connection.py
+### ✅ database/connection.py
 
-### 🔄 Usa python-dotenv para cargar la variable del .env:
+- 🔄 Usa python-dotenv para cargar la variable del .env:
 
 `from sqlalchemy import create_engine`
 `from sqlalchemy.orm import sessionmaker`
@@ -299,17 +299,17 @@ DATABASE_URL=postgresql://usuario:contrasena@host:puerto/basededatos
     `finally:`
          `db.close()`
 
-## ✅ DATABASE / base_class.py
+### ✅ DATABASE / base_class.py
 
 `from sqlalchemy.ext.declarative import declarative_base`
 `Base = declarative_base()`
 
-## ✅ DATABASE / __init__.py
+### ✅ DATABASE / __init__.py
 
 `from .connection import engine, SessionLocal, get_db`
 `from .base_class import Base`
 
-## DATABASE / create_tables.py
+### DATABASE / create_tables.py
 
 `from backend.database.connection import engine`
 `from backend.database.base_class import Base`   
@@ -322,7 +322,7 @@ DATABASE_URL=postgresql://usuario:contrasena@host:puerto/basededatos
 `print("✅ Tablas creadas exitosamente.")`
 `create_all_tables()`
 
-## ✅ MODELOS - models
+### ✅ MODELOS - models
 
 `from sqlalchemy import Column, Integer, String`
 `from backend.database.base_class import Base`
@@ -335,14 +335,14 @@ DATABASE_URL=postgresql://usuario:contrasena@host:puerto/basededatos
     identificacion = Column(String, unique=True, index=True)
     direccion = Column(String)
 
-## ✅ MODELS /__init__.py
+### ✅ MODELS /__init__.py
 
 `from .terceros import Tercero`
 `__all__ = [`
 `"Tercero",`
 ` ]`
 
-## ✅ ESQUEMAS - schemas
+### ✅ ESQUEMAS - schemas
 
 `from pydantic import BaseModel`
 `class TerceroBase(BaseModel):`
@@ -356,11 +356,11 @@ DATABASE_URL=postgresql://usuario:contrasena@host:puerto/basededatos
 `class Config:`
 `from_attributes = True`
 
-## ✅ ESQUEMAS / __init__.py
+### ✅ ESQUEMAS / __init__.py
 
 `from .terceros import Tercero, TerceroCreate, TerceroBase`
 
-## ✅ ROUTERS - routers 
+### ✅ ROUTERS - routers 
 
 `from fastapi import APIRouter, HTTPException, Depends`
 `from sqlalchemy.orm import Session`
@@ -368,7 +368,7 @@ DATABASE_URL=postgresql://usuario:contrasena@host:puerto/basededatos
 `from backend.models.tercero import Tercero as DBTercero`
 `from backend.database import get_db`
 
-### router = APIRouter()
+- router = APIRouter()
 
 `@router.post("/terceros", response_model=Tercero)`
 `def crear_tercero(tercero: TerceroCreate, db: Session = Depends(get_db)):`
@@ -389,11 +389,11 @@ DATABASE_URL=postgresql://usuario:contrasena@host:puerto/basededatos
          `raise HTTPException(status_code=404, detail="Tercero not found")`
      `return db_tercero`
 
-## ✅ ROUTERS / __init__.py
+### ✅ ROUTERS / __init__.py
 
 `from .terceros import router as terceros_router`
 
-## ✅ MAIN.PY - Integracion de los Endpoints  
+### ✅ MAIN.PY - Integracion de los Endpoints  
 
 `from fastapi import FastAPI`
 `from fastapi.middleware.cors import CORSMiddleware`
@@ -410,11 +410,13 @@ DATABASE_URL=postgresql://usuario:contrasena@host:puerto/basededatos
      `allow_headers=["*"],`
  `)`
 
-## ✅ Incluye tus routers con prefijo /api
+### ✅ Incluye tus routers con prefijo /api
 
 `app.include_router(terceros.router, prefix="/api")`
 
-# ✅ "Crear tablas:" python -m backend.db.create_tables
+### ✅ "Crear tablas:" 
+
+`python -m backend.db.create_tables`
 
 
 ## 📁 Explicación de la organización:
@@ -446,62 +448,62 @@ DATABASE_URL=postgresql://usuario:contrasena@host:puerto/basededatos
 
 ---
 
-#                🧠 **Estructura de archivos __init__.py**
+##                🧠 **Estructura de archivos __init__.py**
 
-## 📁 Carpetas de modelos (models/)  
+### 📁 Carpetas de modelos (models/)  
 
-### 🎯 Importamos las clases de los modelos que queremos exponer
+- 🎯 Importamos las clases de los modelos que queremos exponer
 `from .archivo_1 import Clase1`
 `from .archivo_2 import Clase2`
 
-###  🔹Controlamos qué se puede importar desde fuera
+-  🔹Controlamos qué se puede importar desde fuera
 `__all__ = ["Clase1", "Clase2"]`
 
 
-##  📁 Carpetas de routers (routers/)
+###  📁 Carpetas de routers (routers/)
 
-###  🎯 Importamos los routers definidos en otros archivos
+-  🎯 Importamos los routers definidos en otros archivos
 `from .recurso_1 import router as recurso_1_router`
 `from .recurso_2 import router as recurso_2_router`
 
-###  🔹Listamos los routers para facilitar su uso desde main.py o routers principales
+-  🔹Listamos los routers para facilitar su uso desde main.py o routers principales
 
 ` __all__ = ["recurso_1_router", "recurso_2_router"]`
 
-##  📁 Carpetas de esquemas (schemas/)
+###  📁 Carpetas de esquemas (schemas/)
 
-###  🎯 Importamos los esquemas base, create, update, etc.
+-  🎯 Importamos los esquemas base, create, update, etc.
 `from .archivo_1 import Clase1Base, Clase1Create`
 `from .archivo_2 import Clase2Base, Clase2Create`
 
-###  🔹Indicamos explícitamente qué exportamos
+-  🔹Indicamos explícitamente qué exportamos
 
 `__all__ = ["Clase1Base", "Clase1Create", "Clase2Base", "Clase2Create"]`
 
 
-## 📁 Carpetas de servicios (services/)
+### 📁 Carpetas de servicios (services/)
 
-###  🎯 Importamos funciones o clases que contienen la lógica del negocio
+-  🎯 Importamos funciones o clases que contienen la lógica del negocio
 `from .recurso_1 import funcion_1`
 `from .recurso_2 import clase_servicio`
 
-###  🔹Exportamos solo lo necesario
+-  🔹Exportamos solo lo necesario
 
 `__all__ = ["funcion_1", "clase_servicio"]`
 
 
-## 📁 Carpetas de utilidades (utils/)
+### 📁 Carpetas de utilidades (utils/)
 
-###  🎯 Importamos funciones específicas de procesamiento PDF
+-  🎯 Importamos funciones específicas de procesamiento PDF
 `from .lector_pdf import extraer_texto`
 `from .validador_pdf import validar_formato`
 
-###  🔹Dejamos claro qué funciones queremos que estén disponibles
+-  🔹Dejamos claro qué funciones queremos que estén disponibles
 
 `__all__ = ["extraer_texto", "validar_formato"]`
 
 
-## ❌ Carpetas que no necesitan __init__.py
+### ❌ Carpetas que no necesitan __init__.py
 
 └── 📁 Carpetas de uploads - solo para guardar archivos temporales.
 ─── 📁 Carpetas de tests - si no planeas importar sus módulos desde fuera.
