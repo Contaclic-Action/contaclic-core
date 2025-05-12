@@ -24,7 +24,8 @@ Gracias por tu interés en contribuir. Este documento establece un flujo de trab
 
 Incluye rutas comunes para ignorar archivos innecesarios:
 
-- ┣  ⚙️.gitignore
+- ⚙️.gitignore
+
 - ┣ 📁 .venv/
 - ┣ 📁 node_modules/
 - ┣ 🛠️ __pycache__/
@@ -34,7 +35,7 @@ Incluye rutas comunes para ignorar archivos innecesarios:
 - ┣ 📁.next/
 - ┣ 🛠️ dist/
 - ┣ 🛠️ .vscode/
-- ┣ 🛠️ .idea/
+- ┗ 🛠️ .idea/
 
 ---
 
@@ -85,20 +86,20 @@ Incluye rutas comunes para ignorar archivos innecesarios:
 
 ### ✅  Entorno virtual 
 
-    `python -m venv .venv`
-    `source .venv/bin/activate`  - Linux/macOS
+    python -m venv .venv
+    source .venv/bin/activate  - Linux/macOS
 
-    `.venv\Scripts\activate`     - Windows
+    .venv\Scripts\activate     - Windows
 
-### ✅ Instalar dependencias
+### ✅ Instalar dependencias.
 
  `pip install -r requirements.txt`
 
-### ✅ Levantar entorno con Docker
+### ✅ Levantar entorno con Docker.
 
  `docker-compose up --build`
 
-### 🧪 Correr pruebas
+### 🧪 Correr pruebas.
 
  `pytest src/tests`
 
@@ -113,16 +114,16 @@ Incluye rutas comunes para ignorar archivos innecesarios:
 
 ## 🔀 Flujo de trabajo (Git)
 
-- Usa `main` solo para código listo para producción.
+ Usa `main` solo para código listo para producción.
 
-- Trabaja en ramas separadas:
+ Trabajo en ramas separadas:
 
-- `feat/ → nueva funcionalidad`
-- `fix/ → corrección de bug`
-- `refactor/ → cambios internos sin alterar funcionalidad`
-- `test/ → pruebas`
-- `docs/ → documentación`
-- `chore/ → tareas de mantenimiento`
+- `feat/ → nueva funcionalidad.`
+- `fix/ → corrección de bug.`
+- `refactor/ → cambios internos sin alterar funcionalidad.`
+- `test/ → pruebas.`
+- `docs/ → documentación.`
+- `chore/ → tareas de mantenimiento.`
 
 ---
 
@@ -130,10 +131,10 @@ Incluye rutas comunes para ignorar archivos innecesarios:
 
 Usamos Conventional Commits:
 
-- `feat: nombre de funcionalidad`
-- `fix: corrección de error`
-- `docs: cambios de documentación`
-- `test: pruebas nuevas o corregidas`
+- `feat: nombre de funcionalidad.`
+- `fix: corrección de error.`
+- `docs: cambios de documentación.`
+- `test: pruebas nuevas o corregidas.`
 
 ---
 
@@ -152,9 +153,9 @@ Endpoints autodocumentados con FastAPI Swagger:
 Usa la pestaña `Issues` en GitHub para reportar errores, sugerencias o mejoras.
 
 Si vas a enviar un `Pull Request`:
-- Crea una rama (`feat/nueva-funcionalidad`)
-- Asegúrate de que todos los tests pasen
-- Describe claramente qué hace el cambio
+- Crea una rama (`feat/nueva-funcionalidad`).
+- Asegúrate de que todos los tests pasen.
+- Describe claramente qué hace el cambio.
 
 ---
 
@@ -189,95 +190,95 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 
 ## 🧹 Gestión del Entorno Virtual y Dependencias
 
-- ▶️ Eliminar el Entorno Virtual Antiguo (Limpieza):
- `Remove-Item -Path .venv -Recurse -Force`   ➡️ Si la carpeta se llama .venv
-- ▶️ Crear un Nuevo Entorno Virtual:
- `python -m venv .venv`                      ➡️  Esto crea una nueva carpeta '.venv'
-- ▶️ Activar el Nuevo Entorno Virtual:         
- `.\.venv\Scripts\activate`                  ➡️  Si la carpeta se llama .venv
-- ▶️ Verificar listado en la raiz del proyecto. Instalar las Dependencias:
- `pip install -r requirements.txt`
-- ▶️ Para verificar todas las librerías instaladas específicamente en ese entorno.
- `pip freeze`                                ➡️  Muestra el contenido de requirements.txt.
+ ▶️ Eliminar el Entorno Virtual Antiguo (Limpieza):
+ - `Remove-Item -Path .venv -Recurse -Force`   ➡️ Si la carpeta se llama .venv
+ ▶️ Crear un Nuevo Entorno Virtual:
+ - `python -m venv .venv`                      ➡️  Esto crea una nueva carpeta '.venv'
+ ▶️ Activar el Nuevo Entorno Virtual:         
+ - `.\.venv\Scripts\activate`                  ➡️  Si la carpeta se llama .venv
+ ▶️ Verificar listado en la raiz del proyecto. Instalar las Dependencias:
+ - `pip install -r requirements.txt`
+ ▶️ Para verificar todas las librerías instaladas específicamente en ese entorno.
+ - `pip freeze`                                ➡️  Muestra el contenido de requirements.txt.
 
 ---
 
 #                     🏗️ RESUMEN ESTRUCTURA 
 
-### ├── 📂 .github/                 - Workflows de GitHub Actions (CI/CD).
--       ├── 📝 ci.yml               - CI principal (test/lint).
--       └── 📝 workflows            - Pruebas o despliegue automático.
-### ├── 📂 .venv/                   - Entorno virtual local (no se sube a Git).
-### ├── 📂 docs/                    - Documentación general o técnica.
--       ├── 🐳 Dockerfile           - Build para producción.
--       └── 🐳 docker-compose.yml   - Servicios acoplados.
-### ├── 📂 infrastructure/          - Archivos para despliegue (Dockerfile, docker-compose).
-### ├── 📂 src/                     - Código fuente principal.
--       ├── 📂 tests/               - Pruebas automatizadas.
--       └── 📂 app/                 - Módulo principal.          
--           └── 📂 backend/         - Backend FastAPI (rutas, modelos, servicios, etc.).
-### ├── ⚙️ .gitignore               - Para excluir archivos temporales.
-### ├── 📝 CHANGELOG.md             - Historial de cambios.
-### ├── 📝 CODE_OF_CONDUCT.md       - Reglas de comportamiento.
-### ├── 📄 CONTRIBUTING.md          - Guía para colaboradores.
-### ├── 📄 LICENSE                  - Tipo de licencia.
-### ├── 📄 README.md                - Descripción del proyecto.
-### ├── 📄 requirements.txt         - Dependencias de producción.
-### └── 🔒 SECURITY.md              - Cómo reportar vulnerabilidades.
+### ┣ 📂 .github/                 - Workflows de GitHub Actions (CI/CD).
+-       ┣ 📝 ci.yml               - CI principal (test/lint).
+-       ┣ 📝 workflows            - Pruebas o despliegue automático.
+### ┣ 📂 .venv/                   - Entorno virtual local (no se sube a Git).
+### ┣ 📂 docs/                    - Documentación general o técnica.
+-       ┣ 🐳 Dockerfile           - Build para producción.
+-       ┣ 🐳 docker-compose.yml   - Servicios acoplados.
+### ┣ 📂 infrastructure/          - Archivos para despliegue (Dockerfile, docker-compose).
+### ┣ 📂 src/                     - Código fuente principal.
+-       ┣ 📂 tests/               - Pruebas automatizadas.
+-       ┣ 📂 app/                 - Módulo principal.          
+-           ┣ 📂 backend/         - Backend FastAPI (rutas, modelos, servicios, etc.).
+### ┣ ⚙️ .gitignore               - Para excluir archivos temporales.
+### ┣ 📝 CHANGELOG.md             - Historial de cambios.
+### ┣ 📝 CODE_OF_CONDUCT.md       - Reglas de comportamiento.
+### ┣ 📄 CONTRIBUTING.md          - Guía para colaboradores.
+### ┣ 📄 LICENSE                  - Tipo de licencia.
+### ┣ 📄 README.md                - Descripción del proyecto.
+### ┣ 📄 requirements.txt         - Dependencias de producción.
+### ┗ 🔒 SECURITY.md              - Cómo reportar vulnerabilidades.
 
 ---
 
 # 🏛️ BACKEND
 
--   💼 **backend/**	                    -   Contiene la app principal, routers registrados, CORS.
-─── 📄 backend/main.py	                -   Archivo principal que levanta la API
--   💼 **backend/bot/**	                -   Bot de Telegram con Python. "usuario automático".
-─── 🗂️ backend/bot/main.py	             -   Punto de entrada principal.
-─── 🗂️ backend/bot/handlers/	         -   Manejadores de comandos.
-─── 🗂️ backend/bot/middlewares/         -   Hacer logs por usuario, o limitar por roles, etc.
-─── 🗂️ backend/bot/services/	         -   Conexión con backend.
--   💼 **backend/clientes/**	        -   Libreto de operaciones.
-─── 🗂️ backend/cliente/bancos/          -   Operaciones bancarias.
-─── 🗂️ backend/cliente/recibidos/       -   Modulo recibido Dian. Todo sobre compras.
-─── 🗂️ backend/cliente/terceros/	     -   Manejo de usuarios y terceros.
--   💼 **backend/contabilidad/**	    -   Lógica de negocio central
-─── 🗂️ backend/contabilidad/models/	 -   Modelos de datos
-─── 🗂️ backend/contabilidad/routers/    -   Endpoints (listar, crear, actualizar, etc.)
-─── 🗂️ backend/contabilidad/schemas/    -   Esquemas expuestos en API
--   💼 **backend/core/**	            -   Configuraciones de la app
-─── 📄 /core/config.py	                -   Gestiona la configuración externa.
--   💼 **backend/database/**	        -   Configuracion de la base de datos.  
-─── 📄 /database/connection.py	        -   Logica de conexion a PostgreSQL usando SQLAlchemy.
--   💼 **backend/integrations/**        -   Módulo unificado para integraciones
-─── 🗂️ backend/integrations/auth/       -   Autenticación y tokens
--   💼 **backend/models/**	            -   Modelos SQLAlchemy para representar las tablas. 
-─── 🗂️ backend/models/registro/	     -   Modelos geograficos para crear terceros.
-─── 🗂️ backend/models/dian/	         -   Conciliacion modulo Dian.
-─── 🗂️ backend/models/bancos/	         -   Conciciliacion de extractos bancarios.
--   💼 **backend/routers/**	            -   Carpeta general de endpoints FastAPI organizados por dominio.
-─── 🗂️ backend/routers/registro/   
-─── 🗂️ backend/routers/dian/
-─── 🗂️ backend/routers/bancos/
--   💼 **backend/schemas/**	            -  Aqui defines los esquemas de entrada/salida (Pydantic) 
-─── 🗂️ backend/schemas/bancos/	         -  Conciciliacion de extractos bancarios.
-─── 🗂️ backend/schemas/registro/	     -  Esquema geograficos para crear terceros.  
-─── 🗂️ backend/schemas/dian/	         -  Conciliacion modulo Dian.   
--   💼 **backend/services/**            -  Divide lógica de negocio de forma clara y coherente.
-─── 🗂️ backend/services/bancos/	     -  Operaciones bancarias
-─── 🗂️ backend/services/registro/       -  Encapsula toda la lógica, terceros, geográficos, etc.
-─── 🗂️ backend/services/dian/	         -  Interacción con los datos regulados por la DIAN.
--   💼 **backend/tests/**	            -  Es la raíz de la pruebas automáticas
-─── 🗂️ backend/tests/clientes/          -  Dependencias comunes de la API
-─── 🗂️ backend/tests/models/            -  Modelos de datos
-─── 🗂️ backend/tests/database/          -  Esquemas para validación/serialización API
--   💼 **backend/uploads/**	            -  Para guardar temporalmente los archivos (CSV, PDF, XML).
-─── 🗂️ backend/uploads/	bancos/YYYY/
-─── 🗂️ backend/uploads/	terceros/YYYY/
-─── 🗂️ backend/uploads/	emitidos/YYYY/
--   💼 **backend/utils/**	            -  Funciones pequenas y sin conexion a la base de datos.
-─── 🗂️ backend/utils/archivos/pdf/	     -  Funciones para leer PDFs.
-─── 🗂️ backend/utils/archivos/csv/	     -  Validaciones CSV regitros de empresas y personas naturales.
-─── 🗂️ backend/utils/archivos/xml/	     -  XML
+- ┣ 💼 **backend/**	                ▶️   Contiene la app principal, routers registrados, CORS.
+─── 📄 main.py	                    ▶️   Archivo principal que levanta la API
+- ┣ 💼 **backend/bot/**	            ▶️   Bot de Telegram con Python. "usuario automático".
+─── 🗂️ main.py	                     ▶️   Punto de entrada principal.
+─── 🗂️ handlers/	                 ▶️   Manejadores de comandos.
+─── 🗂️ middlewares/                 ▶️   Hacer logs por usuario, o limitar por roles, etc.
+──┃ 🗂️ services/	                 ▶️   Conexión con backend.
+- ┣ 💼 **backend/clientes/**	    ▶️   Libreto de operaciones.
+─── 🗂️ bancos/                      ▶️   Operaciones bancarias.
+─── 🗂️ recibidos/                   ▶️   Modulo recibido Dian. Todo sobre compras.
+─── 🗂️ terceros/	                 ▶️   Manejo de usuarios y terceros.
+- ┣ 💼 **backend/contabilidad/**	▶️   Lógica de negocio central
+─── 🗂️ models/	                     ▶️   Modelos de datos
+─── 🗂️ routers/                     ▶️   Endpoints (listar, crear, actualizar, etc.)
+─── 🗂️ schemas/                     ▶️   Esquemas expuestos en API
+- ┣ 💼 **backend/core/**	        ▶️   Configuraciones de la app
+─── 📄 config.py	                ▶️   Gestiona la configuración externa.
+- ┣ 💼 **backend/database/**	    ▶️   Configuracion de la base de datos.  
+─── 📄 connection.py	            ▶️   Logica de conexion a PostgreSQL usando SQLAlchemy.
+- ┣ 💼 **backend/integrations/**    ▶️   Módulo unificado para integraciones
+─── 🗂️ auth/                        ▶️   Autenticación y tokens
+- ┣ 💼 **backend/models/**	        ▶️   Modelos SQLAlchemy para representar las tablas. 
+─── 🗂️ registro/	                 ▶️   Modelos geograficos para crear terceros.
+─── 🗂️ dian/	                     ▶️   Conciliacion modulo Dian.
+─── 🗂️ bancos/	                     ▶️   Conciciliacion de extractos bancarios.
+- ┣ 💼 **backend/routers/**	        ▶️   Carpeta general de endpoints FastAPI organizados por dominio.
+─── 🗂️ registro/   
+─── 🗂️ dian/
+─── 🗂️ bancos/
+- ┣ 💼 **backend/schemas/**	        ▶️  Aqui defines los esquemas de entrada/salida (Pydantic) 
+─── 🗂️ bancos/	                     ▶️  Conciciliacion de extractos bancarios.
+─── 🗂️ registro/	                 ▶️  Esquema geograficos para crear terceros.  
+─── 🗂️ dian/	                     ▶️  Conciliacion modulo Dian.   
+- ┣ 💼 **backend/services/**        ▶️  Divide lógica de negocio de forma clara y coherente.
+─── 🗂️ bancos/	                     ▶️  Operaciones bancarias
+─── 🗂️ registro/                    ▶️  Encapsula toda la lógica, terceros, geográficos, etc.
+─── 🗂️ dian/	                     ▶️  Interacción con los datos regulados por la DIAN.
+- ┣ 💼 **backend/tests/**	        ▶️  Es la raíz de la pruebas automáticas
+─── 🗂️ clientes/                    ▶️  Dependencias comunes de la API
+─── 🗂️ models/                      ▶️  Modelos de datos
+─── 🗂️ database/                    ▶️  Esquemas para validación/serialización API
+- ┣ 💼 **backend/uploads/**	        ▶️  Para guardar temporalmente los archivos (CSV, PDF, XML).
+─── 🗂️ uploads/bancos/YYYY/
+─── 🗂️ uploads/terceros/YYYY/
+─── 🗂️ uploads/emitidos/YYYY/
+- ┗ 💼 **backend/utils/**	         ▶️  Funciones pequenas y sin conexion a la base de datos.
+─── 🗂️ archivos/pdf/	              ▶️  Funciones para leer PDFs.
+─── 🗂️ archivos/csv/	              ▶️  Validaciones CSV regitros de empresas y personas naturales.
+─── 🗂️ archivos/xml/	              ▶️  XML
 
 ---
 
