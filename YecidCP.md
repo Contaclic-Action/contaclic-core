@@ -30,7 +30,7 @@ Técnico Auxiliar Contable y Tecnólogo en Contabilidad y Finanzas, con más de 
 
 - Revisión de balances y estados financieros.
 
-🔧 Habilidades y Enfoque
+🔧 Habilidades y Enfoque :
 
 - Automatización de procesos contables
 
@@ -42,7 +42,7 @@ Técnico Auxiliar Contable y Tecnólogo en Contabilidad y Finanzas, con más de 
 
 - Manejo de herramientas tecnológicas modernas
 
-🚀 Proyecto en Desarrollo
+🚀 Proyecto en Desarrollo :
 
 - Actualmente estoy trabajando en un proyecto de página web contable que automatiza todas estas tareas:
 
@@ -50,8 +50,8 @@ Técnico Auxiliar Contable y Tecnólogo en Contabilidad y Finanzas, con más de 
 
 El sistema incluirá módulos de compras, ventas, bancos, nómina, conciliaciones, impuestos y más. Todo bajo una arquitectura moderna con tecnologías como FastAPI, PostgreSQL, OCR y herramientas de integración con Microsoft 365.
 
-📫 Contacto
+📫 Contacto:
 
-📧 yecidcordoba@gmail.com
+📧 <yecidcordoba@gmail.com>
 
 💼 En desarrollo: contaclic.pro (sitio en construcción)
