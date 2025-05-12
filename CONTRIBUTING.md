@@ -36,40 +36,40 @@ Incluye rutas comunes para ignorar archivos innecesarios:
 - ┣ 🛠️ .idea/
 
 2. Inicializar el repositorio local - Si tu proyecto aún no está conectado a Git:
--  git init
+-  `git init`
 3. Agrega el repositorio remoto - Esto vincula tu proyecto local al repositorio de GitHub:
--  git remote add origin https://github.com/tu_usuario/tu_repositorio.git
+-  `git remote add origin https://github.com/tu_usuario/tu_repositorio.git`
 4. Crea y muévete a la rama principal main.
--  git checkout -b main
+-  `git checkout -b main`
 5. Añade los archivos y haz tu primer commit - Preparar archivos para subir
--  git add .
--  git commit -m "Primer commit "
+-  `git add .`
+-  `git commit -m "Primer commit "`
 6. Sube tu código a GitHub -  Si tu rama local se llama main, haz:
--  git push -u origin main
+-  `git push -u origin main`
 
 ### ⚠️ Si da error porque el repositorio remoto ya contiene archivos:
--  git push -u origin main --force
+-  `git push -u origin main --force`
 
 ---
 
 # 📄 Subir o actualizar el archivo README.md
 
 1. Verifica que el archivo está presente.
-🐍 git status
+-  `git status`
 2. Agrega el archivo README.md al staging.
- 🐍 git add README.md
+-  `git add README.md`
 3. Realiza un commit con un mensaje descriptivo.
-git commit -m "Agregar o actualizar README.md"
+-  `git commit -m "Agregar o actualizar README.md"`
 4. Sube los cambios al repositorio en GitHub.
-🐍 git push origin main
+-  `git push origin main`
 
 
 ## 💻 Confirmar en GitHub.
 
 
-###  ✅ README.md se muestra como descripción principal del repositorio.
-###  ⚙️ .gitignore, requirements.txt y demás archivos son visibles.
-###  ✅ La rama principal aparece como main.
+- ✅ README.md se muestra como descripción principal del repositorio.
+- ⚙️ .gitignore, requirements.txt y demás archivos son visibles.
+- ✅ La rama principal aparece como main.
 
 ---
 
@@ -77,30 +77,28 @@ git commit -m "Agregar o actualizar README.md"
 
 1.  Clona el repositorio: https://github.com/Contaclic-Action/contaclic-core.git 
 
-
 2.  Entorno virtual 
 
-    python -m venv .venv
-    source .venv/bin/activate  - Linux/macOS
-    .venv\Scripts\activate     - Windows
+    `python -m venv .venv`
+    `source .venv/bin/activate`  - Linux/macOS
+    `.venv\Scripts\activate`     - Windows
 
 3. Instalar dependencias
 
- pip install -r requirements.txt
-
+ `pip install -r requirements.txt`
 
 4. Levantar entorno con Docker
 
- docker-compose up --build
+ `docker-compose up --build`
 
 
 ### 🧪 Correr pruebas
 
- pytest src/tests
+ `pytest src/tests`
 
 ✅ Usa pytest-cov para cobertura:
 
- pytest --cov=src/app src/tests - Para cobertura
+ `pytest --cov=src/app src/tests` - Para cobertura
 
 
 📌 Las pruebas están organizadas en src/tests/. Se utiliza pytest para cobertura y ejecución.
@@ -137,7 +135,7 @@ Documentación general está en docs/
 
 Endpoints autodocumentados con FastAPI Swagger:
 
-  http://localhost:8000/docs
+  `http://localhost:8000/docs`
 
 ---
 
@@ -181,40 +179,40 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 ## 🧹 Gestión del Entorno Virtual y Dependencias
 
 ▶️ Eliminar el Entorno Virtual Antiguo (Limpieza):
-### 📥 Remove-Item -Path .venv -Recurse -Force   ➡️ Si la carpeta se llama .venv
+📥 `Remove-Item -Path .venv -Recurse -Force`   ➡️ Si la carpeta se llama .venv
 ▶️ Crear un Nuevo Entorno Virtual:
-### 📥 python -m venv .venv                      ➡️  Esto crea una nueva carpeta '.venv'
+📥 `python -m venv .venv`                      ➡️  Esto crea una nueva carpeta '.venv'
 ▶️ Activar el Nuevo Entorno Virtual:         
-### 📥 .\.venv\Scripts\activate                  ➡️  Si la carpeta se llama .venv
+📥 `.\.venv\Scripts\activate`                  ➡️  Si la carpeta se llama .venv
 ▶️ Verificar listado en la raiz del proyecto. Instalar las Dependencias:
-### 📥 pip install -r requirements.txt
+📥 `pip install -r requirements.txt`
 ▶️ Para verificar todas las librerías instaladas específicamente en ese entorno.
-### 📥 pip freeze                                ➡️  Muestra el contenido de requirements.txt.
+📥 `pip freeze`                                ➡️  Muestra el contenido de requirements.txt.
 
 ---
 
 #                     🏗️ RESUMEN ESTRUCTURA 
 
-- ├── 📂 .github/                 - Workflows de GitHub Actions (CI/CD).
-      ├── 📝 ci.yml               - CI principal (test/lint).
-      └── 📝 workflows            - Pruebas o despliegue automático.
-- ├── 📂 .venv/                   - Entorno virtual local (no se sube a Git).
-- ├── 📂 docs/                    - Documentación general o técnica.
-      ├── 🐳 Dockerfile           - Build para producción.
-      └── 🐳 docker-compose.yml   - Servicios acoplados.
-- ├── 📂 infrastructure/          - Archivos para despliegue (Dockerfile, docker-compose).
-- ├── 📂 src/                     - Código fuente principal.
-      ├── 📂 tests/               - Pruebas automatizadas.
-      └──  📂 app/                - Módulo principal.          
-           └── 📂 backend/        - Backend FastAPI (rutas, modelos, servicios, etc.).
-- ├── ⚙️ .gitignore               - Para excluir archivos temporales.
-- ├── 📝 CHANGELOG.md             - Historial de cambios.
-- ├── 📝 CODE_OF_CONDUCT.md       - Reglas de comportamiento.
-- ├── 📄 CONTRIBUTING.md          - Guía para colaboradores.
-- ├── 📄 LICENSE                  - Tipo de licencia.
-- ├── 📄 README.md                - Descripción del proyecto.
-- ├── 📄 requirements.txt         - Dependencias de producción.
-- └── 🔒 SECURITY.md              - Cómo reportar vulnerabilidades.
+### ├── 📂 .github/                 - Workflows de GitHub Actions (CI/CD).
+-       ├── 📝 ci.yml               - CI principal (test/lint).
+-       └── 📝 workflows            - Pruebas o despliegue automático.
+### ├── 📂 .venv/                   - Entorno virtual local (no se sube a Git).
+### ├── 📂 docs/                    - Documentación general o técnica.
+-       ├── 🐳 Dockerfile           - Build para producción.
+-       └── 🐳 docker-compose.yml   - Servicios acoplados.
+### ├── 📂 infrastructure/          - Archivos para despliegue (Dockerfile, docker-compose).
+### ├── 📂 src/                     - Código fuente principal.
+-       ├── 📂 tests/               - Pruebas automatizadas.
+-       └── 📂 app/                 - Módulo principal.          
+-           └── 📂 backend/         - Backend FastAPI (rutas, modelos, servicios, etc.).
+### ├── ⚙️ .gitignore               - Para excluir archivos temporales.
+### ├── 📝 CHANGELOG.md             - Historial de cambios.
+### ├── 📝 CODE_OF_CONDUCT.md       - Reglas de comportamiento.
+### ├── 📄 CONTRIBUTING.md          - Guía para colaboradores.
+### ├── 📄 LICENSE                  - Tipo de licencia.
+### ├── 📄 README.md                - Descripción del proyecto.
+### ├── 📄 requirements.txt         - Dependencias de producción.
+### └── 🔒 SECURITY.md              - Cómo reportar vulnerabilidades.
 
 # 🏛️ BACKEND
 
