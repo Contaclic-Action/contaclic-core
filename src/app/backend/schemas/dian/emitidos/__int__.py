@@ -1,29 +1,14 @@
 # importar las clases de los módulos correspondientes.
-from .factura_venta_pdf import (
-    FacturaVentaPDFBase,
-    FacturaVentaPDFCreate,
-    FacturaVentaPDFUpdate,
-    FacturaVentaPDFInDBBase,
-    FacturaVentaPDFInDB,
-)
-from .informe_emitidos_dian import (
-    InformeEmitidosDianBase,
-    InformeEmitidosDianCreate,
-    InformeEmitidosDianUpdate,
-    InformeEmitidosDianInDBBase,
-    InformeEmitidosDianInDB,
-)
+from .factura_venta_pdf import ClaseFacturaVentaPDFBase, ClaseFacturaVentaPDFCreate, ClaseFacturaVentaPDFUpdate
+from .informe_emitidos_dian import ClaseInformeEmitidosDianBase, ClaseInformeEmitidosDianCreate, ClaseInformeEmitidosDianUpdate
 
-# exportar las clases para que puedan ser importadas desde el módulo padre
+# exportamos las clases para que puedan ser importadas desde el paquete
 __all__ = [
-    "FacturaVentaPDFBase",
-    "FacturaVentaPDFCreate",
-    "FacturaVentaPDFUpdate",
-    "FacturaVentaPDFInDBBase",
-    "FacturaVentaPDFInDB",
-    "InformeEmitidosDianBase",
-    "InformeEmitidosDianCreate",
-    "InformeEmitidosDianUpdate",
-    "InformeEmitidosDianInDBBase",
-    "InformeEmitidosDianInDB",
+    "ClaseFacturaVentaPDFBase",
+    "ClaseFacturaVentaPDFCreate",
+    "ClaseFacturaVentaPDFUpdate",
+    "ClaseInformeEmitidosDianBase",
+    "ClaseInformeEmitidosDianCreate",
+    "ClaseInformeEmitidosDianUpdate",
 ]
+    

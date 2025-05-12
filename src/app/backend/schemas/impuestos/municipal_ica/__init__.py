@@ -1,14 +1,15 @@
 # importar las clases de los módulos correspondientes
 
-from .autorretenedores_medellin import Clase1AutorretenedoresMedellin Clase2AutorretenedoresMedellin
-from .listado_ciiu import Clase1ListadoCIIU Clase2ListadoCIIU
-
+from .autorretenedores_medellin import ClaseAutorretenedoresMedellinBase, ClaseAutorretenedoresMedellinCreate, ClaseAutorretenedoresMedellinUpdate
+from .listado_ciiu import ClaseListadoCIIUBase, ClaseListadoCIIUCreate, ClaseListadoCIIUUpdate
 
 # exportamos las clases para que puedan ser importadas desde el paquete
 __all__ = [
-    "Clase1AutorretenedoresMedellin",
-    "Clase2AutorretenedoresMedellin",
-    "Clase1ListadoCIIU",
-    "Clase2ListadoCIIU"
-]   
+    "ClaseAutorretenedoresMedellinBase",
+    "ClaseAutorretenedoresMedellinCreate",
+    "ClaseAutorretenedoresMedellinUpdate",
+    "ClaseListadoCIIUBase",
+    "ClaseListadoCIIUCreate",
+    "ClaseListadoCIIUUpdate"
+]
 
