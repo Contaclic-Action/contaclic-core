@@ -39,31 +39,40 @@ Incluye rutas comunes para ignorar archivos innecesarios:
 
 ---
 
-- Inicializar el repositorio local - Si tu proyecto aún no está conectado a Git:
-  `git init`
-- Agrega el repositorio remoto - Esto vincula tu proyecto local al repositorio de GitHub:
-  `git remote add origin https://github.com/tu_usuario/tu_repositorio.git`
-- Crea y muévete a la rama principal main.
-  `git checkout -b main`
-- Añade los archivos y haz tu primer commit - Preparar archivos para subir
-  `git add .`
-  `git commit -m "Primer commit "`
-- Sube tu código a GitHub -  Si tu rama local se llama main, haz:
-  `git push -u origin main`
+## ✅ Inicializar el repositorio local - Si tu proyecto aún no está conectado a Git: 
+
+ ▶ `git init`
+
+## ✅ Agrega el repositorio remoto - Esto vincula tu proyecto local al repositorio de GitHub:
+
+ ▶ `git remote add origin https://github.com/tu_usuario/tu_repositorio.git`
+
+## ✅ Crea y muévete a la rama principal main.
+
+ ▶ `git checkout -b main`
+
+## ✅ Añade los archivos y haz tu primer commit - Preparar archivos para subir
+
+ ▶ `git add .`
+ ▶ `git commit -m "Primer commit "`
+
+## ✅ Sube tu código a GitHub -  Si tu rama local se llama main, haz:
+
+ ▶ `git push -u origin main`
 
 - ⚠️ Si da error porque el repositorio remoto ya contiene archivos:
--  `git push -u origin main --force`
+▶ `git push -u origin main --force`
 
 ---
 
  ## ✅ Actualizar el README.md en GitHub.
 
 1. Añadir los cambios del archivo README.md.
-`git add README.md`
+▶ `git add README.md`
 2. Hacer el commit con un mensaje claro.
-`git commit -m "Actualizar contenido del README.md"`
+▶ `git commit -m "Actualizar contenido del README.md"`
 3. Subir los cambios al repositorio remoto. 
- `git push origin main`
+▶ `git push origin main`
 
 
 ## ✅ Subir o actualizar los cambios del proyecto en GitHub.
