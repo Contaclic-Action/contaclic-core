@@ -207,7 +207,7 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
   `pip install -r requirements.txt`
 
  - ▶ Para verificar todas las librerías instaladas específicamente en ese entorno.
- 
+
   `pip freeze`                                ➡️  Muestra el contenido de requirements.txt.
 
 ---
@@ -240,7 +240,7 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 # 🏛️ BACKEND
 
 - ┣ 💼 **backend/**	                ▶️   Contiene la app principal, routers registrados, CORS.
-─── 📄 main.py	                    ▶️   Archivo principal que levanta la API
+─── 📄 main.py	                    ▶️   Archivo principal que levanta la API.
 - ┣ 💼 **backend/bot/**	            ▶️   Bot de Telegram con Python. "usuario automático".
 ─── 🗂️ main.py	                     ▶️   Punto de entrada principal.
 ─── 🗂️ handlers/	                 ▶️   Manejadores de comandos.
@@ -250,16 +250,16 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 ─── 🗂️ bancos/                      ▶️   Operaciones bancarias.
 ─── 🗂️ recibidos/                   ▶️   Modulo recibido Dian. Todo sobre compras.
 ─── 🗂️ terceros/	                 ▶️   Manejo de usuarios y terceros.
-- ┣ 💼 **backend/contabilidad/**	▶️   Lógica de negocio central
-─── 🗂️ models/	                     ▶️   Modelos de datos
-─── 🗂️ routers/                     ▶️   Endpoints (listar, crear, actualizar, etc.)
-─── 🗂️ schemas/                     ▶️   Esquemas expuestos en API
-- ┣ 💼 **backend/core/**	        ▶️   Configuraciones de la app
+- ┣ 💼 **backend/contabilidad/**	▶️   Lógica de negocio central.
+─── 🗂️ models/	                     ▶️   Modelos de datos.
+─── 🗂️ routers/                     ▶️   Endpoints (listar, crear, actualizar, etc.).
+─── 🗂️ schemas/                     ▶️   Esquemas expuestos en API.
+- ┣ 💼 **backend/core/**	        ▶️   Configuraciones de la app.
 ─── 📄 config.py	                ▶️   Gestiona la configuración externa.
 - ┣ 💼 **backend/database/**	    ▶️   Configuracion de la base de datos.  
 ─── 📄 connection.py	            ▶️   Logica de conexion a PostgreSQL usando SQLAlchemy.
-- ┣ 💼 **backend/integrations/**    ▶️   Módulo unificado para integraciones
-─── 🗂️ auth/                        ▶️   Autenticación y tokens
+- ┣ 💼 **backend/integrations/**    ▶️   Módulo unificado para integraciones.
+─── 🗂️ auth/                        ▶️   Autenticación y tokens.
 - ┣ 💼 **backend/models/**	        ▶️   Modelos SQLAlchemy para representar las tablas. 
 ─── 🗂️ registro/	                 ▶️   Modelos geograficos para crear terceros.
 ─── 🗂️ dian/	                     ▶️   Conciliacion modulo Dian.
@@ -268,18 +268,18 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 ─── 🗂️ registro/   
 ─── 🗂️ dian/
 ─── 🗂️ bancos/
-- ┣ 💼 **backend/schemas/**	        ▶️  Aqui defines los esquemas de entrada/salida (Pydantic) 
+- ┣ 💼 **backend/schemas/**	        ▶️  Aqui defines los esquemas de entrada/salida (Pydantic).
 ─── 🗂️ bancos/	                     ▶️  Conciciliacion de extractos bancarios.
 ─── 🗂️ registro/	                 ▶️  Esquema geograficos para crear terceros.  
 ─── 🗂️ dian/	                     ▶️  Conciliacion modulo Dian.   
 - ┣ 💼 **backend/services/**        ▶️  Divide lógica de negocio de forma clara y coherente.
-─── 🗂️ bancos/	                     ▶️  Operaciones bancarias
+─── 🗂️ bancos/	                     ▶️  Operaciones bancarias.
 ─── 🗂️ registro/                    ▶️  Encapsula toda la lógica, terceros, geográficos, etc.
 ─── 🗂️ dian/	                     ▶️  Interacción con los datos regulados por la DIAN.
-- ┣ 💼 **backend/tests/**	        ▶️  Es la raíz de la pruebas automáticas
-─── 🗂️ clientes/                    ▶️  Dependencias comunes de la API
-─── 🗂️ models/                      ▶️  Modelos de datos
-─── 🗂️ database/                    ▶️  Esquemas para validación/serialización API
+- ┣ 💼 **backend/tests/**	        ▶️  Es la raíz de la pruebas automáticas.
+─── 🗂️ clientes/                    ▶️  Dependencias comunes de la API.
+─── 🗂️ models/                      ▶️  Modelos de datos.
+─── 🗂️ database/                    ▶️  Esquemas para validación/serialización API.
 - ┣ 💼 **backend/uploads/**	        ▶️  Para guardar temporalmente los archivos (CSV, PDF, XML).
 ─── 🗂️ uploads/bancos/YYYY/
 ─── 🗂️ uploads/terceros/YYYY/
@@ -287,8 +287,90 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 - ┗ 💼 **backend/utils/**	         ▶️  Funciones pequenas y sin conexion a la base de datos.
 ─── 🗂️ archivos/pdf/	              ▶️  Funciones para leer PDFs.
 ─── 🗂️ archivos/csv/	              ▶️  Validaciones CSV regitros de empresas y personas naturales.
-─── 🗂️ archivos/xml/	              ▶️  XML
+─── 🗂️ archivos/xml/	              ▶️  XML.
 
+---
+
+##                🧠 **Estructura de archivos __init__.py**
+
+### 🗂️ DATABASE / __init__.py
+
+`from .connection import engine, SessionLocal, get_db`
+`from .base_class import Base`
+
+---
+
+### 📁 Carpetas de modelos (models/)  
+
+- 🎯 Importamos las clases de los modelos que queremos exponer.
+
+`from .archivo_1 import Clase1`
+`from .archivo_2 import Clase2`
+
+-  Controlamos qué se puede importar desde fuera.
+
+`__all__ = ["Clase1", "Clase2"]`
+
+---
+
+###  📁 Carpetas de routers (routers/)
+
+-  🎯 Importamos los routers definidos en otros archivos.
+
+`from .recurso_1 import router as recurso_1_router`
+`from .recurso_2 import router as recurso_2_router`
+
+-  Listamos los routers para facilitar su uso desde main.py o routers principales.
+
+` __all__ = ["recurso_1_router", "recurso_2_router"]`
+
+---
+
+###  📁 Carpetas de esquemas (schemas/)
+
+-  🎯 Importamos los esquemas base, create, update, etc.
+
+`from .archivo_1 import Clase1Base, Clase1Create`
+`from .archivo_2 import Clase2Base, Clase2Create`
+
+-  Indicamos explícitamente qué exportamos.
+
+`__all__ = ["Clase1Base", "Clase1Create", "Clase2Base", "Clase2Create"]`
+
+---
+
+### 📁 Carpetas de servicios (services/)
+
+-  🎯 Importamos funciones o clases que contienen la lógica del negocio.
+
+`from .recurso_1 import funcion_1`
+`from .recurso_2 import clase_servicio`
+
+-  Exportamos solo lo necesario.
+
+`__all__ = ["funcion_1", "clase_servicio"]`
+
+---
+
+### 📁 Carpetas de utilidades (utils/)
+
+-  🎯 Importamos funciones específicas de procesamiento PDF.
+
+`from .lector_pdf import extraer_texto`
+`from .validador_pdf import validar_formato`
+
+-  Dejamos claro qué funciones queremos que estén disponibles.
+
+`__all__ = ["extraer_texto", "validar_formato"]`
+
+---
+
+### ❌ Carpetas que no necesitan __init__.py
+
+- 📁 Carpetas de uploads - solo para guardar archivos temporales.
+- 📁 Carpetas de tests - si no planeas importar sus módulos desde fuera.
+- 📁 Carpetas docs/, temp/ o cualquier carpeta de recursos.
+           
 ---
 
 ##                       📋 PROCESO CREACION DE TABLAS
@@ -328,11 +410,6 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 
 `from sqlalchemy.ext.declarative import declarative_base`
 `Base = declarative_base()`
-
-### 🗂️ DATABASE / __init__.py
-
-`from .connection import engine, SessionLocal, get_db`
-`from .base_class import Base`
 
 ### 🗂️ DATABASE / create_tables.py
 
@@ -442,77 +519,3 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 
 ---
 
-##                🧠 **Estructura de archivos __init__.py**
-
-### 📁 Carpetas de modelos (models/)  
-
-- 🎯 Importamos las clases de los modelos que queremos exponer.
-
-`from .archivo_1 import Clase1`
-`from .archivo_2 import Clase2`
-
--  Controlamos qué se puede importar desde fuera.
-
-`__all__ = ["Clase1", "Clase2"]`
-
----
-
-###  📁 Carpetas de routers (routers/)
-
--  🎯 Importamos los routers definidos en otros archivos.
-
-`from .recurso_1 import router as recurso_1_router`
-`from .recurso_2 import router as recurso_2_router`
-
--  Listamos los routers para facilitar su uso desde main.py o routers principales.
-
-` __all__ = ["recurso_1_router", "recurso_2_router"]`
-
----
-
-###  📁 Carpetas de esquemas (schemas/)
-
--  🎯 Importamos los esquemas base, create, update, etc.
-
-`from .archivo_1 import Clase1Base, Clase1Create`
-`from .archivo_2 import Clase2Base, Clase2Create`
-
--  Indicamos explícitamente qué exportamos.
-
-`__all__ = ["Clase1Base", "Clase1Create", "Clase2Base", "Clase2Create"]`
-
----
-
-### 📁 Carpetas de servicios (services/)
-
--  🎯 Importamos funciones o clases que contienen la lógica del negocio.
-
-`from .recurso_1 import funcion_1`
-`from .recurso_2 import clase_servicio`
-
--  Exportamos solo lo necesario.
-
-`__all__ = ["funcion_1", "clase_servicio"]`
-
----
-
-### 📁 Carpetas de utilidades (utils/)
-
--  🎯 Importamos funciones específicas de procesamiento PDF.
-
-`from .lector_pdf import extraer_texto`
-`from .validador_pdf import validar_formato`
-
--  Dejamos claro qué funciones queremos que estén disponibles.
-
-`__all__ = ["extraer_texto", "validar_formato"]`
-
----
-
-### ❌ Carpetas que no necesitan __init__.py
-
-- 📁 Carpetas de uploads - solo para guardar archivos temporales.
-- 📁 Carpetas de tests - si no planeas importar sus módulos desde fuera.
-- 📁 Carpetas docs/, temp/ o cualquier carpeta de recursos.
-           
----
