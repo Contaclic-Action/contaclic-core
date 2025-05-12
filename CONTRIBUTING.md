@@ -78,13 +78,13 @@ Incluye rutas comunes para ignorar archivos innecesarios:
 ## ✅ Subir o actualizar los cambios del proyecto en GitHub.
 
 1. Verifica qué archivos han cambiado.
- `git status`
+▶ `git status`
 2. Añade todos los archivos modificados 
- `git add .`
+▶ `git add .`
 3. Haz un commit con un mensaje descriptivo 
- `git commit -m "Actualizar estructura y archivos del proyecto"`
+▶ `git commit -m "Actualizar estructura y archivos del proyecto"`
 4. Sube los cambios al repositorio remoto 
- `git push origin main`
+▶ `git push origin main`
 
 ---
 
@@ -100,7 +100,7 @@ Incluye rutas comunes para ignorar archivos innecesarios:
 
 ### ✅  Clona el repositorio: 
 
-`https://github.com/Contaclic-Action/contaclic-core.git` 
+▶ `https://github.com/Contaclic-Action/contaclic-core.git` 
 
 ### ✅  Entorno virtual 
 
@@ -111,19 +111,19 @@ Incluye rutas comunes para ignorar archivos innecesarios:
 
 ### ✅ Instalar dependencias.
 
- `pip install -r requirements.txt`
+▶ `pip install -r requirements.txt`
 
 ### ✅ Levantar entorno con Docker.
 
- `docker-compose up --build`
+▶ `docker-compose up --build`
 
 ### 🧪 Correr pruebas.
 
- `pytest src/tests`
+▶ `pytest src/tests`
 
 ✅ Usa pytest-cov para cobertura:
 
- `pytest --cov=src/app src/tests` - Para cobertura
+▶ `pytest --cov=src/app src/tests` - Para cobertura
 
 
 📌 Las pruebas están organizadas en 🗂️ src/tests/. 
@@ -164,7 +164,7 @@ Documentación general está en docs/
 
 Endpoints autodocumentados con FastAPI Swagger:
 
-  `http://localhost:8000/docs`
+▶  `http://localhost:8000/docs`
 
 ---
 
@@ -210,25 +210,25 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 
 ## 🧹 Gestión del Entorno Virtual y Dependencias
 
- - ▶ Eliminar el Entorno Virtual Antiguo (Limpieza):
+ - ✅ Eliminar el Entorno Virtual Antiguo (Limpieza):
 
-  `Remove-Item -Path .venv -Recurse -Force`   ➡️ Si la carpeta se llama .venv
+  ▶ `Remove-Item -Path .venv -Recurse -Force`   -  Si la carpeta se llama .venv
 
- - ▶ Crear un Nuevo Entorno Virtual:
+ - ✅ Crear un Nuevo Entorno Virtual:
 
-  `python -m venv .venv`                      ➡️  Esto crea una nueva carpeta '.venv'
+  ▶ `python -m venv .venv`                       -  Esto crea una nueva carpeta '.venv'
 
- - ▶ Activar el Nuevo Entorno Virtual: 
+ - ✅ Activar el Nuevo Entorno Virtual: 
 
-  `.\.venv\Scripts\activate`                  ➡️  Si la carpeta se llama .venv
+  ▶ `.\.venv\Scripts\activate`                   -  Si la carpeta se llama .venv
 
- - ▶ Verificar listado en la raiz del proyecto. Instalar las Dependencias:
+ - ✅ Verificar listado en la raiz del proyecto. Instalar las Dependencias:
 
-  `pip install -r requirements.txt`
+  ▶ `pip install -r requirements.txt`
 
- - ▶ Para verificar todas las librerías instaladas específicamente en ese entorno.
+ - ✅ Para verificar todas las librerías instaladas específicamente en ese entorno.
 
-  `pip freeze`                                ➡️  Muestra el contenido de requirements.txt.
+  ▶ `pip freeze`                                 -  Muestra el contenido de requirements.txt.
 
 ---
 
@@ -260,54 +260,54 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 ## 🏛️ BACKEND
 
 - ┣ 💼 **backend/**	                ▶️   Contiene la app principal, routers registrados, CORS.
-┃ ┣ 📄 main.py	                    ▶️   Archivo principal que levanta la API.
+ ┃┣  📄 main.py	                    ▶️   Archivo principal que levanta la API.
 - ┣ 💼 **backend/bot/**	            ▶️   Bot de Telegram con Python. "usuario automático".
-┃ ┣ 🗂️ main.py	                     ▶️   Punto de entrada principal.
-┃ ┣🗂️ handlers/	                 ▶️   Manejadores de comandos.
-┃ ┣ 🗂️ middlewares/                 ▶️   Hacer logs por usuario, o limitar por roles, etc.
-┃ ┣ 🗂️ services/	                 ▶️   Conexión con backend.
+ ┃┣ 🗂️ main.py	                     ▶️   Punto de entrada principal.
+┃┣🗂️ handlers/	                     ▶️   Manejadores de comandos.
+┃┣ 🗂️ middlewares/                  ▶️   Hacer logs por usuario, o limitar por roles, etc.
+┃┣ 🗂️ services/	                 ▶️   Conexión con backend.
 - ┣ 💼 **backend/clientes/**	    ▶️   Libreto de operaciones.
-┃ ┣ 🗂️ bancos/                      ▶️   Operaciones bancarias.
-┃ ┣ 🗂️ recibidos/                   ▶️   Modulo recibido Dian. Todo sobre compras.
-┃ ┣ 🗂️ terceros/	                 ▶️   Manejo de usuarios y terceros.
+ ┃┣ 🗂️ bancos/                      ▶️   Operaciones bancarias.
+ ┃┣ 🗂️ recibidos/                   ▶️   Modulo recibido Dian. Todo sobre compras.
+ ┃┣ 🗂️ terceros/	                 ▶️   Manejo de usuarios y terceros.
 - ┣ 💼 **backend/contabilidad/**	▶️   Lógica de negocio central.
-┃ ┣ 🗂️ models/	                     ▶️   Modelos de datos.
-┃ ┣ 🗂️ routers/                     ▶️   Endpoints (listar, crear, actualizar, etc.).
-┃ ┣ 🗂️ schemas/                     ▶️   Esquemas expuestos en API.
+ ┃┣ 🗂️ models/	                     ▶️   Modelos de datos.
+ ┃┣ 🗂️ routers/                     ▶️   Endpoints (listar, crear, actualizar, etc.).
+ ┃┣ 🗂️ schemas/                     ▶️   Esquemas expuestos en API.
 - ┣ 💼 **backend/core/**	        ▶️   Configuraciones de la app.
-┃ ┣ 📄 config.py	                ▶️   Gestiona la configuración externa.
+ ┃┣ 📄 config.py	                ▶️   Gestiona la configuración externa.
 - ┣ 💼 **backend/database/**	    ▶️   Configuracion de la base de datos.  
-┃ ┣ 📄 connection.py	            ▶️   Logica de conexion a PostgreSQL usando SQLAlchemy.
+ ┃┣ 📄 connection.py	            ▶️   Logica de conexion a PostgreSQL usando SQLAlchemy.
 - ┣ 💼 **backend/integrations/**    ▶️   Módulo unificado para integraciones.
-┃ ┣ 🗂️ auth/                        ▶️   Autenticación y tokens.
+ ┃┣ 🗂️ auth/                        ▶️   Autenticación y tokens.
 - ┣ 💼 **backend/models/**	        ▶️   Modelos SQLAlchemy para representar las tablas. 
-┃ ┣ 🗂️ registro/	                 ▶️   Modelos geograficos para crear terceros.
-┃ ┣ 🗂️ dian/	                     ▶️   Conciliacion modulo Dian.
-┃ ┣ 🗂️ bancos/	                     ▶️   Conciciliacion de extractos bancarios.
+ ┃┣ 🗂️ registro/	                 ▶️   Modelos geograficos para crear terceros.
+ ┃┣ 🗂️ dian/	                     ▶️   Conciliacion modulo Dian.
+ ┃┣ 🗂️ bancos/	                     ▶️   Conciciliacion de extractos bancarios.
 - ┣ 💼 **backend/routers/**	        ▶️   Carpeta general de endpoints FastAPI organizados por dominio.
-┃ ┣ 🗂️ registro/   
-┃ ┣ 🗂️ dian/
-┃ ┣ 🗂️ bancos/
+ ┃┣ 🗂️ registro/   
+ ┃┣ 🗂️ dian/
+ ┃┣ 🗂️ bancos/
 - ┣ 💼 **backend/schemas/**	        ▶️  Aqui defines los esquemas de entrada/salida (Pydantic).
-┃ ┣ 🗂️ bancos/	                     ▶️  Conciciliacion de extractos bancarios.
-┃ ┣ 🗂️ registro/	                 ▶️  Esquema geograficos para crear terceros.  
-┃ ┣ 🗂️ dian/	                     ▶️  Conciliacion modulo Dian.   
+ ┃┣ 🗂️ bancos/	                     ▶️  Conciciliacion de extractos bancarios.
+ ┃┣ 🗂️ registro/	                 ▶️  Esquema geograficos para crear terceros.  
+ ┃┣ 🗂️ dian/	                     ▶️  Conciliacion modulo Dian.   
 - ┣ 💼 **backend/services/**        ▶️  Divide lógica de negocio de forma clara y coherente.
-┃ ┣ 🗂️ bancos/	                     ▶️  Operaciones bancarias.
-┃ ┣ 🗂️ registro/                    ▶️  Encapsula toda la lógica, terceros, geográficos, etc.
-┃ ┣ 🗂️ dian/	                     ▶️  Interacción con los datos regulados por la DIAN.
+ ┃┣ 🗂️ bancos/	                     ▶️  Operaciones bancarias.
+ ┃┣ 🗂️ registro/                    ▶️  Encapsula toda la lógica, terceros, geográficos, etc.
+ ┃┣ 🗂️ dian/	                     ▶️  Interacción con los datos regulados por la DIAN.
 - ┣ 💼 **backend/tests/**	        ▶️  Es la raíz de la pruebas automáticas.
-┃ ┣ 🗂️ clientes/                    ▶️  Dependencias comunes de la API.
-┃ ┣ 🗂️ models/                      ▶️  Modelos de datos.
-┃ ┣ 🗂️ database/                    ▶️  Esquemas para validación/serialización API.
+ ┃┣ 🗂️ clientes/                    ▶️  Dependencias comunes de la API.
+ ┃┣ 🗂️ models/                      ▶️  Modelos de datos.
+ ┃┣ 🗂️ database/                    ▶️  Esquemas para validación/serialización API.
 - ┣ 💼 **backend/uploads/**	        ▶️  Para guardar temporalmente los archivos (CSV, PDF, XML).
-┃ ┣ 🗂️ uploads/bancos/YYYY/
-┃ ┣ 🗂️ uploads/terceros/YYYY/
-┃ ┣ 🗂️ uploads/emitidos/YYYY/
+ ┃┣ 🗂️ uploads/bancos/YYYY/
+ ┃┣ 🗂️ uploads/terceros/YYYY/
+ ┃┣ 🗂️ uploads/emitidos/YYYY/
 - ┗ 💼 **backend/utils/**	         ▶️  Funciones pequenas y sin conexion a la base de datos.
-┃ ┣ 🗂️ archivos/pdf/	              ▶️  Funciones para leer PDFs.
-┃ ┣ 🗂️ archivos/csv/	              ▶️  Validaciones CSV regitros de empresas y personas naturales.
-┃ ┣ 🗂️ archivos/xml/	              ▶️  XML.
+ ┃┣ 🗂️ archivos/pdf/	              ▶️  Funciones para leer PDFs.
+ ┃┣ 🗂️ archivos/csv/	              ▶️  Validaciones CSV regitros de empresas y personas naturales.
+ ┃┣ 🗂️ archivos/xml/	              ▶️  XML.
 
 ---
 
