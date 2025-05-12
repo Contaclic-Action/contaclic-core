@@ -141,7 +141,7 @@ El uso de un patron uniforme en toda la aplicacion reduce errores, facilita la c
 ✅ Issues para empezar
 
  ## 👨‍💼 Autor
- Yecid Cordoba – GitHub | (admin@contaclick.pro) 
+ Yecid Cordoba – GitHub | <admin@contaclick.pro> 
 
  ## ⚖️ Licencia
 
