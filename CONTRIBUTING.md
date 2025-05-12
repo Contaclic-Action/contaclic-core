@@ -190,16 +190,25 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 
 ## 🧹 Gestión del Entorno Virtual y Dependencias
 
- ▶️ Eliminar el Entorno Virtual Antiguo (Limpieza):
- - `Remove-Item -Path .venv -Recurse -Force`   ➡️ Si la carpeta se llama .venv
- ▶️ Crear un Nuevo Entorno Virtual:
- - `python -m venv .venv`                      ➡️  Esto crea una nueva carpeta '.venv'
- ▶️ Activar el Nuevo Entorno Virtual:         
- - `.\.venv\Scripts\activate`                  ➡️  Si la carpeta se llama .venv
- ▶️ Verificar listado en la raiz del proyecto. Instalar las Dependencias:
- - `pip install -r requirements.txt`
- ▶️ Para verificar todas las librerías instaladas específicamente en ese entorno.
- - `pip freeze`                                ➡️  Muestra el contenido de requirements.txt.
+ - ▶ Eliminar el Entorno Virtual Antiguo (Limpieza):
+
+  `Remove-Item -Path .venv -Recurse -Force`   ➡️ Si la carpeta se llama .venv
+
+ - ▶ Crear un Nuevo Entorno Virtual:
+
+  `python -m venv .venv`                      ➡️  Esto crea una nueva carpeta '.venv'
+
+ - ▶ Activar el Nuevo Entorno Virtual: 
+
+  `.\.venv\Scripts\activate`                  ➡️  Si la carpeta se llama .venv
+
+ - ▶ Verificar listado en la raiz del proyecto. Instalar las Dependencias:
+
+  `pip install -r requirements.txt`
+
+ - ▶ Para verificar todas las librerías instaladas específicamente en ese entorno.
+ 
+  `pip freeze`                                ➡️  Muestra el contenido de requirements.txt.
 
 ---
 
