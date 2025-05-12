@@ -4,7 +4,7 @@
   <img src="./assets/logo.png" alt="Contaclic Logo" width="200"/>
 </p>
 
-# 💻 **Contaclic Actión – Plataforma Contable y Tributaria.**
+# 🧠  Plataforma Contable y Tributaria.**
 
 
 Automatización contable y tributaria inteligente para empresas. Incluye módulos de carga masiva, validación de datos, creación de terceros, lectura de RUT en PDF, conciliación de compras y más.
@@ -141,7 +141,7 @@ El uso de un patron uniforme en toda la aplicacion reduce errores, facilita la c
 ✅ Issues para empezar
 
  ## 👨‍💼 Autor
- Yecid Cordoba – GitHub | Contaclic.pro 
+ Yecid Cordoba – GitHub | (admin@contaclick.pro) 
 
  ## ⚖️ Licencia
 
