@@ -52,6 +52,6 @@ El sistema incluirá módulos de compras, ventas, bancos, nómina, conciliacione
 
 ### 📫 Contacto:
 
-📧 <yecidcordoba@gmail.com>
+📧 <admin@contaclick.pro>
 
 💼 En desarrollo: contaclic.pro (sitio en construcción)
