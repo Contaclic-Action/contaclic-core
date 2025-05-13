@@ -434,32 +434,61 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 
 ### 🗂️ MODELOS - models
 
-`from sqlalchemy import Column, Integer, String`
-`from backend.database.base_class import Base`
 
-`class Tercero(Base):`
-`__tablename__ = "terceros"`
+- 🗂️ registro/generales/ 
+
+
+    `from sqlalchemy import Column, Integer, String, Boolean, DateTime, func`
+    `from backend.database.base_class import Base`
+
+
+    `class nombre(Base):`
+    `__tablename__ = "nombre"`
+
+     id = Column(Integer, primary_key=True, index=True)
+     nombre = Column(String, index=True)
+
+
+- 🗂️ registro/geograficos/ 
+
+    `from sqlalchemy import Column, Integer, String`
+    `from backend.database.base_class import Base`
+
+
+    `class Tercero(Base):`
+    `__tablename__ = "terceros"`
+
 
     id = Column(Integer, primary_key=True, index=True)
     nombre = Column(String, index=True)
-    identificacion = Column(String, unique=True, index=True)
-    direccion = Column(String)
 
 ---
 
 ### 🗂️ ESQUEMAS - schemas
 
-`from pydantic import BaseModel`
-`class TerceroBase(BaseModel):`
-`nombre: str`
-`identificacion: str`
-`direccion: str`
+`from pydantic import BaseModel` 
+
+`from typing import Optional`
+
+`from datetime import datetime`
+
+`class nombre(BaseModel):`
+    
+
 `class TerceroCreate(TerceroBase):`
-` pass`
-`class Tercero(TerceroBase):`
-`id: int`
-`class Config:`
-`from_attributes = True`
+    pass  # Aquí no necesitas campos adicionales, porque se llenan automáticamente
+
+class Nombre(NombreBase):
+    id: int
+    fecha_creacion: Optional[datetime]
+    fecha_actualizacion: Optional[datetime]
+    usuario_creacion: Optional[str]
+    usuario_actualizacion: Optional[str]
+    activo: Optional[bool] = True
+
+    class Config:
+        from_attributes = True  # Necesario para que funcione con ORM
+
 
 ---
 

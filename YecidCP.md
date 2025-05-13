@@ -6,7 +6,7 @@ Técnico Auxiliar Contable y Tecnólogo en Contabilidad y Finanzas, con más de 
 
 ### 🧾 Diario:
 
-- Compras: Ingreso de facturas de compras electrónicas, documentos soporte, notas crédito, gastos nacionales y del exterior. Manejo de inventario.
+- **Compras:** Ingreso de facturas de compras electrónicas, documentos soporte, notas crédito, gastos nacionales y del exterior.
 
 - **Ventas:** Registro de facturas de ventas electrónicas y notas crédito electrónicas.
 
