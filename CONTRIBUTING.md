@@ -437,9 +437,9 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 
 - 🗂️ registro/generales/ 
 
+`from sqlalchemy import Column, Integer, String, Boolean, DateTime, func`
 
-    `from sqlalchemy import Column, Integer, String, Boolean, DateTime, func`
-    `from backend.database.base_class import Base`
+`from backend.database.base_class import Base`
 
 
     `class nombre(Base):`
@@ -451,8 +451,9 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 
 - 🗂️ registro/geograficos/ 
 
-    `from sqlalchemy import Column, Integer, String`
-    `from backend.database.base_class import Base`
+`from sqlalchemy import Column, Integer, String`
+
+`from backend.database.base_class import Base`
 
 
     `class Tercero(Base):`
