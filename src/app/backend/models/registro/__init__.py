@@ -1,15 +1,14 @@
-# backend/models/registro/__init__.py
-# Modelos geograficos para crear terceros.
+# Agrupamos submodulos de registro
 
-from .generales import Generales
-from .geograficos import Geograficos    
-from .metodo_pago import MeotodoPago
-from .terceros import Terceros
+from .generales import modelo_registro as generales_modelo_registro
+from .geograficos import modelo_registro as geograficos_modelo_registro
+from .metodo_pago import modelo_registro as metodo_pago_modelo_registro
+from .terceros import modelo_registro as terceros_modelo_registro
 
-# Exponemos las clases que queremos que sean accesibles.
+# Exponemos los submodulos
 __all__ = [
-    "Generales",
-    "Geograficos",
-    "MeotodoPago",
-    "Terceros",
+    "generales_modelo_registro",
+    "geograficos_modelo_registro",
+    "metodo_pago_modelo_registro",
+    "terceros_modelo_registro"
 ]

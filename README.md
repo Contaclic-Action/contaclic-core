@@ -10,44 +10,11 @@
 Automatización contable y tributaria inteligente para empresas. Incluye módulos de carga masiva, validación de datos, creación de terceros, lectura de RUT en PDF, conciliación de compras y más.
 
 ---
-## 🚀 Tecnologías
-
-| Tecnología               | Descripción                                        |
-|--------------------------|----------------------------------------------------|
-| **Python 3.11+**         | Backend moderno con FastAPI y SQLAlchemy ORM       |
-| **PostgreSQL**           | Base de datos relacional principal                 |
-| **React / Next.js 14+**  | Frontend SPA con SSR y rendimiento optimizado      |
-| **Tailwind CSS**         | Utilidades para estilos rápidos y personalizables  |
-| **React Query**          | Manejo eficiente de estados asincrónicos           |
-| **Redis**                | Cache de alta velocidad y cola de tareas           |
-| **Power BI**             | Visualización interactiva de datos empresariales   |
-| **Pytest**               | Framework de testing para backend                  |
-| **Docker & Compose**     | Contenedores y orquestación local/prod             |
-| **Pydantic V2**          | Validación de datos y modelos en FastAPI           |
-
----
 
 # 🗂️ Estructura general
 
 ### ├── 📦 backend/   Backend con FastAPI (API REST, lógica de negocio, base de datos, automatizaciones)
 ### └── 💻 frontend/  Frontend moderno en Next.js (interfaz de usuario para clientes y administrativos)
-
----
-
-## 👋 Bienvenido al backend de Contaclic Action.
-
-Este sistema ha sido desarrollado para automatizar y gestionar de forma eficiente, modular y escalable toda la información tributaria, contable y documental de tu empresa, tanto a nivel nacional como municipal.
-
-Aquí encontrarás:
-
-### 🧩 Todos los módulos funcionales del sistema (tributación, Compras, bancos, etc.).
-
-### ⚙️ Detalles técnicos de su estructura, lógica de negocio y herramientas integradas.
-
-### 🚀 Mejoras continuas orientadas a rendimiento, usabilidad y escalabilidad.
-
-
-Este backend es el núcleo que conecta procesos clave de tu operación contable con automatizaciones inteligentes y una visión clara del estado financiero.
 
 ---
 
@@ -57,52 +24,7 @@ Este backend es el núcleo que conecta procesos clave de tu operación contable 
                     
 ---
 
-## 📌 Explicación de la organización:
 
-### 📁 database/ 
-
-Conexion a la base de datos. Aqui generalmente se encuentra:
-
-- El motor de conexion (engine).
-- La sesion (SessionLocal).
-- El archivo create_tables.py para inicializar las tablas a partir de los modelos.
-
----
-
-### 📁 models/ 
-
-Define las clases de SQLAlchemy que representan tus tablas en la base de datos. Cada clase equivale a una tabla y define sus campos, relaciones y restricciones.
-
-### 📁 schemas/ 
-
-Contiene las clases de Pydantic, utilizadas para:
-
-- Validar los datos de entrada y salida de la API.
-- Separar los modelos internos de la base de datos de las estructuras que se exponen al cliente.
-- Esto mejora la seguridad y mantiene el codigo desacoplado.
-
-### 📁 routers/  
-
-Endpoints de la API agrupados por funcionalidad. Cada archivo corresponde a un recurso o entidad y contiene:
-
-- Las rutas (@router.get, @router.post, etc.).
-- La logica de interaccion entre los schemas y los modelos.
-
-### ⚙️ __init__.py en cada carpeta/ 
-
-Este archivo hace que la carpeta sea reconocida como un paquete de Python y permite importaciones limpias entre modulos. Ayuda a mantener una estructura modular y organizada.
-
-### 📝 main.py/
-
-Es el punto de entrada de la aplicacion FastAPI. Aqui se:
-
-- Crea la instancia principal de la app (app = FastAPI()).
-- Se agregan middlewares (como CORS).
-- Se incluyen los routers definidos en routers/.
-- Se levanta el servidor si se ejecuta directamente.
-- Beneficios de esta Estructura.
-
----
 
 ## 🧱 Ventajas de esta Arquitectura.
 
@@ -121,6 +43,65 @@ Cada componente (modelo, ruta, lógica) puede ser probado de forma aislada, lo q
 ### 🧩 Consistencia
 El uso de un patron uniforme en toda la aplicacion reduce errores, facilita la colaboracion en equipo y mejora la experiencia de desarrollo a largo plazo.
 
+---
+
+## 📥 Configuración local
+
+
+- ✅  Clona el repositorio: 
+
+ `https://github.com/Contaclic-Action/contaclic-core.git` 
+
+
+- ✅  Entorno virtual 
+
+    python -m venv .venv
+    source .venv/bin/activate  - Linux/macOS
+
+    .venv\Scripts\activate     - Windows
+
+- ✅ Instalar dependencias.
+
+ `pip install -r requirements.txt`
+
+- ✅ Levantar entorno con Docker.
+
+ `docker-compose up --build`
+
+### 🧪 Correr pruebas.
+
+ `pytest src/tests`
+
+- Usa pytest-cov para cobertura:
+
+ `pytest --cov=src/app src/tests` 
+
+
+### 📌 Las pruebas están organizadas en 🗂️ src/tests/. 
+
+Se utiliza pytest para cobertura y ejecución.
+
+---
+
+
+## 🔗 Conexión de proyecto local a GitHub
+
+### ✅ Crea un archivo .gitignore en la raíz del proyecto.
+
+Incluye rutas comunes para ignorar archivos innecesarios:
+
+1. ✅ Inicializar el repositorio local  ▶ `git init`
+2. ✅ Agrega el repositorio remoto ▶ `git remote add origin https://github.com/Contaclic-Action/contaclic-core.git`
+3. ✅ Crea y muévete a la rama principal main  ▶ `git checkout -b main`
+4. ✅ Añade los archivos y haz tu primer commit ▶ `git add .`
+ ▶ `git commit -m "Primer commit "`
+5. ✅ Sube tu código a GitHub  ▶ `git push -u origin main`
+
+- ⚠️ Si da error porque el repositorio remoto ya contiene archivos:
+
+▶ `git push -u origin main --force`
+
+---
 
 🚧 Estado del proyecto
 
