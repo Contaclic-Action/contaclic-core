@@ -435,7 +435,8 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 ### 🗂️ MODELOS - models
 
 
-- 🗂️ registro/generales/ 
+- 🗂️ `registro`
+
 
 `from sqlalchemy import Column, Integer, String, Boolean, DateTime, func`
 
@@ -456,24 +457,10 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
     usuario_actualizacion = Column(String, nullable=True)
     estado = Column(Boolean, default=True)
 
-
-- 🗂️ registro/geograficos/ 
-
-`from sqlalchemy import Column, Integer, String`
-
-`from backend.database.base_class import Base`
-
-
-    `class Tercero(Base):`
-    `__tablename__ = "terceros"`
-
-
-    id = Column(Integer, primary_key=True, index=True)
-    nombre = Column(String, index=True)
-
 ---
 
 ### 🗂️ ESQUEMAS - schemas
+
 
 `from pydantic import BaseModel` 
 
