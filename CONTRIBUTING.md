@@ -454,7 +454,7 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 
 `from sqlalchemy import Column, Boolean, DateTime, func`
 
-# Export class ActiveStateMixin:
+ Export class ActiveStateMixin:
 
 `class ActiveStateMixin:`
 
@@ -516,14 +516,7 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
      id = Column(Integer, primary_key=True, index=True)
      numero_identificacion = Column(String, index=True)
 
-  `Trazabilidad`
-
-    fecha_creacion = Column(DateTime(timezone=True), server_default=func.now())
-    fecha_actualizacion = Column(DateTime(timezone=True), onupdate=func.now())
-    usuario_creacion = Column(String, nullable=True)
-    usuario_actualizacion = Column(String, nullable=True)
-    estado = Column(Boolean, default=True)
-
+  
 ---
 
 ### 🗂️ ESQUEMAS - schemas
