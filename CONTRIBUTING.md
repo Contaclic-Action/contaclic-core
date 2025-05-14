@@ -19,26 +19,19 @@ Ver el archivo [Tecnologías_utilizadas](./docs/backend/TECNOLOGIAS.md) para má
 2. Clonar fork:
 `https://github.com/Contaclic-Action/contaclic-core.git`
 
-### ✅ Actualizar el README.md en GitHub.
+### ✅ Actualizar README.md en GitHub.
 
-1. Añadir los cambios del archivo README.md.
-▶ `git add README.md`
-2. Hacer el commit con un mensaje claro.
-▶ `git commit -m "Actualizar contenido del README.md"`
-3. Subir los cambios al repositorio remoto. 
-▶ `git push origin main`
+1. Añadir los cambios   ▶ `git add README.md`
+2. Hacer el commit      ▶ `git commit -m "Actualizar contenido del README.md"`
+3. Subir cambios        ▶ `git push origin main`
 
 
-### ✅ Subir o actualizar los cambios del proyecto en GitHub.
+### ✅ Actualizar los cambios en GitHub.
 
-1. Verifica qué archivos han cambiado.
-▶ `git status`
-2. Añade todos los archivos modificados 
-▶ `git add .`
-3. Haz un commit con un mensaje descriptivo 
-▶ `git commit -m "Actualizar estructura y archivos del proyecto"`
-4. Sube los cambios al repositorio remoto 
-▶ `git push origin main`
+1. Verifica archivos    ▶ `git status`
+2. Añadir archivos      ▶ `git add .`
+3. Commit con mensaje   ▶ `git commit -m "Actualizar estructura y archivos del proyecto"`
+4. Subir cambios        ▶ `git push origin main`
 
 
 - 🖥️ Confirmar en GitHub.
@@ -49,7 +42,8 @@ Ver el archivo [Tecnologías_utilizadas](./docs/backend/TECNOLOGIAS.md) para má
 
  Usa `main` solo para código listo para producción.
 
- Trabajo en ramas separadas:
+```bash
+✅ Usa ramas para trabajar, por ejemplo:
 
 - `feat/ → nueva funcionalidad.`
 - `fix/ → corrección de bug.`
@@ -71,23 +65,12 @@ Usamos Conventional Commits:
 
 ---
 
-### 📚 Documentación
 
-Documentación general está en docs/
+## 🧹 Estilo de código
 
-Endpoints autodocumentados con FastAPI Swagger:
-
-▶  `http://localhost:8000/docs`
-
----
-
-🧹 Estilo de código
-
-Sigue las guías de estilo PEP8.
-
-Usa black, flake8 o ruff para formatear y verificar tu código.
-
-Nombra tus funciones y variables de forma clara y coherente.
+- Sigue la guía [PEP8](https://peps.python.org/pep-0008/).
+- Usa herramientas como `black`, `flake8` o `ruff` para formatear el código.
+- Nombrá tus funciones y variables de forma clara y coherente.
 
 ---
 
@@ -112,9 +95,11 @@ Antes de subir tu código:
 
 ---
 
-### 🤝 Código de conducta
+## 📚 Documentación
 
-Este proyecto tiene un [Código de Conducta](CODE_OF_CONDUCT.md). Por favor, sé respetuoso y constructivo con otros colaboradores.
+- [Tecnologías utilizadas](./docs/backend/TECNOLOGIAS.md)
+- [Código de Conducta](./CODE_OF_CONDUCT.md)
+- [README del proyecto](./README.md)
 
 ---
 

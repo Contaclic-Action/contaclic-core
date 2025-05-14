@@ -13,7 +13,7 @@ Automatización contable y tributaria inteligente para empresas. Incluye módulo
 
 # 🗂️ Estructura general
 
-
+```bash
 📦 backend/     # Backend con FastAPI (API REST, lógica, base de datos)
 
 💻 frontend/    # Frontend moderno en Next.js (clientes y administrativos)
@@ -30,26 +30,19 @@ Ver el archivo [backend](./docs/README.md) para más información.
 
 
 1. 🧹 **Gestión del Entorno Virtual y Dependencias**
+    
+   
+- ✅ Eliminar el Entorno Virtual Antiguo (Limpieza).
 
- ✅ Eliminar el Entorno Virtual Antiguo (Limpieza).
- 
-- ▶ `Remove-Item -Path .venv -Recurse -Force`   
+     ▶ `Remove-Item -Path .venv -Recurse -Force`  
 
- ✅ Crear un Nuevo Entorno Virtual.
-
-- ▶ `python -m venv .venv`                       
-
- ✅ Activar el Nuevo Entorno Virtual. 
-
-- ▶ `.\.venv\Scripts\activate`                   
-
-  ✅ Verificar listado en la raiz del proyecto. 
-
-- ▶ `pip install -r requirements.txt`           
-
+- ✅ Crear       ▶ `python -m venv .venv`                       
+- ✅ Activar     ▶ `.\.venv\Scripts\activate`
+- ✅ Verificar   ▶ `pip install -r requirements.txt`
+                    
   ✅ Para verificar todas las librerías instaladas específicamente en ese entorno.
-
-- ▶ `pip freeze`
+     
+ ▶ `pip freeze`
 
 ---
 
@@ -70,8 +63,8 @@ cd contaclic_core`
 
 4. 🧪 Correr pruebas.
 
-📂 src/                     ▶️  Código fuente principal.
-┃┣ 📂 tests/                ▶️  Pruebas automatizadas.
+- 📂 src/                     ▶️  Código fuente principal.
+- ┃┣ 📂 tests/                ▶️  Pruebas automatizadas.
 
 Ejecuta las pruebas unitarias y de integración con:
 
