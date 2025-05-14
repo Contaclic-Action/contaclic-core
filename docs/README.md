@@ -57,6 +57,8 @@ Este backend es el núcleo que conecta procesos clave de tu operación contable 
 
 ---
 
+
+
 ## 📌 Explicación de la organización:
 
 ### 📁 database/ 
@@ -115,3 +117,37 @@ Es el punto de entrada de la aplicacion FastAPI. Aqui se:
 - Beneficios de esta Estructura.
 
 ---
+
+## 🧱 Ventajas de esta Arquitectura.
+
+### 🧠 Separación clara de responsabilidades.
+Cada capa del proyecto (modelos, esquemas, routers, base de datos) tiene una función bien definida, lo que facilita el entendimiento del sistema y promueve buenas practicas de desarrollo.
+
+### 📈 Escalabilidad
+La estructura modular permite agregar nuevos recursos de forma sencilla. Solo necesitas crear el modelo, el esquema y el router correspondiente sin afectar otras partes de la aplicación.
+
+### 🔧 Mantenibilidad
+Las capas están desacopladas. Por lo tanto, hacer cambios en una (por ejemplo, en los modelos o esquemas) requiere pocas o ninguna modificacion en el resto del codigo.
+
+### 🧪 Testabilidad
+Cada componente (modelo, ruta, lógica) puede ser probado de forma aislada, lo que facilita la escritura de pruebas unitarias y mejora la calidad del codigo.
+
+### 🧩 Consistencia
+El uso de un patron uniforme en toda la aplicacion reduce errores, facilita la colaboracion en equipo y mejora la experiencia de desarrollo a largo plazo.
+
+---
+###  ⚙️ `Cómo iniciar/`
+
+---
+
+ ## 📌 CONEXION PgAdmin 4 y Render.
+
+- Host: Es la URL o IP de la base de datos.(Ej: dpg-xxxxxxx.render.com) - PSQL Command.
+- Port: generalmente 5432 (el puerto estándar de PostgreSQL).
+- Maintenance Database: suele ser el nombre de la base de datos principal que creaste en Render.
+- Username (Role): Es el nombre que configuraste o te asignó Render ( "DATABASE USER").
+- Password: la contraseña del usuario de base de datos.
+- Service: este campo no es obligatorio en pgAdmin. 
+
+---
+
