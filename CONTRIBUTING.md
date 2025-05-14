@@ -4,11 +4,12 @@
 Gracias por tu interés en contribuir. Este documento establece un flujo de trabajo claro y estandarizado para mantener la calidad del código en **Contaclic Action**.
 
 ---
+
 ## ✅ Requisitos Previos
 
 Antes de comenzar, asegúrate de tener instalado:
 
-[tecnologias](TECNOLOGIAS)
+Ver el archivo [TECNOLOGIAS.MD](TECNOLOGIAS.MD) para más información.
 
 ---
 

@@ -2,20 +2,13 @@
 
 Este sistema ha sido desarrollado para automatizar y gestionar de forma eficiente, modular y escalable toda la información tributaria, contable y documental de tu empresa, tanto a nivel nacional como municipal.
 
-Aquí encontrarás:
+## 🏛️ Contaclic Core
 
-### 🧩 Todos los módulos funcionales del sistema (tributación, Compras, bancos, etc.).
-
-### ⚙️ Detalles técnicos de su estructura, lógica de negocio y herramientas integradas.
-
-### 🚀 Mejoras continuas orientadas a rendimiento, usabilidad y escalabilidad.
-
-
-Este backend es el núcleo que conecta procesos clave de tu operación contable con automatizaciones inteligentes y una visión clara del estado financiero.
-
----
+Es el backend central de la plataforma de automatización contable. Está construido con FastAPI, Docker, pruebas automatizadas, y una estructura escalable y profesional.
 
 # 🏗️ RESUMEN ESTRUCTURA 
+
+-🏛️ contaclic_core
 
 - ┣ 📂 .github/                 ▶️  Workflows de GitHub Actions (CI/CD).
 - ┣ 📂 .venv/                   ▶️  Entorno virtual local (no se sube a Git).
@@ -33,6 +26,25 @@ Este backend es el núcleo que conecta procesos clave de tu operación contable 
 - ┣ 📄 README.md                ▶️  Descripción del proyecto.
 - ┣ 📄 requirements.txt         ▶️  Dependencias de producción.
 - ┗ 🔒 SECURITY.md              ▶️  Cómo reportar vulnerabilidades.
+
+Aquí encontrarás:
+
+### 🧩 Todos los módulos funcionales del sistema (tributación, Compras, bancos, etc.).
+
+### ⚙️ Detalles técnicos de su estructura, lógica de negocio y herramientas integradas.
+
+### 🚀 Mejoras continuas orientadas a rendimiento, usabilidad y escalabilidad.
+
+
+Este backend es el núcleo que conecta procesos clave de tu operación contable con automatizaciones inteligentes y una visión clara del estado financiero.
+
+## 📚 Documentación
+
+- [APIs del backend](./docs/backend/apis.md)
+- [Modelos y esquemas](./docs/backend/models.md)
+---
+
+
 
 ---
 
@@ -56,8 +68,6 @@ Este backend es el núcleo que conecta procesos clave de tu operación contable 
 - ┗ 💼 **backend/utils/**	      ▶️  Funciones pequenas y sin conexion a la base de datos.
 
 ---
-
-
 
 ## 📌 Explicación de la organización:
 

@@ -1,4 +1,4 @@
-## 🖼️ Logo
+🖼️ Logo
 
 <p align="center">
   <img src="./assets/logo.png" alt="Contaclic Logo" width="200"/>
@@ -13,59 +13,64 @@ Automatización contable y tributaria inteligente para empresas. Incluye módulo
 
 # 🗂️ Estructura general
 
-## ├── 📦 backend/   Backend con FastAPI (API REST, lógica de negocio, base de datos, automatizaciones)
+```bash
+📦 backend/     # Backend con FastAPI (API REST, lógica, base de datos)
 
-## 🏛️ Contaclic Core
+## 📚 Documentación
+- [backend](./docs/README.md)
 
-**contaclic_core** es el backend central de la plataforma de automatización contable. Está construido con FastAPI, Docker, pruebas automatizadas, y una estructura escalable y profesional.
-
-
-## └── 💻 frontend/  Frontend moderno en Next.js (interfaz de usuario para clientes y administrativos)
+💻 frontend/    # Frontend moderno en Next.js (clientes y administrativos)
 
 ---
 
 ## 📥 Configuración local
 
 
-1. Clonación del proyecto
+1. 🧹 **Gestión del Entorno Virtual y Dependencias**
 
-Puedes clonar este repositorio con:
-
-`https://github.com/Contaclic-Action/contaclic-core.git`
-
- ---
-
-2. 🧹 Gestión del Entorno Virtual y Dependencias.
-
-- ✅ Eliminar el Entorno Virtual Antiguo (Limpieza).
+ ✅ Eliminar el Entorno Virtual Antiguo (Limpieza).
  
-    ▶ `Remove-Item -Path .venv -Recurse -Force`   
+- ▶ `Remove-Item -Path .venv -Recurse -Force`   
 
-- ✅ Crear un Nuevo Entorno Virtual.
+ ✅ Crear un Nuevo Entorno Virtual.
 
-  ▶ `python -m venv .venv`                       
+- ▶ `python -m venv .venv`                       
 
-- ✅ Activar el Nuevo Entorno Virtual. 
+ ✅ Activar el Nuevo Entorno Virtual. 
 
-  ▶ `.\.venv\Scripts\activate`                   
+- ▶ `.\.venv\Scripts\activate`                   
 
--  ✅ Verificar listado en la raiz del proyecto. 
+  ✅ Verificar listado en la raiz del proyecto. 
 
-  ▶ `pip install -r requirements.txt`           
+- ▶ `pip install -r requirements.txt`           
 
--  ✅ Para verificar todas las librerías instaladas específicamente en ese entorno.
+  ✅ Para verificar todas las librerías instaladas específicamente en ese entorno.
 
-  ▶ `pip freeze`
+- ▶ `pip freeze`
 
 ---
 
-3. Levantar entorno con Docker.
+2. **Levantar entorno con Docker**
 
  `docker-compose up --build`
 
 ---
 
+3. 🖱️ **Clonación del proyecto**
+
+Puedes clonar este repositorio con:
+
+`git clone https://github.com/Contaclic-Action/contaclic-core.git
+cd contaclic_core`
+
+ ---
+
 4. 🧪 Correr pruebas.
+
+📂 src/                     ▶️  Código fuente principal.
+┃┣ 📂 tests/                ▶️  Pruebas automatizadas.
+
+Ejecuta las pruebas unitarias y de integración con:
 
  `pytest src/tests`
                                
@@ -81,7 +86,8 @@ Puedes clonar este repositorio con:
 
  ## 💪🏼 CONTRIBUTING.md 
 
- Guía para quienes quieran colaborar en el desarrollo. Ver el archivo [CONTRIBUTING](CONTRIBUTING) para más información.
+ Guía para quienes quieran colaborar en el desarrollo. Ver el archivo [CONTRIBUTING.md](./CONTRIBUTING.md) para más información.
+
 
  ## 👨‍💼 Autor
  Yecid Cordoba – GitHub | <admin@contaclick.pro> 
