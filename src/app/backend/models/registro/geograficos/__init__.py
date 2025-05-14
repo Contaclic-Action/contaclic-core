@@ -1,5 +1,4 @@
 # backend/models/registro/geograficos/__init__.py
-# Modelos geograficos compartidos entre modulo.
 
 from .codigo_postal import CodigoPostal
 from .departamentos import Departamentos    

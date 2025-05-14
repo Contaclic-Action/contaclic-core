@@ -430,6 +430,71 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 `print("✅ Tablas creadas exitosamente.")`
 `create_all_tables()`
 
+### 🗂️ DATABASE / mixins
+
+1. TimestampMixin.py 🧱
+
+`from sqlalchemy import Column, DateTime, func`
+
+`class TimestampMixin:`
+
+    fecha_creacion = Column(DateTime(timezone=True), server_default=func.now())
+    fecha_actualizacion = Column(DateTime(timezone=True), onupdate=func.now())
+
+2. UserTrackingMixin.py 👤
+
+`from sqlalchemy import Column, String`
+
+`class UserTrackingMixin:`
+
+    usuario_creacion = Column(String, nullable=True)
+    usuario_actualizacion = Column(String, nullable=True)
+
+3. ActiveStateMixin.py ✅
+
+`from sqlalchemy import Column, Boolean, DateTime, func`
+
+# Export class ActiveStateMixin:
+
+`class ActiveStateMixin:`
+
+    estado = Column(Boolean, default=True)
+    deleted_at = Column(DateTime(timezone=True), nullable=True)
+
+
+4. LocationMixin.py 🌍
+
+`from sqlalchemy import Column, String`
+
+`class LocationMixin:`
+
+    pais = Column(String, nullable=True)
+    departamento = Column(String, nullable=True)
+    ciudad = Column(String, nullable=True)
+
+5. IdentifiableMixin.py 🔑
+
+`from sqlalchemy import Column, Integer, String`
+
+`class IdentifiableMixin:`
+
+    id = Column(Integer, primary_key=True, index=True)
+    codigo = Column(String, unique=True, nullable=False)
+
+6. Combinación de mixins 🧩
+
+`from backend.database.base_class import Base`
+`from backend.database.mixins import AuditMixin, LocationMixin`
+
+`class Nombre(Base, AuditMixin, LocationMixin):`
+
+    __tablename__ = "Nombres"
+
+    id = Column(Integer, primary_key=True, index=True)
+    nombre = Column(String, nullable=False)
+    identificacion = Column(String, unique=True, nullable=False)
+
+
 ---
 
 ### 🗂️ MODELOS - models
@@ -438,16 +503,18 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 - 🗂️ `registro`
 
 
-`from sqlalchemy import Column, Integer, String, Boolean, DateTime, func`
+`from sqlalchemy import Column, Integer, String`
 
 `from backend.database.base_class import Base`
 
+`from backend.database.audit_mixin import AuditMixin`
 
-    class nombre(Base):
-    __tablename__ = "nombre"
+
+    class nombre(Base, AuditMixin):
+    __tablename__ = "tercero"
 
      id = Column(Integer, primary_key=True, index=True)
-     nombre = Column(String, index=True)
+     numero_identificacion = Column(String, index=True)
 
   `Trazabilidad`
 
