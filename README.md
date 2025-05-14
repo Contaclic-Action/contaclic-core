@@ -11,15 +11,6 @@ Automatización contable y tributaria inteligente para empresas. Incluye módulo
 
 ---
 
-# 🗂️ Estructura general
-
-```bash
-📦 backend/     # Backend con FastAPI (API REST, lógica, base de datos)
-
-💻 frontend/    # Frontend moderno en Next.js (clientes y administrativos)
-
-
-
 ## 📚 Documentación
 
 Ver el archivo [backend](./docs/README.md) para más información.
@@ -36,9 +27,9 @@ Ver el archivo [backend](./docs/README.md) para más información.
 
      ▶ `Remove-Item -Path .venv -Recurse -Force`  
 
-- ✅ Crear       ▶ `python -m venv .venv`                       
-- ✅ Activar     ▶ `.\.venv\Scripts\activate`
-- ✅ Verificar   ▶ `pip install -r requirements.txt`
+- ✅ Crear       ▶  `python -m venv .venv`                       
+- ✅ Activar     ▶  `.\.venv\Scripts\activate`
+- ✅ Verificar   ▶  `pip install -r requirements.txt` 
                     
   ✅ Para verificar todas las librerías instaladas específicamente en ese entorno.
      
@@ -48,16 +39,16 @@ Ver el archivo [backend](./docs/README.md) para más información.
 
 2. **Levantar entorno con Docker**
 
- `docker-compose up --build`
-
+`docker-compose up --build`
+ 
 ---
 
 3. 🖱️ **Clonación del proyecto**
 
 Puedes clonar este repositorio con:
 
-`git clone https://github.com/Contaclic-Action/contaclic-core.git
-cd contaclic_core`
+git clone `https://github.com/Contaclic-Action/contaclic-core.git`
+`cd contaclic_core`
 
  ---
 
@@ -69,7 +60,7 @@ cd contaclic_core`
 Ejecuta las pruebas unitarias y de integración con:
 
  `pytest src/tests`
-                               
+                            
 ---
 
 🚧 Estado del proyecto

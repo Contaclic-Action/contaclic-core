@@ -1,4 +1,4 @@
----
+
 # Guía para Contribuir
 
 Gracias por tu interés en contribuir. Este documento establece un flujo de trabajo claro y estandarizado para mantener la calidad del código en **Contaclic Action**.
@@ -42,15 +42,16 @@ Ver el archivo [Tecnologías_utilizadas](./docs/backend/TECNOLOGIAS.md) para má
 
  Usa `main` solo para código listo para producción.
 
-```bash
+
 ✅ Usa ramas para trabajar, por ejemplo:
 
-- `feat/ → nueva funcionalidad.`
-- `fix/ → corrección de bug.`
-- `refactor/ → cambios internos sin alterar funcionalidad.`
-- `test/ → pruebas.`
-- `docs/ → documentación.`
-- `chore/ → tareas de mantenimiento.`
+
+- `feat` → nueva funcionalidad.
+- `fix` → corrección de bug.
+- `refactor` → cambios internos sin alterar funcionalidad.
+- `test` → pruebas.
+- `docs` → documentación.
+- `chore` → tareas de mantenimiento.
 
 ---
 
@@ -58,10 +59,10 @@ Ver el archivo [Tecnologías_utilizadas](./docs/backend/TECNOLOGIAS.md) para má
 
 Usamos Conventional Commits:
 
-- `feat: nombre de funcionalidad.`
-- `fix: corrección de error.`
-- `docs: cambios de documentación.`
-- `test: pruebas nuevas o corregidas.`
+- `feat`→ nombre de funcionalidad.
+- `fix`→ corrección de error.
+- `docs`→ cambios de documentación.
+- `test`→ pruebas nuevas o corregidas.
 
 ---
 
@@ -101,8 +102,4 @@ Antes de subir tu código:
 - [Código de Conducta](./CODE_OF_CONDUCT.md)
 - [README del proyecto](./README.md)
 
----
-
-
-          
-
+---     
