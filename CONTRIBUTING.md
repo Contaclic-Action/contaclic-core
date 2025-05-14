@@ -442,11 +442,19 @@ Este proyecto tiene un [Código de Conducta](./CODE_OF_CONDUCT.md). Por favor, s
 `from backend.database.base_class import Base`
 
 
-    `class nombre(Base):`
-    `__tablename__ = "nombre"`
+    class nombre(Base):
+    __tablename__ = "nombre"
 
      id = Column(Integer, primary_key=True, index=True)
      nombre = Column(String, index=True)
+
+  `Trazabilidad`
+
+    fecha_creacion = Column(DateTime(timezone=True), server_default=func.now())
+    fecha_actualizacion = Column(DateTime(timezone=True), onupdate=func.now())
+    usuario_creacion = Column(String, nullable=True)
+    usuario_actualizacion = Column(String, nullable=True)
+    estado = Column(Boolean, default=True)
 
 
 - 🗂️ registro/geograficos/ 

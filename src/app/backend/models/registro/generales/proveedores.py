@@ -1,17 +1,13 @@
 from sqlalchemy import Column, Integer, String, Boolean, DateTime, func
 from backend.database.base_class import Base
 
-# export class ConceptosRut(Base):
-class ConceptosRut(Base):
-    __tablename__ = "conceptos_rut"
+# exportar la clase Proveedores(Base)
+class Proveedores(Base):
+    __tablename__ = "proveedores"
 
-# Primary Key
+    # Primary Key
     id = Column(Integer, primary_key=True, index=True)
     codigo = Column(String, unique=True, nullable=False)
-    
-    # Datos del Concepto
-    concepto = Column(String, nullable=False)
-    validacion = Column(String, nullable=False)
     descripcion = Column(String, nullable=False)
 
     # Trazabilidad
@@ -20,8 +16,3 @@ class ConceptosRut(Base):
     usuario_creacion = Column(String, nullable=True)
     usuario_actualizacion = Column(String, nullable=True)
     estado = Column(Boolean, default=True)
-    
-    # Timestamps
-    fecha_creacion = Column(DateTime(timezone=True), server_default=func.now())
-    fecha_actualizacion = Column(DateTime(timezone=True), onupdate=func.now())
-

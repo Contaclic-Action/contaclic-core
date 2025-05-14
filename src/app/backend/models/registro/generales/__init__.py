@@ -3,23 +3,23 @@
 
 from .catalogo_terceros import CatalogoTerceros
 from .centro_costos import CentroCostos
-from .conceptos_dian import ConceptosDian
 from .conceptos_rut import ConceptosRut  
 from .plan_cuenta import PlanCuenta
-from .subtipo_tercero import SubtipoTercero 
+from .clientes import Clientes
+from .proveedores import Proveedores
 from .tipo_documento import TipoDocumento
 from .tipo_sociedad import TipoSociedad
 from .tipo_tercero import TipoTercero
 
-# Exponemos las clases que queremos que sean accesibles.
+# Exportar las clases
 __all__ = [
     "CatalogoTerceros",
     "CentroCostos",
-    "ConceptosDian",
     "ConceptosRut",
     "PlanCuenta",
-    "SubtipoTercero",
+    "Clientes",
+    "Proveedores",
     "TipoDocumento",
     "TipoSociedad",
-    "TipoTercero",
+    "TipoTercero"
 ]
