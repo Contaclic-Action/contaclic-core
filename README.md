@@ -13,13 +13,16 @@ Automatización contable y tributaria inteligente para empresas. Incluye módulo
 
 # 🗂️ Estructura general
 
-```bash
+
 📦 backend/     # Backend con FastAPI (API REST, lógica, base de datos)
 
-## 📚 Documentación
-- [backend](./docs/README.md)
-
 💻 frontend/    # Frontend moderno en Next.js (clientes y administrativos)
+
+
+
+## 📚 Documentación
+
+Ver el archivo [backend](./docs/README.md) para más información.
 
 ---
 
@@ -91,7 +94,8 @@ Ejecuta las pruebas unitarias y de integración con:
 
  ## 👨‍💼 Autor
  Yecid Cordoba – GitHub | <admin@contaclick.pro> 
+ Ver el archivo [YECIDCP.md](./YECIDCP.md) para más información.
 
  ## ⚖️ Licencia
 
-Este proyecto está bajo la licencia MIT. Ver el archivo [LICENSE](LICENSE) para más información.
+Este proyecto está bajo la licencia MIT. Ver el archivo [LICENSE](./LICENSE) para más información.
