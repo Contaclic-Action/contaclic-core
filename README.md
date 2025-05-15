@@ -29,7 +29,7 @@ Automatización contable y tributaria inteligente para empresas. Incluye módulo
                     
 - Para verificar todas las librerías instaladas específicamente en ese entorno.
      
-      ▶ `pip freeze`
+      ▶ pip freeze
 
 ---
 
@@ -72,7 +72,7 @@ Ejecuta las pruebas unitarias y de integración con:
 
 # 📚 Documentación
 
-Bienvenido a **Contaclic Action**, una plataforma modular para automatización contable y tributaria.
+Bienvenido a **Contaclic Core**, una plataforma modular para automatización contable y tributaria.
 
 ---
 
