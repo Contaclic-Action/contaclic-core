@@ -79,7 +79,7 @@ Bienvenido a **Contaclic Core**, una plataforma modular para automatización con
 ## 📁 Contaclic_Core
 
 El backend está construido con **FastAPI**, **SQLAlchemy**, **Docker** y otras herramientas modernas.  
-La documentación interna delproyecto se encuentra en:
+La documentación interna del proyecto se encuentra en:
 
 [📁 ESTRUCTURA PROYECTO](./docs/README.md)
 
@@ -96,7 +96,8 @@ Consulta nuestra guía de colaboración en:
 
 ## 🧑🏽 Autor
 
-**Yecid Córdoba**  
+**Yecid Córdoba P.**  
+
 📧 <admin@contaclick.pro>  
 🔍 Más información en: [YECIDCP.md](./YECIDCP.md)
 
@@ -105,4 +106,5 @@ Consulta nuestra guía de colaboración en:
 ## ⚖️ Licencia
 
 Este proyecto está bajo la Licencia MIT.  
+
 📄 Revisa los términos en: [LICENSE](./LICENSE)
