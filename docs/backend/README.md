@@ -131,7 +131,7 @@ El uso de un patron uniforme en toda la aplicacion reduce errores, facilita la c
 
 ---
 
-## 📚 MODELS - RESGITRO
+## 📚 Documentación Backend
 
 
 ### 💼 backend/models/banco
