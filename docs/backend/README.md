@@ -40,6 +40,22 @@ Este archivo hace que la carpeta sea reconocida como un paquete de Python y perm
 
 ## 📌 Explicación de la organización:
 
+Este proyecto está organizado para facilitar el mantenimiento, la escalabilidad y la comprensión, incluso por personas que no tienen experiencia técnica. La estructura sigue una lógica modular, separando responsabilidades claras en carpetas específicas:
+
+---
+
+### 📝 main.py/
+
+Es el punto de entrada de la aplicacion FastAPI. Aqui se:
+
+- Crea la instancia principal de la app (app = FastAPI()).
+- Se agregan middlewares (como CORS).
+- Se incluyen los routers definidos en routers/.
+- Se levanta el servidor si se ejecuta directamente.
+- Beneficios de esta Estructura.
+
+---
+
 ### 📁 database/ 
 
 Conexion a la base de datos. Aqui generalmente se encuentra:
@@ -75,18 +91,6 @@ Endpoints de la API agrupados por funcionalidad. Cada archivo corresponde a un r
 
 ---
 
-### 📝 main.py/
-
-Es el punto de entrada de la aplicacion FastAPI. Aqui se:
-
-- Crea la instancia principal de la app (app = FastAPI()).
-- Se agregan middlewares (como CORS).
-- Se incluyen los routers definidos en routers/.
-- Se levanta el servidor si se ejecuta directamente.
-- Beneficios de esta Estructura.
-
----
-
 ## 🧱 Ventajas de esta Arquitectura.
 
 ### 🧠 Separación clara de responsabilidades.
@@ -106,6 +110,18 @@ El uso de un patron uniforme en toda la aplicacion reduce errores, facilita la c
 
 ---
 
+🔄 Flujo de trabajo
+
+1. Ingreso de archivos (PDF, XML, CSV) → procesamiento automático en **utils/**.
+
+2. Validaciones y extracciones → **services/** y schemas/.
+
+3. Almacenamiento ordenado → **models/** y lógica contable.
+
+4. Visualización o acción → **routers/** y conexión con el frontend o APIs externas.
+
+---
+
 ## 🏗️ Progreso
 
 - [x] Estructura de carpetas creada
@@ -115,7 +131,7 @@ El uso de un patron uniforme en toda la aplicacion reduce errores, facilita la c
 
 ---
 
-## 📚 Documentación 
+## 📚 MODELS - RESGITRO
 
 
 ### 💼 backend/models/banco
@@ -152,6 +168,6 @@ El uso de un patron uniforme en toda la aplicacion reduce errores, facilita la c
 ## ✉️ Contacto
 
 Para soporte técnico o colaboración en la documentación, escribe a:
-  
+
 📧 **admin@contaclick.pro**
 
