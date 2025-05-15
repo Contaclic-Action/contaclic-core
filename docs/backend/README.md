@@ -1,9 +1,3 @@
-## 👋 Bienvenido al backend de Contaclic Action.
-
-Este espacio contiene la documentación técnica de los módulos desarrollados para el backend de **Contaclic Core**.  
-La estructura de esta carpeta replica la arquitectura del proyecto para facilitar su exploración y mantenimiento.
-
-
 ## 🏛️ Backend
 
 Este módulo es el núcleo de la plataforma **Contaclic Core**, encargado de integrar y automatizar los procesos contables, operativos y tributarios.  
@@ -123,8 +117,35 @@ El uso de un patron uniforme en toda la aplicacion reduce errores, facilita la c
 
 ## 📚 Documentación 
 
-- [GENERALES ](./MODELS/REGISTRO/GENERALES.md)
-- [GEOGRAFICOS ](./MODELS/REGISTRO/GEOGRAFICOS.md)
+
+### 💼 backend/models/banco
+
+- [📁 BANCOLOMBIA](./models/banco/bancolombia/)
+
+
+### 💼 backend/models/dian
+
+- [📁 EMITIDOS](./models/dian/emitidos/)
+- [📁 RECIBIDOS](./models/dian/recibidos/)
+
+
+### 💼 backend/models/impuestos
+
+- [📁 MUNICIPAL](./models/impuestos/municipal_ica/)
+- [📁 NACIONAL](./models/impuestos/nacional/)
+
+
+### 💼 backend/models/registro
+
+- [📁 GENERALES](./models/registro/generales.md)
+- [📁 GEOGRAFICOS](./models/registro/geograficos.md)
+- [📁 METODO PAGO](./models/registro/metodo_pago.md)
+- [📁 TERCEROS](./models/registro/terceros.md)
+
+
+### 💼 backend/models/usuarios
+
+- [📁 USUARIOS](./models/usuarios/)
 
 ---
 

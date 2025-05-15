@@ -1,10 +1,10 @@
-# 📘 Documentación Técnica - Contaclic Action
+# 📘 Documentación Técnica - Contaclic Core
 
 Este sistema ha sido desarrollado para automatizar y gestionar de forma eficiente, modular y escalable toda la información tributaria, contable y documental de tu empresa, tanto a nivel nacional como municipal.
 
 ---
 
-## 📁 Estructura
+## 📁 Estructura del Proyecto
 
 📁 contaclic_core
 - ┣ 📂 .github/                 ▶️  Workflows de GitHub Actions (CI/CD).
@@ -50,8 +50,11 @@ El objetivo de esta documentación es centralizar y explicar con claridad:
 
 ---
 
-## 📚 Documentación 
+## 📚 Documentación Backend
 
-- [Estructura backend](./backend/README.md)
+Este espacio contiene la documentación técnica de los módulos desarrollados para el backend de **Contaclic Core**.  
+La estructura de esta carpeta replica la arquitectura del proyecto para facilitar su exploración y mantenimiento.
+
+- [BACKEND](./backend/README.md)
 
 ---

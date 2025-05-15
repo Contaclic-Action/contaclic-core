@@ -11,11 +11,7 @@ Automatización contable y tributaria inteligente para empresas. Incluye módulo
 
 ---
 
-## 📚 Documentación
 
-Ver el archivo [backend](./docs/README.md) para más información.
-
----
 
 ## 📥 Configuración local
 
@@ -63,6 +59,7 @@ Ejecuta las pruebas unitarias y de integración con:
                             
 ---
 
+
 🚧 Estado del proyecto
 
 - [x] Backend funcional
@@ -71,15 +68,41 @@ Ejecuta las pruebas unitarias y de integración con:
 - [ ] Frontend visual con Next.js
 - [ ] Integraciones
 
- ## 💪🏼 CONTRIBUTING.md 
+---
 
- Guía para quienes quieran colaborar en el desarrollo. Ver el archivo [CONTRIBUTING.md](./CONTRIBUTING.md) para más información.
+# 📚 Documentación
 
+Bienvenido a **Contaclic Core**, una plataforma modular para automatización contable y tributaria.
 
- ## 👨‍💼 Autor
- Yecid Cordoba – GitHub | <admin@contaclick.pro> 
- Ver el archivo [YECIDCP.md](./YECIDCP.md) para más información.
+---
 
- ## ⚖️ Licencia
+## 📁 Contaclic_Core
 
-Este proyecto está bajo la licencia MIT. Ver el archivo [LICENSE](./LICENSE) para más información.
+El backend está construido con **FastAPI**, **SQLAlchemy**, **Docker** y otras herramientas modernas.  
+La documentación interna delproyecto se encuentra en:
+
+📄 [📁 ESTRUCTURA PROYECTO](./docs/README.md)
+
+---
+
+## 💪🏼 Contribuciones
+
+¿Quieres colaborar con este proyecto?
+
+Consulta nuestra guía de colaboración en:  
+🔧 [CONTRIBUTING.md](./CONTRIBUTING.md)
+
+---
+
+## 👨‍💼 Autor
+
+**Yecid Córdoba**  
+📧 <admin@contaclick.pro>  
+🔍 Más información en: [YECIDCP.md](./YECIDCP.md)
+
+---
+
+## ⚖️ Licencia
+
+Este proyecto está bajo la Licencia MIT.  
+📄 Revisa los términos en: [LICENSE](./LICENSE)
