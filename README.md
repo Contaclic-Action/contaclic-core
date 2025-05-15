@@ -31,7 +31,7 @@ Ver el archivo [backend](./docs/README.md) para más información.
 - ✅ Activar     ▶  `.\.venv\Scripts\activate`
 - ✅ Verificar   ▶  `pip install -r requirements.txt` 
                     
-  ✅ Para verificar todas las librerías instaladas específicamente en ese entorno.
+- ✅ Para verificar todas las librerías instaladas específicamente en ese entorno.
      
  ▶ `pip freeze`
 

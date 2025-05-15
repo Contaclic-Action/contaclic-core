@@ -22,4 +22,4 @@ Las violaciones pueden resultar en advertencias, bloqueos o expulsión del proye
 
 ---
 
-Para reportar cualquier problema, contáctanos en: soporte@contaclic.pro
+Para reportar cualquier problema, contáctanos en: <admin@contaclick.pro> 

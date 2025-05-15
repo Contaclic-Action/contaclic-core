@@ -9,7 +9,7 @@ Gracias por tu interés en contribuir. Este documento establece un flujo de trab
 
 Antes de comenzar, asegúrate de tener instalado:
 
-Ver el archivo [Tecnologías_utilizadas](./docs/backend/TECNOLOGIAS.md) para más información.
+Ver el archivo [Tecnologías_utilizadas](./docs/backend/TECNOLOGIAS/TECNOLOGIAS.md) para más información.
 
 ---
 
@@ -98,7 +98,6 @@ Antes de subir tu código:
 
 ## 📚 Documentación
 
-- [Tecnologías utilizadas](./docs/backend/TECNOLOGIAS.md)
 - [Código de Conducta](./CODE_OF_CONDUCT.md)
 - [README del proyecto](./README.md)
 
