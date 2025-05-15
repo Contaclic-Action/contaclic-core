@@ -55,6 +55,6 @@ El objetivo de esta documentación es centralizar y explicar con claridad:
 Este espacio contiene la documentación técnica de los módulos desarrollados para el backend de **Contaclic Core**.  
 La estructura de esta carpeta replica la arquitectura del proyecto para facilitar su exploración y mantenimiento.
 
-- [BACKEND](./backend/README.md)
+- [🗂️ BACKEND](./backend/README.md)
 
 ---

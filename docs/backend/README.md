@@ -33,7 +33,7 @@ Este archivo hace que la carpeta sea reconocida como un paquete de Python y perm
 - ❌ Carpetas que no necesitan `__init__.py`
 
 - 📁 Carpetas de uploads - solo para guardar archivos temporales.
-- 📁 Carpetas de tests - si no planeas importar sus módulos desde fuera.
+- 📁 Carpetas de tests - si no planeas importar módulos desde fuera.
 - 📁 Carpetas docs/, temp/ o cualquier carpeta de recursos.
 
 ---
@@ -151,6 +151,7 @@ El uso de un patron uniforme en toda la aplicacion reduce errores, facilita la c
 
 ## ✉️ Contacto
 
-Para soporte técnico o colaboración en la documentación, escribe a:  
+Para soporte técnico o colaboración en la documentación, escribe a:
+  
 📧 **admin@contaclick.pro**
 

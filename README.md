@@ -6,12 +6,19 @@
 
 # 🧠  Plataforma Contable y Tributaria.
 
+> Automatización contable y administrativa con propósito, visión y estructura.
 
-Automatización contable y tributaria inteligente para empresas. Incluye módulos de carga masiva, validación de datos, creación de terceros, lectura de RUT en PDF, conciliación de compras y más.
+
+## 🚀 Qué hace Contaclic
+
+- Automatiza el ingreso y validación de facturas electrónicas (XML, PDF).
+- Procesa archivos masivos desde ZIP, Excel, imagen, CSV.
+- Se integra con servicios externos (correo, APIs, Power BI, Microsoft 365).
+- Mantiene una estructura modular y documentada para crecer sin romperse.
+- Soporta flujos internos contables (egresos, ingresos, compras, informes).
+- Guarda toda la información con trazabilidad, control y posibilidad de auditoría.
 
 ---
-
-
 
 ## 📥 Configuración local
 
@@ -60,13 +67,15 @@ Ejecuta las pruebas unitarias y de integración con:
 ---
 
 
-🚧 Estado del proyecto
+🚧 Estado del proyecto (mayo 2025)
 
-- [x] Backend funcional
-- [ ] Servicios de validación de terceros
-- [ ] Procesamiento de archivos (XML, PDF)
-- [ ] Frontend visual con Next.js
-- [ ] Integraciones
+- [x] Estructura modular completa
+- [ ] Procesamiento de XML y PDF
+- [ ] Modelos y esquemas contables
+- [ ] Integración con correo y Power Automate
+- [ ] Documentación interna 100% revisada
+- [ ] Primeras conexiones con software contable externo
+- [ ] Ensayo con empresa real o propia
 
 ---
 

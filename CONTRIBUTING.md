@@ -5,6 +5,24 @@ Gracias por tu interés en contribuir. Este documento establece un flujo de trab
 
 ---
 
+**Contaclic Action** no nació como un software, sino como una necesidad personal.  
+Una búsqueda de orden, eficiencia y lógica en un mundo financiero que muchas veces se mueve por rutina, no por comprensión.
+
+Este proyecto combina programación, automatización e inteligencia artificial para transformar tareas contables repetitivas en procesos eficientes y comprensibles.  
+No fue creado para vender funciones, sino para entender lo que realmente se necesita y cómo optimizarlo desde adentro.
+
+Es el resultado de observar, cuestionar y rediseñar procesos administrativos desde cero, sin copiar modelos innecesarios, con un enfoque realista:  
+👨‍💻 pensado para autónomos, pymes y personas que simplemente quieren dejar de depender de lo manual sin tener que entender todo el mundo tech.
+
+---
+
+## 💡 Filosofía
+
+Este proyecto cree en la autonomía, la transparencia y en el poder de entender lo que uno está usando.  
+No busca esconder complejidades, sino estructurarlas de forma lógica para que cualquier persona con interés pueda adaptarlo, sin depender de terceros ni de parches.
+
+---
+
 ## ✅ Requisitos Previos
 
 Antes de comenzar, asegúrate de tener instalado:
