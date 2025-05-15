@@ -19,17 +19,17 @@ Automatización contable y tributaria inteligente para empresas. Incluye módulo
 1. 🧹 **Gestión del Entorno Virtual y Dependencias**
     
    
-- ✅ Eliminar el Entorno Virtual Antiguo (Limpieza).
+-  Eliminar el Entorno Virtual Antiguo (Limpieza).
 
-     ▶ `Remove-Item -Path .venv -Recurse -Force`  
+      ▶ `Remove-Item -Path .venv -Recurse -Force`  
 
-- ✅ Crear       ▶  `python -m venv .venv`                       
-- ✅ Activar     ▶  `.\.venv\Scripts\activate`
-- ✅ Verificar   ▶  `pip install -r requirements.txt` 
+- Crear       ▶  `python -m venv .venv`                       
+- Activar     ▶  `.\.venv\Scripts\activate`
+- Verificar   ▶  `pip install -r requirements.txt` 
                     
-- ✅ Para verificar todas las librerías instaladas específicamente en ese entorno.
+- Para verificar todas las librerías instaladas específicamente en ese entorno.
      
- ▶ `pip freeze`
+      ▶ `pip freeze`
 
 ---
 
@@ -72,7 +72,7 @@ Ejecuta las pruebas unitarias y de integración con:
 
 # 📚 Documentación
 
-Bienvenido a **Contaclic Core**, una plataforma modular para automatización contable y tributaria.
+Bienvenido a **Contaclic Action**, una plataforma modular para automatización contable y tributaria.
 
 ---
 
@@ -81,7 +81,7 @@ Bienvenido a **Contaclic Core**, una plataforma modular para automatización con
 El backend está construido con **FastAPI**, **SQLAlchemy**, **Docker** y otras herramientas modernas.  
 La documentación interna delproyecto se encuentra en:
 
-📄 [📁 ESTRUCTURA PROYECTO](./docs/README.md)
+[📁 ESTRUCTURA PROYECTO](./docs/README.md)
 
 ---
 
@@ -90,11 +90,11 @@ La documentación interna delproyecto se encuentra en:
 ¿Quieres colaborar con este proyecto?
 
 Consulta nuestra guía de colaboración en:  
-🔧 [CONTRIBUTING.md](./CONTRIBUTING.md)
+[🔧 CONTRIBUTING.md](./CONTRIBUTING.md)
 
 ---
 
-## 👨‍💼 Autor
+## 🧑🏽 Autor
 
 **Yecid Córdoba**  
 📧 <admin@contaclick.pro>  
