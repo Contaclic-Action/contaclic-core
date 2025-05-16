@@ -1,14 +1,21 @@
 ### ⚙️ ```__init__.py```
 
-Este archivo hace que la carpeta sea reconocida como un paquete de Python y permite importaciones limpias entre modulos. Ayuda a mantener una estructura modular y organizada.
+Este archivo permite que una carpeta sea reconocida como un paquete de Python, facilitando las importaciones limpias entre módulos del proyecto.
+Es clave para mantener una estructura modular y organizada, especialmente en proyectos grandes como este.
 
 
 ## 🧠 **Estructura de archivos `__init__.py`**
 
 ### 🗂️ DATABASE / `__init__.py`
 
-- ```from .connection import engine, SessionLocal, get_db```
-- ```from .base_class import Base```
+ ```from .connection import engine, SessionLocal, get_db```
+
+ ```from .base_class import Base```
+
+- engine: Conexión principal a PostgreSQL.
+- SessionLocal: Sesión de base de datos para operaciones CRUD.
+- get_db: Dependencia para inyección de sesión en FastAPI.
+- Base: Clase base para heredar en todos los modelos.
 
 
 ### 📁 MODELS / `__init__.py` 
