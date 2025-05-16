@@ -7,16 +7,16 @@ Este archivo hace que la carpeta sea reconocida como un paquete de Python y perm
 
 ### 🗂️ DATABASE / `__init__.py`
 
-```from .connection import engine, SessionLocal, get_db```
-```from .base_class import Base```
+- ```from .connection import engine, SessionLocal, get_db```
+- ```from .base_class import Base```
 
 
 ### 📁 MODELS / `__init__.py` 
 
 - 🎯 Importamos las clases de los modelos que queremos exponer.
 
-```from .archivo_1 import Clase1```
-```from .archivo_2 import Clase2```
+          ```from .archivo_1 import Clase1```
+          ```from .archivo_2 import Clase2```
 
 -  Controlamos qué se puede importar desde fuera.
 
