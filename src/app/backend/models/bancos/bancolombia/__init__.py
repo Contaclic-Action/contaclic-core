@@ -1,11 +1,11 @@
 # backend/models/bancos/__init__.py
 # Esta carpeta contiene los modelos para la conciliación de extractos bancarios.
 
-from .csv import Csv
+from .csv import Csv 
 from .pdf import Pdf
 
-# definimos los modelos que serán importados por otros módulos o archivos.
+# Exportar los modelos para que puedan ser utilizados en otras partes de la aplicación.
 __all__ = [
     "Csv",
     "Pdf",
-]
+]                                                                                                                          
