@@ -9,13 +9,12 @@ Es clave para mantener una estructura modular y organizada, especialmente en pro
 ### 🗂️ DATABASE / `__init__.py`
 
  ```from .connection import engine, SessionLocal, get_db```
-
  ```from .base_class import Base```
 
-- engine: Conexión principal a PostgreSQL.
-- SessionLocal: Sesión de base de datos para operaciones CRUD.
-- get_db: Dependencia para inyección de sesión en FastAPI.
-- Base: Clase base para heredar en todos los modelos.
+- **engine**: Conexión principal a PostgreSQL.
+- **SessionLocal**: Sesión de base de datos para operaciones CRUD.
+- **get_db**: Dependencia para inyección de sesión en FastAPI.
+- **Base**: Clase base para heredar en todos los modelos.
 
 
 ### 📁 MODELS / `__init__.py` 
