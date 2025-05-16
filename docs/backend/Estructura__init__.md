@@ -15,12 +15,12 @@ Este archivo hace que la carpeta sea reconocida como un paquete de Python y perm
 
 - 🎯 Importamos las clases de los modelos que queremos exponer.
 
-          ```from .archivo_1 import Clase1```
-          ```from .archivo_2 import Clase2```
+- ```from .archivo_1 import Clase1```
+- ```from .archivo_2 import Clase2```
 
 -  Controlamos qué se puede importar desde fuera.
 
-```__all__ = ["Clase1", "Clase2"]```
+- ```__all__ = ["Clase1", "Clase2"]```
 
 ---
 
@@ -28,12 +28,12 @@ Este archivo hace que la carpeta sea reconocida como un paquete de Python y perm
 
 -  🎯 Importamos los routers definidos en otros archivos.
 
-```from .recurso_1 import router as recurso_1_router```
-```from .recurso_2 import router as recurso_2_router```
+- ```from .recurso_1 import router as recurso_1_router```
+- ```from .recurso_2 import router as recurso_2_router```
 
 -  Listamos los routers para facilitar su uso desde main.py o routers principales.
 
-``` __all__ = ["recurso_1_router", "recurso_2_router"]```
+- ``` __all__ = ["recurso_1_router", "recurso_2_router"]```
 
 ---
 
